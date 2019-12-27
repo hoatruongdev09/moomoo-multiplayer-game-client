@@ -1,0 +1,5266 @@
+fileFormatVersion: 2
+guid: 069d269500638406f827d1fd94c378d7
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: UI-Builder-Panels_0
+    21300002: UI-Builder-Panels_1
+    21300004: UI-Builder-Panels_2
+    21300006: UI-Builder-Panels_3
+    21300008: UI-Builder-Panels_4
+    21300010: UI-Builder-Panels_5
+    21300012: UI-Builder-Panels_6
+    21300014: UI-Builder-Panels_7
+    21300016: UI-Builder-Panels_8
+    21300018: UI-Builder-Panels_9
+    21300020: UI-Builder-Panels_10
+    21300022: UI-Builder-Panels_11
+    21300024: UI-Builder-Panels_12
+    21300026: UI-Builder-Panels_13
+    21300028: UI-Builder-Panels_14
+    21300030: UI-Builder-Panels_15
+    21300032: UI-Builder-Panels_16
+    21300034: UI-Builder-Panels_17
+    21300036: UI-Builder-Panels_18
+    21300038: UI-Builder-Panels_19
+    21300040: UI-Builder-Panels_20
+    21300042: UI-Builder-Panels_21
+    21300044: UI-Builder-Panels_22
+    21300046: UI-Builder-Panels_23
+    21300048: UI-Builder-Panels_24
+    21300050: UI-Builder-Panels_25
+    21300052: UI-Builder-Panels_26
+    21300054: UI-Builder-Panels_27
+    21300056: UI-Builder-Panels_28
+    21300058: UI-Builder-Panels_29
+    21300060: UI-Builder-Panels_30
+    21300062: UI-Builder-Panels_31
+    21300064: UI-Builder-Panels_32
+    21300066: UI-Builder-Panels_33
+    21300068: UI-Builder-Panels_34
+    21300070: UI-Builder-Panels_35
+    21300072: UI-Builder-Panels_36
+    21300074: UI-Builder-Panels_37
+    21300076: UI-Builder-Panels_38
+    21300078: UI-Builder-Panels_39
+    21300080: UI-Builder-Panels_40
+    21300082: UI-Builder-Panels_41
+    21300084: UI-Builder-Panels_42
+    21300086: UI-Builder-Panels_43
+    21300088: UI-Builder-Panels_44
+    21300090: UI-Builder-Panels_45
+    21300092: UI-Builder-Panels_46
+    21300094: UI-Builder-Panels_47
+    21300096: UI-Builder-Panels_48
+    21300098: UI-Builder-Panels_49
+    21300100: UI-Builder-Panels_50
+    21300102: UI-Builder-Panels_51
+    21300104: UI-Builder-Panels_52
+    21300106: UI-Builder-Panels_53
+    21300108: UI-Builder-Panels_54
+    21300110: UI-Builder-Panels_55
+    21300112: UI-Builder-Panels_56
+    21300114: UI-Builder-Panels_57
+    21300116: UI-Builder-Panels_58
+    21300118: UI-Builder-Panels_59
+    21300120: UI-Builder-Panels_60
+    21300122: UI-Builder-Panels_61
+    21300124: UI-Builder-Panels_62
+    21300126: UI-Builder-Panels_63
+    21300128: UI-Builder-Panels_64
+    21300130: UI-Builder-Panels_65
+    21300132: UI-Builder-Panels_66
+    21300134: UI-Builder-Panels_67
+    21300136: UI-Builder-Panels_68
+    21300138: UI-Builder-Panels_69
+    21300140: UI-Builder-Panels_70
+    21300142: UI-Builder-Panels_71
+    21300144: UI-Builder-Panels_72
+    21300146: UI-Builder-Panels_73
+    21300148: UI-Builder-Panels_74
+    21300150: UI-Builder-Panels_75
+    21300152: UI-Builder-Panels_76
+    21300154: UI-Builder-Panels_77
+    21300156: UI-Builder-Panels_78
+    21300158: UI-Builder-Panels_79
+    21300160: UI-Builder-Panels_80
+    21300162: UI-Builder-Panels_81
+    21300164: UI-Builder-Panels_82
+    21300166: UI-Builder-Panels_83
+    21300168: UI-Builder-Panels_84
+    21300170: UI-Builder-Panels_85
+    21300172: UI-Builder-Panels_86
+    21300174: UI-Builder-Panels_87
+    21300176: UI-Builder-Panels_88
+    21300178: UI-Builder-Panels_89
+    21300180: UI-Builder-Panels_90
+    21300182: UI-Builder-Panels_91
+    21300184: UI-Builder-Panels_92
+    21300186: UI-Builder-Panels_93
+    21300188: UI-Builder-Panels_94
+    21300190: UI-Builder-Panels_95
+    21300192: UI-Builder-Panels_96
+    21300194: UI-Builder-Panels_97
+    21300196: UI-Builder-Panels_98
+    21300198: UI-Builder-Panels_99
+    21300200: UI-Builder-Panels_100
+    21300202: UI-Builder-Panels_101
+    21300204: UI-Builder-Panels_102
+    21300206: UI-Builder-Panels_103
+    21300208: UI-Builder-Panels_104
+    21300210: UI-Builder-Panels_105
+    21300212: UI-Builder-Panels_106
+    21300214: UI-Builder-Panels_107
+    21300216: UI-Builder-Panels_108
+    21300218: UI-Builder-Panels_109
+    21300220: UI-Builder-Panels_110
+    21300222: UI-Builder-Panels_111
+    21300224: UI-Builder-Panels_112
+    21300226: UI-Builder-Panels_113
+    21300228: UI-Builder-Panels_114
+    21300230: UI-Builder-Panels_115
+    21300232: UI-Builder-Panels_116
+    21300234: UI-Builder-Panels_117
+    21300236: UI-Builder-Panels_118
+    21300238: UI-Builder-Panels_119
+    21300240: UI-Builder-Panels_120
+    21300242: UI-Builder-Panels_121
+    21300244: UI-Builder-Panels_122
+    21300246: UI-Builder-Panels_123
+    21300248: UI-Builder-Panels_124
+    21300250: UI-Builder-Panels_125
+    21300252: UI-Builder-Panels_126
+    21300254: UI-Builder-Panels_127
+    21300256: UI-Builder-Panels_128
+    21300258: UI-Builder-Panels_129
+    21300260: UI-Builder-Panels_130
+    21300262: UI-Builder-Panels_131
+    21300264: UI-Builder-Panels_132
+    21300266: UI-Builder-Panels_133
+    21300268: UI-Builder-Panels_134
+    21300270: UI-Builder-Panels_135
+    21300272: UI-Builder-Panels_136
+    21300274: UI-Builder-Panels_137
+    21300276: UI-Builder-Panels_138
+    21300278: UI-Builder-Panels_139
+    21300280: UI-Builder-Panels_140
+    21300282: UI-Builder-Panels_141
+    21300284: UI-Builder-Panels_142
+    21300286: UI-Builder-Panels_143
+    21300288: UI-Builder-Panels_144
+    21300290: UI-Builder-Panels_145
+    21300292: UI-Builder-Panels_146
+    21300294: UI-Builder-Panels_147
+    21300296: UI-Builder-Panels_148
+    21300298: UI-Builder-Panels_149
+    21300300: UI-Builder-Panels_150
+    21300302: UI-Builder-Panels_151
+    21300304: UI-Builder-Panels_152
+    21300306: UI-Builder-Panels_153
+    21300308: UI-Builder-Panels_154
+    21300310: UI-Builder-Panels_155
+    21300312: UI-Builder-Panels_156
+    21300314: UI-Builder-Panels_157
+    21300316: UI-Builder-Panels_158
+    21300318: UI-Builder-Panels_159
+    21300320: UI-Builder-Panels_160
+    21300322: UI-Builder-Panels_161
+    21300324: UI-Builder-Panels_162
+    21300326: UI-Builder-Panels_163
+    21300328: UI-Builder-Panels_164
+    21300330: UI-Builder-Panels_165
+    21300332: UI-Builder-Panels_166
+    21300334: UI-Builder-Panels_167
+    21300336: UI-Builder-Panels_168
+    21300338: UI-Builder-Panels_169
+    21300340: UI-Builder-Panels_170
+    21300342: UI-Builder-Panels_171
+    21300344: UI-Builder-Panels_172
+    21300346: UI-Builder-Panels_173
+    21300348: UI-Builder-Panels_174
+    21300350: UI-Builder-Panels_175
+    21300352: UI-Builder-Panels_176
+    21300354: UI-Builder-Panels_177
+    21300356: UI-Builder-Panels_178
+    21300358: UI-Builder-Panels_179
+    21300360: UI-Builder-Panels_180
+    21300362: UI-Builder-Panels_181
+    21300364: UI-Builder-Panels_182
+    21300366: UI-Builder-Panels_183
+    21300368: UI-Builder-Panels_184
+    21300370: UI-Builder-Panels_185
+    21300372: UI-Builder-Panels_186
+    21300374: UI-Builder-Panels_187
+    21300376: UI-Builder-Panels_188
+    21300378: UI-Builder-Panels_189
+    21300380: UI-Builder-Panels_190
+    21300382: UI-Builder-Panels_191
+    21300384: UI-Builder-Panels_192
+    21300386: UI-Builder-Panels_193
+    21300388: UI-Builder-Panels_194
+    21300390: UI-Builder-Panels_195
+    21300392: UI-Builder-Panels_196
+    21300394: UI-Builder-Panels_197
+    21300396: UI-Builder-Panels_198
+    21300398: UI-Builder-Panels_199
+    21300400: UI-Builder-Panels_200
+    21300402: UI-Builder-Panels_201
+    21300404: UI-Builder-Panels_202
+    21300406: UI-Builder-Panels_203
+    21300408: UI-Builder-Panels_204
+    21300410: UI-Builder-Panels_205
+    21300412: UI-Builder-Panels_206
+    21300414: UI-Builder-Panels_207
+    21300416: UI-Builder-Panels_208
+    21300418: UI-Builder-Panels_209
+    21300420: UI-Builder-Panels_210
+    21300422: UI-Builder-Panels_211
+    21300424: UI-Builder-Panels_212
+    21300426: UI-Builder-Panels_213
+    21300428: UI-Builder-Panels_214
+    21300430: UI-Builder-Panels_215
+    21300432: UI-Builder-Panels_216
+    21300434: UI-Builder-Panels_217
+    21300436: UI-Builder-Panels_218
+    21300438: UI-Builder-Panels_219
+    21300440: UI-Builder-Panels_220
+    21300442: UI-Builder-Panels_221
+    21300444: UI-Builder-Panels_222
+    21300446: UI-Builder-Panels_223
+    21300448: UI-Builder-Panels_224
+    21300450: UI-Builder-Panels_225
+    21300452: UI-Builder-Panels_226
+    21300454: UI-Builder-Panels_227
+    21300456: UI-Builder-Panels_228
+    21300458: UI-Builder-Panels_229
+    21300460: UI-Builder-Panels_230
+    21300462: UI-Builder-Panels_231
+    21300464: UI-Builder-Panels_232
+    21300466: UI-Builder-Panels_233
+    21300468: UI-Builder-Panels_234
+    21300470: UI-Builder-Panels_235
+    21300472: UI-Builder-Panels_236
+    21300474: UI-Builder-Panels_237
+    21300476: UI-Builder-Panels_238
+    21300478: UI-Builder-Panels_239
+    21300480: UI-Builder-Panels_240
+    21300482: UI-Builder-Panels_241
+    21300484: UI-Builder-Panels_242
+    21300486: UI-Builder-Panels_243
+    21300488: UI-Builder-Panels_244
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UI-Builder-Panels_0
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 3569
+        width: 106
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98f1ba65e1d7a428d873294c3d868b68
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_1
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 3569
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54398bda19f664e4a8f2d37da59246bc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_2
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 3569
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f11959321fde24fbeb252ec35c7c5d2b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_3
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 3569
+        width: 110
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de7f815fad1f1412385a84a8f46ef5f8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_4
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 3566
+        width: 113
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4c95489a7f914af7a569ef790bfc32e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_5
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 3564
+        width: 115
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b61bd700bf3b43218d0a75079ab62be
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_6
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 3564
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aaab969e88fb49c38706f72a1761b5a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_7
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 3562
+        width: 123
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 698aa2bcee19447ba99ec2375b119694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_8
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 3559
+        width: 125
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aad7af38b50dd4062a8fd558c49381e8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_9
+      rect:
+        serializedVersion: 2
+        x: 1884
+        y: 3579
+        width: 278
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10db9406bcf6d46df9e5420ae7b9dd83
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_10
+      rect:
+        serializedVersion: 2
+        x: 2224
+        y: 3576
+        width: 280
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c9fa97e3e4504a04af539763b879178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_11
+      rect:
+        serializedVersion: 2
+        x: 2561
+        y: 3569
+        width: 280
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e23804357b8644682a39b57afabc5560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_12
+      rect:
+        serializedVersion: 2
+        x: 2905
+        y: 3569
+        width: 285
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab44d8b16d5c0480cacc715fd67d24a3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_13
+      rect:
+        serializedVersion: 2
+        x: 3249
+        y: 3569
+        width: 285
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca546250466f348d986667a3f0135d89
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_14
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 3409
+        width: 106
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd431d12a4bd94ab680359e797752ad5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_15
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 3412
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e10b7af2994c24158a648010af6791fc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_16
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 3409
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad6a58cfb97084bbca671f9455545f92
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_17
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 3414
+        width: 110
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03bdc4d31d8a9462981e1f2831fcabe9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_18
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 3409
+        width: 113
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a19f972be284a433cb1ea8deb9d0163d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_19
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 3404
+        width: 115
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc79dd1d14cf141f89b437c834727502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_20
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 3404
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3ff1b0ae067a4610980fccf05c19c69
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_21
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 3402
+        width: 123
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d3068f76b12049bb9d3f3681bbdca76
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_22
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 3399
+        width: 125
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d766cca9872c4cea922cd3a8aa45684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_23
+      rect:
+        serializedVersion: 2
+        x: 1875
+        y: 3414
+        width: 287
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d1137d8b7b9948948a67cc022f78850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_24
+      rect:
+        serializedVersion: 2
+        x: 2224
+        y: 3404
+        width: 290
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 186f25e49db3f42c8a082d7f85b4eebf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_25
+      rect:
+        serializedVersion: 2
+        x: 2556
+        y: 3402
+        width: 297
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f739c5bcdcb04fdeae3d39f6d9fb79a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_26
+      rect:
+        serializedVersion: 2
+        x: 2897
+        y: 3402
+        width: 300
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 802161096a03d46ada93a8c61a3bcecb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_27
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 3249
+        width: 106
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9624ad9449c7c453f969e7afc36a0162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_28
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 3249
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0977067d4e5042be8d1ea26b725f9e5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_29
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 3249
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72eb279827bd349dd93eebd10874825e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_30
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 3247
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5355389e46e154a109546c8afd732a3f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_31
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 3247
+        width: 113
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43cecd71aef484f7db4a3b683cd0425d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_32
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 3244
+        width: 115
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dda65ff8f1cb4ef3963c8e7c71b81e9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_33
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 3244
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54f87f369db224d9ab98cccb879f5eca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_34
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 3242
+        width: 123
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c12283dac677743b08114bf44e6a0af8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_35
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 3239
+        width: 125
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6690004814a32436882dc648fb841552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_36
+      rect:
+        serializedVersion: 2
+        x: 3092
+        y: 3129
+        width: 159
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9907abf454d74f7f86241423549c2a1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_37
+      rect:
+        serializedVersion: 2
+        x: 3301
+        y: 3129
+        width: 159
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cc12cde74f4c43f893a0cfe34f91042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_38
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 3129
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd86d24494d446f8911289de4e81d7d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_39
+      rect:
+        serializedVersion: 2
+        x: 3718
+        y: 3126
+        width: 165
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c1e7047c463c48b8aa68239c2af86ed
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_40
+      rect:
+        serializedVersion: 2
+        x: 3923
+        y: 3124
+        width: 172
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d06c507df9ed4387b9079cbc58625b8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_41
+      rect:
+        serializedVersion: 2
+        x: 4124
+        y: 3114
+        width: 189
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 813485d82299247c993d21f5f824d778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_42
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 3089
+        width: 106
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48a9b875c68da41be88ca221c54c7a90
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_43
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 3087
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd27c8edf2dc74969933dea2e3ddc2fb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_44
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 3087
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da128c583d91a41278bf3ebadd6658c7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_45
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 3087
+        width: 110
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1941e450b6f7945ec859086d6dd9a638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_46
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 3087
+        width: 113
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5c9d02883caf4d638e0c37ef02d0b8e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_47
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 3085
+        width: 115
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0267de5f81d524320b4d36d113b9f15a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_48
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 3082
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 245ff061ecedd4aa49ae86fe8a1b9585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_49
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 3080
+        width: 123
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26e313ce5151b4f4dacd164069d105b9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_50
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 3080
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7e881931a4584e6a92330b49453c4e9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_51
+      rect:
+        serializedVersion: 2
+        x: 1929
+        y: 3156
+        width: 51
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae4c45aa2497b43aba1b4b2dd0cad44a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_52
+      rect:
+        serializedVersion: 2
+        x: 2057
+        y: 3154
+        width: 51
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0c813b4a60c74c15b94bff6a4fc40df
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_53
+      rect:
+        serializedVersion: 2
+        x: 2175
+        y: 3148
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4586026a101b24900ba574ede9829062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_54
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 3146
+        width: 66
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d5ba31d114fe4519b8178880bdb28ba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_55
+      rect:
+        serializedVersion: 2
+        x: 2425
+        y: 3146
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb10e2e743a364b19a610b0667d5fc4f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_56
+      rect:
+        serializedVersion: 2
+        x: 2548
+        y: 3144
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d5394a6de354444ab55733e3321856e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_57
+      rect:
+        serializedVersion: 2
+        x: 2674
+        y: 3144
+        width: 76
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ca7ef8d92d004535a275f58fcf2a513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_58
+      rect:
+        serializedVersion: 2
+        x: 2799
+        y: 3141
+        width: 79
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd124c4aaff748f5bbf9565bed19531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_59
+      rect:
+        serializedVersion: 2
+        x: 2922
+        y: 3139
+        width: 83
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58e99289372a14b22930c67bdf69ccb3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_60
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 2930
+        width: 106
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66d02ef850e074f6890ea41deb9d51a5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_61
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 2927
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ebaa31d8cacb46fcb44de8257323866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_62
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 2927
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c33574eb69bd441ed9412ba3ec7f4045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_63
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 2927
+        width: 110
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8022212cbd1014bb4b95f92d7e9cda9e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_64
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 2925
+        width: 113
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c95dc0b80d13e424cbcbbb430ace6a88
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_65
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 2925
+        width: 115
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e80cb661e3ba48bc997c67fd3d17413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_66
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 2922
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6ff289c9b5f54473880c9f5b2c7beb1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_67
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 2920
+        width: 123
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66e29790ff9d2432499795c6bba8aab5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_68
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 2920
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac2b6639643054673bfec0226a512503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_69
+      rect:
+        serializedVersion: 2
+        x: 1924
+        y: 2780
+        width: 258
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7cddbfd09cf548c69a1fa6c60d45753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_70
+      rect:
+        serializedVersion: 2
+        x: 2275
+        y: 2780
+        width: 258
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a388406d6c4f4261a08ef6e0237c31f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_71
+      rect:
+        serializedVersion: 2
+        x: 2622
+        y: 2777
+        width: 263
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63b7bbedce59a4f25822263f8adec749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_72
+      rect:
+        serializedVersion: 2
+        x: 2966
+        y: 2772
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85da9456b4975493e85b4afdcffba23e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_73
+      rect:
+        serializedVersion: 2
+        x: 3310
+        y: 2765
+        width: 286
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3a626560802e45a2b8dfbb27046b2ab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_74
+      rect:
+        serializedVersion: 2
+        x: 3645
+        y: 2750
+        width: 317
+        height: 317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 783f9303310c440aea3d97b0d61712c4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_75
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 2770
+        width: 106
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 751e7d3b8283b4fb18649023e4c3a391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_76
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 2767
+        width: 108
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee12f6e131c484365a30c586ba667a65
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_77
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 2767
+        width: 109
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97c792842db9c4423a274a7f0dbe68c8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_78
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 2767
+        width: 108
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60affb04c758345fe9262d0818e37f90
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_79
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 2765
+        width: 110
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38b0214bc9f064357b597ff6d13b96e7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_80
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 2765
+        width: 118
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ea66830d2db545f790d554a29cd201f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_81
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 2762
+        width: 119
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d86cfe44e10f043949427985d624c92e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_82
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 2760
+        width: 123
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edb6bbaedbcdf4f7084b07d9bab611b0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_83
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 2760
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52e02fe508eff4cd9bffb5de0beb6b40
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_84
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 2379
+        width: 106
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d5a651d552af421eabda1c354d681bf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_85
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 2377
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77501c78f1603417e83f4b4ceed44655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_86
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 2379
+        width: 109
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e27bbc09e9c0f48af8a4b34cd2ead1e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_87
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 2374
+        width: 108
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49ebf9dca0cad437bb9d9dbc65e22618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_88
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 2374
+        width: 110
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b18663fed16dd44a5966a8501e08ee13
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_89
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 2372
+        width: 118
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbfa21612f931496eb0028e92b606fb9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_90
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 2372
+        width: 119
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a81a296972ce4ac3a504066b1ef11b6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_91
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 2369
+        width: 123
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 350c1ea3590134812be8fad20616f529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_92
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 2368
+        width: 125
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b20fa1a2fdf8457ead9f5155bd21c6f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_93
+      rect:
+        serializedVersion: 2
+        x: 1929
+        y: 2197
+        width: 506
+        height: 506
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f71c3c0828934c8a9ea7a7b251155cc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_94
+      rect:
+        serializedVersion: 2
+        x: 2573
+        y: 2197
+        width: 506
+        height: 506
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c8d96b84f5dd4b49b413e1e478238c4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_95
+      rect:
+        serializedVersion: 2
+        x: 3214
+        y: 2194
+        width: 512
+        height: 514
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a582094a4e8d34519a98350fb5145e19
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_96
+      rect:
+        serializedVersion: 2
+        x: 3851
+        y: 2190
+        width: 524
+        height: 523
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39eddffc1bfdd40f38d7680bfb07fd76
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_97
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 2197
+        width: 106
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39093d39ac5e649b3a981f4aa68dc0ef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_98
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 2197
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1e0371ec5b574dea8fefaaf324f7be3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_99
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 2197
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f3fb118e55e64bc0bdece449def66fb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_100
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 2197
+        width: 108
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d5a2fe9a43be429aa82f03f58703f05
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_101
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 2197
+        width: 110
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 626a96c7096e54536a7802f331f2a59d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_102
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 2194
+        width: 118
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71ab00beb8e334259aa0cb5e024af657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_103
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 2194
+        width: 119
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0fc88688d1634303a9e25c1c0c1009d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_104
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 2192
+        width: 123
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47615fe451e6a4c95ad08dc3b4510517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_105
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 2192
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65153d4759f954036882a3a1963d199b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_106
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 2017
+        width: 106
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2116b6b668a964b7fa263c1bbf29ea8f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_107
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 2017
+        width: 108
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0cb33fed8405488ab5eb3a3bf8b8487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_108
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 2017
+        width: 108
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e38f81118e27947ed835adc45ebaf4c9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_109
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 2015
+        width: 110
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de86349a7d2b445e1bcdd1122218f70b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_110
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 2013
+        width: 110
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f78994c1308cc47679570349295e7083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_111
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 2010
+        width: 115
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf67fdb3770fc4724babfd670adb9de3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_112
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 2013
+        width: 118
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 241508542f9cd4e4a9f14b79cb391ab7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_113
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 2008
+        width: 123
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec3415a7fd0f4e199a5c9bc100736a3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_114
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 2005
+        width: 125
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94c0f51b620ad4fce8a00deafa2d1946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_115
+      rect:
+        serializedVersion: 2
+        x: 1909
+        y: 1558
+        width: 537
+        height: 536
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09b5b41a3c9b743f3ba07e8744993557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_116
+      rect:
+        serializedVersion: 2
+        x: 2546
+        y: 1543
+        width: 565
+        height: 565
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93bea248708af4aa5977e0412c239c74
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_117
+      rect:
+        serializedVersion: 2
+        x: 3175
+        y: 1521
+        width: 606
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d356e0268cc364cdbb70e9a5a0c94986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_118
+      rect:
+        serializedVersion: 2
+        x: 3800
+        y: 1496
+        width: 656
+        height: 657
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73949d215e9d245688f48ef4eaa1fa58
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_119
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 1858
+        width: 106
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 980c9d6bf832b4dad9abc30ba4cbe098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_120
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 1858
+        width: 108
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a25cce261964c4caeb9883af15d4459f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_121
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 1855
+        width: 109
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a92fee015539e4574a4cf02365f7d1b5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_122
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 1855
+        width: 108
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dff967ee3c3de4f538a8431e8f2d2048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_123
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 1853
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 526fa5d87c2a4476fb5af9fc6a651f34
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_124
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 1850
+        width: 115
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69f7efb8678564fa9a36c1a94bb371a4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_125
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 1853
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6da219ebbd42442728f3f9d62a2845d4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_126
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 1848
+        width: 123
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b308b99fb31f4a0ba31180b7fb22767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_127
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 1848
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb1f7e931cd134caf879bdaa753575ce
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_128
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 1698
+        width: 106
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c603cf1837b9c4eb5bd881ac09f7048f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_129
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 1698
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1665696e4d17f4c11b7c431798b47d70
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_130
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 1695
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 138487946955e4802bab37871c76855a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_131
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 1695
+        width: 111
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a5a49bb3b91f4435b52e02216ea0b94
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_132
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 1695
+        width: 110
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac8b594ae42db47029ede57cbbdb9f9c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_133
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 1690
+        width: 118
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15af763477df44911bd35738947f235b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_134
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 1690
+        width: 119
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6c8dea65b8a84c5686239e163ccb704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_135
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 1690
+        width: 123
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba302ebe4eb84f81bf919444e54bb15
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_136
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 1673
+        width: 125
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 831295c2e2be845468405e8ff0cd6ac9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_137
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 1538
+        width: 106
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f9f1fe48730e4d939659d08c40e95ca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_138
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1536
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b2d473a50de94a24bf938508ca96ccc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_139
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 1543
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99509e6a410174c798e5e1c88aeb5fc1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_140
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 1536
+        width: 108
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aebe84a74062f47bf9fd2f0c1dc8f16b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_141
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 1532
+        width: 110
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ed17467fec44b3496ca34b801084c8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_142
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 1528
+        width: 118
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e2e8b21a8c224e44ac5bbdfeca0b59e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_143
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 1528
+        width: 119
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e1a51d6106da4cf5bfeceded3c2b868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_144
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 1531
+        width: 123
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f55c39321745e4761a91ca75934420a0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_145
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 1528
+        width: 125
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fbef13d04eef415cb5885a76510b929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_146
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1108
+        width: 157
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d204d210a19904ce8ad303399f15066f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_147
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 1105
+        width: 159
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c681649d197464d7ab68b4736b563915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_148
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 1105
+        width: 157
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d83393310244e6380257c9f0c5fd4c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_149
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 1105
+        width: 159
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f79f6d1778511471a9edcecfe223b1c3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_150
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 1103
+        width: 165
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f91e664c48a204c95a5900e7b263f28c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_151
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 1103
+        width: 169
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a62de5c811c3e4d4587365855d6019aa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_152
+      rect:
+        serializedVersion: 2
+        x: 1818
+        y: 1100
+        width: 170
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96db973df50084c808dc0bf5925d01da
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_153
+      rect:
+        serializedVersion: 2
+        x: 2093
+        y: 1098
+        width: 176
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4eb235c2cba747b1aefb49c947b43e8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_154
+      rect:
+        serializedVersion: 2
+        x: 2371
+        y: 1098
+        width: 180
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1571f5bf6062842dabaeacbacdaef5be
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_155
+      rect:
+        serializedVersion: 2
+        x: 2792
+        y: 1142
+        width: 147
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f17ca3f455d94a5a92d152d0735fc0d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_156
+      rect:
+        serializedVersion: 2
+        x: 3015
+        y: 1142
+        width: 150
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0753d8b9be824a7f81d0ebf28309e3f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_157
+      rect:
+        serializedVersion: 2
+        x: 3237
+        y: 1142
+        width: 152
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca5c93cf184d54d818ab3dd169bc7f18
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_158
+      rect:
+        serializedVersion: 2
+        x: 3458
+        y: 1140
+        width: 157
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3fd6e2dc2237414e833926a342c5f85
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_159
+      rect:
+        serializedVersion: 2
+        x: 3680
+        y: 1140
+        width: 161
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 773086475ca3042a4aeac48aafec1c80
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_160
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 1137
+        width: 170
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c997725f8f97b45ab9c21749fe86bf88
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_161
+      rect:
+        serializedVersion: 2
+        x: 4120
+        y: 1135
+        width: 176
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce431f202fa0e47bfa1ceb54a2ef5929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_162
+      rect:
+        serializedVersion: 2
+        x: 4339
+        y: 1132
+        width: 186
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa58d6572a14c4d2398f212e6fa78d65
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_163
+      rect:
+        serializedVersion: 2
+        x: 4559
+        y: 1130
+        width: 194
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58068b1e2fd5f4c7889b62f56873d124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_164
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 906
+        width: 155
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fc58c24575ab47bf9e8004dead3eff0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_165
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 906
+        width: 155
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a2283ec253c54ba2a9c131b5c90c155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_166
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 906
+        width: 155
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0d5a82b4211d42f38ab0abe55c9b5ee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_167
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 905
+        width: 160
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c301683901e3a4179a2251b79546236a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_168
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 904
+        width: 160
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab75cc03eae0c43f2a9c86876c8d650d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_169
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 901
+        width: 164
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 593c84c1afdb646c1a0e31f3fcad5923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_170
+      rect:
+        serializedVersion: 2
+        x: 1818
+        y: 901
+        width: 167
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff61a2fdc44e45b2898cd1b7fcd70d3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_171
+      rect:
+        serializedVersion: 2
+        x: 2096
+        y: 899
+        width: 169
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3ba66553ed154b34a6abe93d0b97dcd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_172
+      rect:
+        serializedVersion: 2
+        x: 2374
+        y: 901
+        width: 174
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab921956f74554f85bbfa0eee086e1c5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_173
+      rect:
+        serializedVersion: 2
+        x: 2792
+        y: 986
+        width: 147
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae4d1947d00f148f48353d95e6734cbb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_174
+      rect:
+        serializedVersion: 2
+        x: 3015
+        y: 985
+        width: 150
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60ed9413813c94c12801e7d76546c486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_175
+      rect:
+        serializedVersion: 2
+        x: 3237
+        y: 985
+        width: 152
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8edf07513d43641ed8c8cc2d11e15b69
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_176
+      rect:
+        serializedVersion: 2
+        x: 3458
+        y: 985
+        width: 157
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31fe78f14e155452ab9b142730e7a0ca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_177
+      rect:
+        serializedVersion: 2
+        x: 3680
+        y: 982
+        width: 161
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 800a7d411d0d648de823cb1125573b9d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_178
+      rect:
+        serializedVersion: 2
+        x: 3899
+        y: 980
+        width: 171
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58030c422d8544a10af2332c8a8d83d9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_179
+      rect:
+        serializedVersion: 2
+        x: 4120
+        y: 980
+        width: 176
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 675f91068bb4c44dea09fede038a4b3b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_180
+      rect:
+        serializedVersion: 2
+        x: 4339
+        y: 977
+        width: 186
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c3b1ad6fb8e54e9e9ee158100ec1f67
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_181
+      rect:
+        serializedVersion: 2
+        x: 4559
+        y: 975
+        width: 194
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9eb346b454844203b793c72b2aa1956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_182
+      rect:
+        serializedVersion: 2
+        x: 2792
+        y: 830
+        width: 147
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b190f611f61949feb770de04f22bc97
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_183
+      rect:
+        serializedVersion: 2
+        x: 3015
+        y: 830
+        width: 150
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 516de967128a54cf38b189748018e23b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_184
+      rect:
+        serializedVersion: 2
+        x: 3237
+        y: 830
+        width: 152
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53af8bd5b0d2a46d691133cf2c253d5e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_185
+      rect:
+        serializedVersion: 2
+        x: 3458
+        y: 830
+        width: 157
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7721e0af127824352ad73413ab983772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_186
+      rect:
+        serializedVersion: 2
+        x: 3680
+        y: 827
+        width: 161
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 383ae60d4280c4eb5814a4797af910bc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_187
+      rect:
+        serializedVersion: 2
+        x: 3899
+        y: 825
+        width: 171
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6408bbe77aee5421d99a727803c1e0b8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_188
+      rect:
+        serializedVersion: 2
+        x: 4120
+        y: 825
+        width: 176
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 615a0c827638245f9a5128e4897f966f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_189
+      rect:
+        serializedVersion: 2
+        x: 4339
+        y: 822
+        width: 186
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abd615ff70fd54ac4b161ca360fce6d0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_190
+      rect:
+        serializedVersion: 2
+        x: 4559
+        y: 820
+        width: 194
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d189f344d17114854a97b78a542e9d61
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_191
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 675
+        width: 153
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c3184d846c374e4a990dc3bf29faa9a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_192
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 673
+        width: 152
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82254956cff0643b99f441a865de9ff9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_193
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 675
+        width: 155
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77b5daea680e64b1dbda4dcf1b6619e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_194
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 673
+        width: 156
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 670606670bd2448a1ac875ae9baee9ca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_195
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 672
+        width: 158
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 254480273eab449de88ce7eb71a86a89
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_196
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 670
+        width: 162
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dbd255bc392b409589b50681431cc82
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_197
+      rect:
+        serializedVersion: 2
+        x: 1825
+        y: 669
+        width: 165
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12158d4b20abb4cb69a130d89f443db7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_198
+      rect:
+        serializedVersion: 2
+        x: 2103
+        y: 668
+        width: 170
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18dc7db8e28d045a3a9e9a48825dbf08
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_199
+      rect:
+        serializedVersion: 2
+        x: 2384
+        y: 665
+        width: 172
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88583076b27464b2f81835d225cbe643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_200
+      rect:
+        serializedVersion: 2
+        x: 2802
+        y: 677
+        width: 147
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7623ecf6d6124f0db3c74d88c253cf1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_201
+      rect:
+        serializedVersion: 2
+        x: 3023
+        y: 677
+        width: 150
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f9c28694f8b48aa894f5c87617b6c1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_202
+      rect:
+        serializedVersion: 2
+        x: 3244
+        y: 675
+        width: 152
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21ae8c4340ed44e3e853fa25616944b6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_203
+      rect:
+        serializedVersion: 2
+        x: 3465
+        y: 675
+        width: 157
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7210af2e923104efbb9a7affbb2d635e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_204
+      rect:
+        serializedVersion: 2
+        x: 3685
+        y: 675
+        width: 161
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2de08b1b0b66456fae681ba51a21440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_205
+      rect:
+        serializedVersion: 2
+        x: 3903
+        y: 672
+        width: 171
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16b3e84014bb24054a98a876ab60bfe2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_206
+      rect:
+        serializedVersion: 2
+        x: 4122
+        y: 670
+        width: 177
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c71c6cd548a26481aa9e98bf73fc1233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_207
+      rect:
+        serializedVersion: 2
+        x: 4341
+        y: 669
+        width: 184
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa1a70aa4897646abbb1ae1b6fb99651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_208
+      rect:
+        serializedVersion: 2
+        x: 4559
+        y: 668
+        width: 194
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25d65422e0fad422b81327ec36136194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_209
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 434
+        width: 147
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 236d8aba70f4d4efea89ca0589ba173f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_210
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 432
+        width: 149
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e17e52bff9fa14bb3a621b45bd5df779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_211
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 432
+        width: 150
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc33fe7c8df5b434397516f070e7dae0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_212
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 432
+        width: 150
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d720cc552005406482d3de5d49841cb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_213
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 429
+        width: 153
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8ce8d452660f4af5bb54364fd476641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_214
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 428
+        width: 157
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8484675e955e441ae91e5e9ca7f8e210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_215
+      rect:
+        serializedVersion: 2
+        x: 1828
+        y: 427
+        width: 157
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cebe0f25f51d4df091341f4b2da3d8e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_216
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 424
+        width: 163
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7549af97a9ed43c7b899b7cf5c72373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_217
+      rect:
+        serializedVersion: 2
+        x: 2386
+        y: 422
+        width: 167
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c74c48b8a6fe14c78921c2448da6c564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_218
+      rect:
+        serializedVersion: 2
+        x: 2792
+        y: 525
+        width: 147
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc830a2f795e5448983e54e0a3aad26f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_219
+      rect:
+        serializedVersion: 2
+        x: 3015
+        y: 523
+        width: 150
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 347f14164958d4ecb887fe52e9ddf73d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_220
+      rect:
+        serializedVersion: 2
+        x: 3237
+        y: 523
+        width: 152
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22351b41216364418a1bc105eb7b82e0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_221
+      rect:
+        serializedVersion: 2
+        x: 3458
+        y: 523
+        width: 157
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 876ec0a5ca7424ef1aefbcdd6d6e4794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_222
+      rect:
+        serializedVersion: 2
+        x: 3680
+        y: 520
+        width: 161
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b680ba277bf4346cf8e2596fd8c08b1c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_223
+      rect:
+        serializedVersion: 2
+        x: 3899
+        y: 519
+        width: 171
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 922232ae7e5e5496da0bd4405b205ebd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_224
+      rect:
+        serializedVersion: 2
+        x: 4120
+        y: 518
+        width: 176
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cca5ade44dc8d4bc6ad96c49f4b90f33
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_225
+      rect:
+        serializedVersion: 2
+        x: 4339
+        y: 515
+        width: 186
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 280ad78a9c2be405c952f279c98b48c6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_226
+      rect:
+        serializedVersion: 2
+        x: 4559
+        y: 513
+        width: 194
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9935f15370a094402b85f03b247d92d1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_227
+      rect:
+        serializedVersion: 2
+        x: 2792
+        y: 370
+        width: 147
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00ed4f921f6f344f085ddd783f455ded
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_228
+      rect:
+        serializedVersion: 2
+        x: 3003
+        y: 370
+        width: 149
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5182784bf19824a20bd5b17542bcb768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_229
+      rect:
+        serializedVersion: 2
+        x: 3227
+        y: 368
+        width: 152
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e03297f1a50134695976cbc03acd4caa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_230
+      rect:
+        serializedVersion: 2
+        x: 3449
+        y: 368
+        width: 158
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3e7fe74f2b184a9e94bd3bf65c27f1a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_231
+      rect:
+        serializedVersion: 2
+        x: 3672
+        y: 368
+        width: 162
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a786f4206e084511907fcf7aaa643c2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_232
+      rect:
+        serializedVersion: 2
+        x: 3893
+        y: 365
+        width: 170
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8f188ce97c0a46ada8c73371b0cb25a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_233
+      rect:
+        serializedVersion: 2
+        x: 4115
+        y: 363
+        width: 176
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19c75049a0a034c77aa82d9a7626c690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_234
+      rect:
+        serializedVersion: 2
+        x: 4336
+        y: 363
+        width: 186
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e74182811a1490a9726d30e7a82eea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_235
+      rect:
+        serializedVersion: 2
+        x: 4559
+        y: 360
+        width: 194
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2365f72c202b049e3a9b80a9bb6e1184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_236
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 193
+        width: 143
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9fa1dd6e1edc47fa9fde70deec54c9d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_237
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 193
+        width: 143
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af5d9076d0d5847c2802422cb3716935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_238
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 193
+        width: 145
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a67cef52995448c4b40759faa1de8dc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_239
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 192
+        width: 145
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df16f66119597459c8a1cf9c02597a6c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_240
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 191
+        width: 148
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 835257bafd2554ab68cff218d062fb81
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_241
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 188
+        width: 152
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d07acb6b053d43e9b9c42dc9cd1d78b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_242
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 188
+        width: 155
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 426dd8a3422e6479caa9871310477b1b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_243
+      rect:
+        serializedVersion: 2
+        x: 2108
+        y: 186
+        width: 160
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fc56acacbf964a16b00ad0ecbc067cf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-Builder-Panels_244
+      rect:
+        serializedVersion: 2
+        x: 2388
+        y: 183
+        width: 163
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ca9d581cdb34f3080f8e79b4d051f7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 625e3d45b1a3d4213818c79c2e388df8
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
