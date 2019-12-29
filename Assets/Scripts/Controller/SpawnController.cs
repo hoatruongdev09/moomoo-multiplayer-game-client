@@ -13,10 +13,14 @@ public class SpawnController : MonoBehaviour {
     public GameObject rsRock;
     public GameObject rsGold;
     private GameObject rsHolder;
+    [Header ("EFFECTS")]
+    public TextPopup textPopup;
+    private GameObject fxHolder;
 
     private void Start () {
-        rsHolder = new GameObject ("RESOURCES");
-        playerHolder = new GameObject ("PLAYERHOLDER");
+        rsHolder = new GameObject ("RESOURCES HOLDER");
+        playerHolder = new GameObject ("PLAYERS HOLDER");
+        fxHolder = new GameObject ("EFFECTS HOLDER");
     }
     public PlayerController[] SpawnPlayers (InitPlayerModel[] playerModels, PlayerController[] listPlayer) {
         for (int i = 0; i < playerModels.Length; i++) {
@@ -49,7 +53,6 @@ public class SpawnController : MonoBehaviour {
         rs.name = id.ToString ();
         return rs;
     }
-
     public GameObject GetResource (ResourceType type) {
         switch (type) {
             case ResourceType.Food:
@@ -64,6 +67,13 @@ public class SpawnController : MonoBehaviour {
                 return null;
 
         }
+    }
+
+    public void SpawnDamagePopUp (int damage, Vector3 position) {
+        Color color;
+        ColorUtility.TryParseHtmlString (damage < 0 ? "#ff5252" : "#33d9b2", out color);
+        TextPopup temp = Instantiate (textPopup, position, Quaternion.identity, fxHolder.transform);
+        temp.SetText (damage < 0 ? $"{damage}" : $"+{damage}", position, color);
     }
 }
 public enum ResourceType {

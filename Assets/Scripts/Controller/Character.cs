@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 
 public class Character : MonoBehaviour {
+    public Transform healthBarHolder;
     public SpriteRenderer healthBar;
     public TextMeshPro textName;
     public SpriteRenderer[] bodyparts;
@@ -13,10 +14,10 @@ public class Character : MonoBehaviour {
     public Color color;
 
     private void Update () {
-        healthBar.transform.position = transform.position + new Vector3 (0, -2);
+        healthBarHolder.position = transform.position + new Vector3 (0, -2);
         textName.transform.position = transform.position + new Vector3 (0, 3);
 
-        healthBar.transform.rotation = Quaternion.identity;
+        healthBarHolder.rotation = Quaternion.identity;
         textName.transform.rotation = Quaternion.identity;
     }
     public void AnimateMeleeAttack () {
@@ -32,6 +33,9 @@ public class Character : MonoBehaviour {
         foreach (SpriteRenderer sp in bodyparts) {
             sp.color = color;
         }
+    }
+    public void SyncHealthPoint (int hp) {
+        this.healthBar.transform.LeanScaleX ((float) hp / 100f, .1f);
     }
     public void SetName (string name) {
         gameObject.name = $"Player: {name}";

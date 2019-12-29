@@ -38,7 +38,6 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
     #region SOCKET LISTENER 
     public void OnConnect (string data) {
         var temp = JSON.Parse (data);
-
         // Debug.Log ($"{temp[1]}");
         ConnectServerModel model = JsonUtility.FromJson<ConnectServerModel> (temp[1].ToString ());
         connectInfo = model;
@@ -89,6 +88,24 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
         var temp = JSON.Parse (data);
         TriggerAttackModel model = JsonUtility.FromJson<TriggerAttackModel> (temp[1].ToString ());
         playerManager.TriggerPlayerAttack (model);
+    }
+    public void OnPlayerDie (string data) {
+        var temp = JSON.Parse (data);
+        PlayerDieModel model = JsonUtility.FromJson<PlayerDieModel> (temp[1].ToString ());
+        playerManager.PlayerDie (model);
+        if (model.id == connectInfo.id) {
+            uIController.OnGameOver ();
+        }
+    }
+
+    public void OnPlayerHit (string data) {
+        var temp = JSON.Parse (data);
+        PlayerHitModel model = JsonUtility.FromJson<PlayerHitModel> (temp[1].ToString ());
+        playerManager.PlayerHit (model);
+    }
+
+    public void OnPlayerStatus (string data) {
+        Debug.Log ($"Player status:  {data}");
     }
     #endregion
 

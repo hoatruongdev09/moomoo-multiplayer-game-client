@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
-
     public Character Character { get { return character; } }
-
     public Character character;
     private Vector3 lastPosition;
     private float lastRotattion;
@@ -30,6 +28,12 @@ public class PlayerController : MonoBehaviour {
 
                 break;
         }
+    }
+    public int GetLastHealthPoint () {
+        return Mathf.FloorToInt (character.healthBar.transform.localScale.x * 100);
+    }
+    public void SyncHealthPoint (int hp) {
+        character.SyncHealthPoint (hp);
     }
     public void SwapItem (GameObject item) {
         character.ChangeItem (item);

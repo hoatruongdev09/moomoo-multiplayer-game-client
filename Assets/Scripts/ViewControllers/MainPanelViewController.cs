@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class MainPanelViewController : MonoBehaviour {
     public MainPanelView mainView;
-
+    private void OnEnable () {
+        Show ();
+    }
     public void Show () {
 
         mainView.joinPanelViewController.gameObject.SetActive (true);

@@ -60,7 +60,23 @@ public class SocketController : MonoBehaviour {
         socket.On (gameCode.syncTransform, OnSyncTransform);
 
         socket.On (gameCode.triggerAttack, OnTriggerAttack);
+        socket.On (gameCode.playerHit, OnPlayerHit);
+        socket.On (gameCode.playerDie, OnPlayerDie);
 
+        socket.On (gameCode.playerStatus, OnPlayerStatus);
+
+    }
+
+    private void OnPlayerHit (Socket socket, Packet packet, object[] args) {
+        controllerDelegate.OnPlayerHit (packet.ToString ());
+    }
+
+    private void OnPlayerDie (Socket socket, Packet packet, object[] args) {
+        controllerDelegate.OnPlayerDie (packet.ToString ());
+    }
+
+    private void OnPlayerStatus (Socket socket, Packet packet, object[] args) {
+        controllerDelegate.OnPlayerStatus (packet.ToString ());
     }
 
     private void OnTriggerAttack (Socket socket, Packet packet, object[] args) {
@@ -95,7 +111,10 @@ public class SocketController : MonoBehaviour {
 
 public interface ISocketControllerDelegate {
     void OnConnect (string data);
+    void OnPlayerDie (string v);
+    void OnPlayerHit (string v);
     void OnPlayerQuit (string data);
+    void OnPlayerStatus (string v);
     void OnReceiveData (string data);
     void OnSpawnPlayer (string data);
     void OnSyncTransform (string data);
@@ -118,4 +137,8 @@ public class GameCode {
     public string syncMoveDirect = "syncMove";
     public string syncTransform = "syncTrsform";
     public string triggerAttack = "attk";
+
+    public string playerHit = "phit";
+    public string playerDie = "pdie";
+    public string playerStatus = "pstt";
 }

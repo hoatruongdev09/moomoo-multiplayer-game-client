@@ -17,6 +17,10 @@ public class UIController : MonoBehaviour, IJoinPanelViewControllerDelegate, IJo
         mainPanelViewController.Hide ();
         gameViewController.gameObject.SetActive (true);
     }
+    public void OnGameOver () {
+        mainPanelViewController.gameObject.SetActive (true);
+        gameViewController.Hide ();
+    }
 
     public void OnConnect () {
         StartCoroutine (AnimateStartup (.5f));
