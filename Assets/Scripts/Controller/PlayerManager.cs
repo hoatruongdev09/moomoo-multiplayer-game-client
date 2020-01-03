@@ -59,4 +59,9 @@ public class PlayerManager : MonoBehaviour {
             players[model.id].SyncHealthPoint (model.hp);
         }
     }
+    public void PlayerSwitchItem (SwitchItemModel model) {
+        if (players[model.id] != null) {
+            players[model.id].SwapItem (spawnController.CreateItem (model.item));
+        }
+    }
 }

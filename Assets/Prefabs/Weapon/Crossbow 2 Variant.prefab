@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 453034042081782711, guid: 54b9f324d25c14421ab5418d0a4b5028,
         type: 3}
       propertyPath: m_Name
-      value: Crossbow 2
+      value: Crossbow 2 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5525244961301248369, guid: 54b9f324d25c14421ab5418d0a4b5028,
         type: 3}
@@ -102,6 +102,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 91f6eed94a4fc47d0b77625f066eb93a,
         type: 3}
+    - target: {fileID: 7839569700303926838, guid: 54b9f324d25c14421ab5418d0a4b5028,
+        type: 3}
+      propertyPath: id
+      value: w9
+      objectReference: {fileID: 0}
     - target: {fileID: 6104317355810248239, guid: 54b9f324d25c14421ab5418d0a4b5028,
         type: 3}
       propertyPath: m_Sprite

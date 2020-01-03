@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 3312582849548946599, guid: f01cada6920644446a25ca122f76a522,
         type: 3}
       propertyPath: m_Name
-      value: Hammer
+      value: Tool Hammer Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7430013073298792033, guid: f01cada6920644446a25ca122f76a522,
         type: 3}
@@ -67,6 +67,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90.00001
       objectReference: {fileID: 0}
+    - target: {fileID: 6398442239044910983, guid: f01cada6920644446a25ca122f76a522,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 5150595810787643686, guid: f01cada6920644446a25ca122f76a522,
         type: 3}
       propertyPath: upgrades.Array.size
@@ -102,10 +107,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 02d6393bc1a9147fe97c89cc4ed431f3,
         type: 3}
-    - target: {fileID: 6398442239044910983, guid: f01cada6920644446a25ca122f76a522,
+    - target: {fileID: 5150595810787643686, guid: f01cada6920644446a25ca122f76a522,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.25
+      propertyPath: id
+      value: w0
       objectReference: {fileID: 0}
     - target: {fileID: 9153509933936374079, guid: f01cada6920644446a25ca122f76a522,
         type: 3}

@@ -11,16 +11,19 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
     public CameraController cameraController;
     public Controller[] inputController;
     public GameObject[] listResources;
-
+    public List<Structure> listStructure;
     [SerializeField] private ConnectServerModel connectInfo;
     public GameDataModel gameInfo;
 
     private void Start () {
+
         socketController.Delegate = this;
         foreach (Controller ctrler in inputController) {
             ctrler.Datasource = this;
             ctrler.Delegate = this;
         }
+        listStructure = new List<Structure> ();
+
     }
 
     #region SOCKET COMMAND
@@ -33,6 +36,12 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
         data.AddField ("gameId", gameId);
         data.AddField ("skinId", skinId);
         socketController.SocketEmit (socketController.socketCode.OnRequestJoin, data);
+    }
+    public void RequestSwitchItem (string code) {
+        JSONObject data = new JSONObject (JSONObject.Type.OBJECT);
+        data.AddField ("type", code[0].ToString ());
+        data.AddField ("code", code);
+        socketController.SocketEmit (socketController.gameCode.switchItem, data);
     }
     #endregion
     #region SOCKET LISTENER 
@@ -106,6 +115,18 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
 
     public void OnPlayerStatus (string data) {
         Debug.Log ($"Player status:  {data}");
+    }
+
+    public void OnSwitchItem (string data) {
+        var temp = JSON.Parse (data);
+        SwitchItemModel model = JsonUtility.FromJson<SwitchItemModel> (temp[1].ToString ());
+        playerManager.PlayerSwitchItem (model);
+    }
+    public void OnCreateStructure (string data) {
+        var temp = JSON.Parse (data);
+        CreateStructureModel model = JsonUtility.FromJson<CreateStructureModel> (temp[1].ToString ());
+        listStructure.Add (spawnController.SpawnStructures (model));
+        Debug.Log ($"{data}");
     }
     #endregion
 

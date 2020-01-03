@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 3815546804609666109, guid: 6829942f4aa4c46b592bff2c3af1b2a2,
         type: 3}
       propertyPath: m_Name
-      value: Great Axe
+      value: Great Axe Variant
       objectReference: {fileID: 0}
     - target: {fileID: 9085896324279426811, guid: 6829942f4aa4c46b592bff2c3af1b2a2,
         type: 3}
@@ -67,6 +67,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90.00001
       objectReference: {fileID: 0}
+    - target: {fileID: 4738057595127349021, guid: 6829942f4aa4c46b592bff2c3af1b2a2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 6805419037121876412, guid: 6829942f4aa4c46b592bff2c3af1b2a2,
         type: 3}
       propertyPath: upgrades.Array.size
@@ -96,10 +101,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: babac2b81caf84d7e95a918e16070c26,
         type: 3}
-    - target: {fileID: 4738057595127349021, guid: 6829942f4aa4c46b592bff2c3af1b2a2,
+    - target: {fileID: 6805419037121876412, guid: 6829942f4aa4c46b592bff2c3af1b2a2,
         type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.8
+      propertyPath: id
+      value: w7
       objectReference: {fileID: 0}
     - target: {fileID: 7353516032385954213, guid: 6829942f4aa4c46b592bff2c3af1b2a2,
         type: 3}

@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class MainPanelViewController : MonoBehaviour {
     public MainPanelView mainView;
-    private void OnEnable () {
-        Show ();
-    }
     public void Show () {
-
-        mainView.joinPanelViewController.gameObject.SetActive (true);
+        StartCoroutine (DelayShowJoinPanel (.5f));
     }
 
     public void Hide () {
         mainView.joinPanelViewController.gameObject.SetActive (false);
         gameObject.SetActive (false);
+    }
+    private IEnumerator DelayShowJoinPanel (float time) {
+        yield return new WaitForSeconds (time);
+        mainView.joinPanelViewController.gameObject.SetActive (true);
     }
 }

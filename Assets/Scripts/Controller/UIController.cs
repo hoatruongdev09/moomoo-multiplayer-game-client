@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIController : MonoBehaviour, IJoinPanelViewControllerDelegate, IJoinPanelViewControllerDatasource {
+public class UIController : MonoBehaviour, IJoinPanelViewControllerDelegate, IJoinPanelViewControllerDatasource, IGameViewControllerDatasource, IGameViewControllerDelegate {
     public GameController gameController;
     public MainPanelViewController mainPanelViewController;
     public GameViewController gameViewController;
@@ -11,6 +11,9 @@ public class UIController : MonoBehaviour, IJoinPanelViewControllerDelegate, IJo
     private void Start () {
         joinPanelViewController.Delegate = this;
         joinPanelViewController.Datasource = this;
+
+        gameViewController.Delegate = this;
+        gameViewController.Datasource = this;
     }
 
     public void OnJoinGame () {
@@ -23,11 +26,11 @@ public class UIController : MonoBehaviour, IJoinPanelViewControllerDelegate, IJo
     }
 
     public void OnConnect () {
-        StartCoroutine (AnimateStartup (.5f));
+        StartCoroutine (AnimateStartup (2f));
     }
     private IEnumerator AnimateStartup (float time) {
         yield return new WaitForSeconds (time);
-        joinPanelViewController.gameObject.SetActive (true);
+        mainPanelViewController.Show ();
     }
 
     #region PANEL VIEW
@@ -37,6 +40,12 @@ public class UIController : MonoBehaviour, IJoinPanelViewControllerDelegate, IJo
 
     public GameStatusModel[] ListGame () {
         return gameController.RequestConnectInfo ().listGame;
+    }
+
+    #endregion
+    #region GAME VIEW
+    public void OnChangeItem (string item) {
+        gameController.RequestSwitchItem (item);
     }
     #endregion
 }

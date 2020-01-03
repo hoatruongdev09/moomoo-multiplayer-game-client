@@ -16,11 +16,17 @@ public class SpawnController : MonoBehaviour {
     [Header ("EFFECTS")]
     public TextPopup textPopup;
     private GameObject fxHolder;
+    [Header ("WEAPONS")]
+    public Item[] itemPrefabs;
+    [Header ("STRUCTURES")]
+    public Structure[] structurePrefabs;
+    private GameObject structureHolder;
 
     private void Start () {
         rsHolder = new GameObject ("RESOURCES HOLDER");
         playerHolder = new GameObject ("PLAYERS HOLDER");
         fxHolder = new GameObject ("EFFECTS HOLDER");
+        structureHolder = new GameObject ("STRUCTURE HOLDER");
     }
     public PlayerController[] SpawnPlayers (InitPlayerModel[] playerModels, PlayerController[] listPlayer) {
         for (int i = 0; i < playerModels.Length; i++) {
@@ -74,6 +80,32 @@ public class SpawnController : MonoBehaviour {
         ColorUtility.TryParseHtmlString (damage < 0 ? "#ff5252" : "#33d9b2", out color);
         TextPopup temp = Instantiate (textPopup, position, Quaternion.identity, fxHolder.transform);
         temp.SetText (damage < 0 ? $"{damage}" : $"+{damage}", position, color);
+    }
+    public GameObject CreateItem (string id) {
+        Item prefab = null;
+        foreach (Item wp in itemPrefabs) {
+            if (wp.id == id) {
+                prefab = wp;
+                break;
+            }
+        }
+        return prefab.gameObject;
+    }
+    public Structure SpawnStructures (CreateStructureModel model) {
+        Structure prefab = null;
+        foreach (Structure str in structurePrefabs) {
+            if (str.itemId == model.itemId) {
+                prefab = str;
+                break;
+            }
+        }
+        if (prefab == null) {
+            Debug.Log ("SPAWN NULL");
+            return null;
+        }
+        Structure temp = Instantiate (prefab, model.position.ToVector3 (), Quaternion.identity, structureHolder.transform);
+        temp.id = model.id;
+        return temp;
     }
 }
 public enum ResourceType {

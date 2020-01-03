@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 1596763634179546587, guid: 009a493437c194d8dace7d290a2e97b8,
         type: 3}
       propertyPath: m_Name
-      value: Grab
+      value: Grab Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6686936268768120605, guid: 009a493437c194d8dace7d290a2e97b8,
         type: 3}
@@ -67,6 +67,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90.00001
       objectReference: {fileID: 0}
+    - target: {fileID: 7141483935485292283, guid: 009a493437c194d8dace7d290a2e97b8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141483935485292283, guid: 009a493437c194d8dace7d290a2e97b8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8983246412762234970, guid: 009a493437c194d8dace7d290a2e97b8,
         type: 3}
       propertyPath: upgrades.Array.size
@@ -102,15 +112,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 299b56569c1af44728aea72c9cc8d141,
         type: 3}
-    - target: {fileID: 7141483935485292283, guid: 009a493437c194d8dace7d290a2e97b8,
+    - target: {fileID: 8983246412762234970, guid: 009a493437c194d8dace7d290a2e97b8,
         type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7141483935485292283, guid: 009a493437c194d8dace7d290a2e97b8,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.5
+      propertyPath: id
+      value: w13
       objectReference: {fileID: 0}
     - target: {fileID: 4960640584301371459, guid: 009a493437c194d8dace7d290a2e97b8,
         type: 3}

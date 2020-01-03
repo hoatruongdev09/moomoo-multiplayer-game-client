@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 5704700157326792451, guid: d097f5eb72483484bad9b690e2e9244a,
         type: 3}
       propertyPath: m_Name
-      value: Spear
+      value: Spear Variant
       objectReference: {fileID: 0}
     - target: {fileID: 418614426166691269, guid: d097f5eb72483484bad9b690e2e9244a,
         type: 3}
@@ -91,6 +91,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 1a74a0f602aa94c02be892d18caae720,
         type: 3}
+    - target: {fileID: 2713723914334390914, guid: d097f5eb72483484bad9b690e2e9244a,
+        type: 3}
+      propertyPath: id
+      value: w5
+      objectReference: {fileID: 0}
     - target: {fileID: 2149429602718050971, guid: d097f5eb72483484bad9b690e2e9244a,
         type: 3}
       propertyPath: m_Sprite

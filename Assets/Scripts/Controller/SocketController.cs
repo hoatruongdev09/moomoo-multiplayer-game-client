@@ -64,7 +64,17 @@ public class SocketController : MonoBehaviour {
         socket.On (gameCode.playerDie, OnPlayerDie);
 
         socket.On (gameCode.playerStatus, OnPlayerStatus);
+        socket.On (gameCode.switchItem, OnSwitchItem);
+        socket.On (gameCode.spawnnStructures, OnCreateStructure);
 
+    }
+
+    private void OnCreateStructure (Socket socket, Packet packet, object[] args) {
+        controllerDelegate.OnCreateStructure (packet.ToString ());
+    }
+
+    private void OnSwitchItem (Socket socket, Packet packet, object[] args) {
+        controllerDelegate.OnSwitchItem (packet.ToString ());
     }
 
     private void OnPlayerHit (Socket socket, Packet packet, object[] args) {
@@ -111,12 +121,14 @@ public class SocketController : MonoBehaviour {
 
 public interface ISocketControllerDelegate {
     void OnConnect (string data);
+    void OnCreateStructure (string v);
     void OnPlayerDie (string v);
     void OnPlayerHit (string v);
     void OnPlayerQuit (string data);
     void OnPlayerStatus (string v);
     void OnReceiveData (string data);
     void OnSpawnPlayer (string data);
+    void OnSwitchItem (string v);
     void OnSyncTransform (string data);
     void OnTriggerAttack (string data);
 }
@@ -141,4 +153,6 @@ public class GameCode {
     public string playerHit = "phit";
     public string playerDie = "pdie";
     public string playerStatus = "pstt";
+    public string switchItem = "swtItm";
+    public string spawnnStructures = "spwnStrc";
 }

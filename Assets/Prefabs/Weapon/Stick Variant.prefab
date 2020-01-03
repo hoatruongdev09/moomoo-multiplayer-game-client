@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 4489708326462561789, guid: 4f04a340bb93e4e8faa4f6000af5565a,
         type: 3}
       propertyPath: m_Name
-      value: Stick
+      value: Stick Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8406734945006587707, guid: 4f04a340bb93e4e8faa4f6000af5565a,
         type: 3}
@@ -102,6 +102,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 5ec6321f9a3fc450fbd32df819dfa1a5,
         type: 3}
+    - target: {fileID: 6110429199948595324, guid: 4f04a340bb93e4e8faa4f6000af5565a,
+        type: 3}
+      propertyPath: id
+      value: w2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7832254171180556389, guid: 4f04a340bb93e4e8faa4f6000af5565a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 66203e6e69ff14dba93868c0ce151573,
+        type: 3}
     - target: {fileID: 5439741636703743709, guid: 4f04a340bb93e4e8faa4f6000af5565a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -112,11 +123,5 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.7
       objectReference: {fileID: 0}
-    - target: {fileID: 7832254171180556389, guid: 4f04a340bb93e4e8faa4f6000af5565a,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 66203e6e69ff14dba93868c0ce151573,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f04a340bb93e4e8faa4f6000af5565a, type: 3}

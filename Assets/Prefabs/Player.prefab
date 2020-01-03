@@ -501,7 +501,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 1.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4609425830259051686}
+  - {fileID: 9012027816721649390}
   m_Father: {fileID: 8494629762279293993}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -654,7 +654,7 @@ MonoBehaviour:
   - {fileID: 8494629763588378765}
   hands: {fileID: 8494629762279293993}
   itemHolder: {fileID: 8494629762661276560}
-  currentItem: {fileID: 8436338683938397792}
+  currentItem: {fileID: 4032193388642245672}
   color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &8494629763588378767
 GameObject:
@@ -735,7 +735,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &1150018295938495246
+--- !u!1001 &5553906322294370630
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -745,7 +745,7 @@ PrefabInstance:
     - target: {fileID: 8855848016688835950, guid: 634ad0305936d418fb74b13ab14fcd66,
         type: 3}
       propertyPath: m_Name
-      value: Hammer Variant
+      value: Tool Hammer Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3459424027012300712, guid: 634ad0305936d418fb74b13ab14fcd66,
         type: 3}
@@ -804,15 +804,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 634ad0305936d418fb74b13ab14fcd66, type: 3}
---- !u!1 &8436338683938397792 stripped
+--- !u!1 &4032193388642245672 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8855848016688835950, guid: 634ad0305936d418fb74b13ab14fcd66,
     type: 3}
-  m_PrefabInstance: {fileID: 1150018295938495246}
+  m_PrefabInstance: {fileID: 5553906322294370630}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &4609425830259051686 stripped
+--- !u!4 &9012027816721649390 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3459424027012300712, guid: 634ad0305936d418fb74b13ab14fcd66,
     type: 3}
-  m_PrefabInstance: {fileID: 1150018295938495246}
+  m_PrefabInstance: {fileID: 5553906322294370630}
   m_PrefabAsset: {fileID: 0}

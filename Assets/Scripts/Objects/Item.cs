@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weapon : MonoBehaviour {
-
+public class Item : MonoBehaviour {
+    public string id;
     public Sprite[] upgrades;
     public SpriteRenderer spriteRenderer;
 

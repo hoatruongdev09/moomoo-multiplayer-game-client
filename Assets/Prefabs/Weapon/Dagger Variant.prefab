@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 6313364055083634435, guid: 1856c94c6d7de4daeabfd2d8fb3e80b7,
         type: 3}
       propertyPath: m_Name
-      value: Dagger
+      value: Dagger Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2123884982990265797, guid: 1856c94c6d7de4daeabfd2d8fb3e80b7,
         type: 3}
@@ -67,6 +67,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90.00001
       objectReference: {fileID: 0}
+    - target: {fileID: 2499197581195754531, guid: 1856c94c6d7de4daeabfd2d8fb3e80b7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 4404428335481655938, guid: 1856c94c6d7de4daeabfd2d8fb3e80b7,
         type: 3}
       propertyPath: upgrades.Array.size
@@ -96,10 +101,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 83c479dbf668e4b85bca45f09db71680,
         type: 3}
-    - target: {fileID: 2499197581195754531, guid: 1856c94c6d7de4daeabfd2d8fb3e80b7,
+    - target: {fileID: 4404428335481655938, guid: 1856c94c6d7de4daeabfd2d8fb3e80b7,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.3
+      propertyPath: id
+      value: w4
       objectReference: {fileID: 0}
     - target: {fileID: 388144561284264603, guid: 1856c94c6d7de4daeabfd2d8fb3e80b7,
         type: 3}
