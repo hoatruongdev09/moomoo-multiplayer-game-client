@@ -1,11 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 public class ItemTrayController : MonoBehaviour {
     public ItemTray itemTray;
     public Transform trayHolder;
     private void Start () {
+        UpdateSize ();
+    }
+    public void SyncItemTray (string[] codes) {
+        List<ButtonSwapItem> allItems = itemTray.AllItems ();
+        allItems.ForEach ((item) => {
+            if (codes.Contains (item.code)) {
+                item.gameObject.SetActive (true);
+            } else {
+                item.gameObject.SetActive (false);
+            }
+        });
         UpdateSize ();
     }
     private void UpdateSize () {

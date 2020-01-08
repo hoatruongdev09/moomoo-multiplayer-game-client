@@ -10,6 +10,9 @@ public class ButtonSwapItem : MonoBehaviour {
     public OnChooseButton click;
 
     private Button button;
+    // private void OnEnable () {
+    //     Show ();
+    // }
 
     private void Start () {
         button = GetComponent<Button> ();
@@ -23,6 +26,10 @@ public class ButtonSwapItem : MonoBehaviour {
             return;
         }
         images.sprite = upgrades[id];
+    }
+    private void Show () {
+        transform.localScale = Vector3.zero;
+        transform.LeanScale (Vector3.one, .1f);
     }
     private void OnClick () {
         if (click != null) {

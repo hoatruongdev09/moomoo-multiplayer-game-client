@@ -8,22 +8,33 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
     public UIController uIController;
     public SpawnController spawnController;
     public PlayerManager playerManager;
+    public StructuresController structuresController;
     public CameraController cameraController;
-    public Controller[] inputController;
-    public GameObject[] listResources;
-    public List<Structure> listStructure;
-    [SerializeField] private ConnectServerModel connectInfo;
+    [Header ("CONTROLLER")]
+    public KeyboardController keyboardController;
+    public VirtualGamePadController virtualGamePadController;
+    private GameObject[] listResources;
+    private ConnectServerModel connectInfo;
+    [SerializeField] private Controller[] inputController;
     public GameDataModel gameInfo;
 
     private void Start () {
-
         socketController.Delegate = this;
+        inputController = new Controller[] { keyboardController, virtualGamePadController };
         foreach (Controller ctrler in inputController) {
             ctrler.Datasource = this;
             ctrler.Delegate = this;
         }
-        listStructure = new List<Structure> ();
-
+#if UNITY_ANDROID || UNITY_IOS
+        Debug.Log ("Unity android");
+        keyboardController.gameObject.SetActive (false);
+        virtualGamePadController.gameObject.SetActive (true);
+#endif
+#if UNITY_EDITOR
+        Debug.Log ("Unity editor");
+        keyboardController.gameObject.SetActive (true);
+        virtualGamePadController.gameObject.SetActive (false);
+#endif
     }
 
     #region SOCKET COMMAND
@@ -39,9 +50,13 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
     }
     public void RequestSwitchItem (string code) {
         JSONObject data = new JSONObject (JSONObject.Type.OBJECT);
-        data.AddField ("type", code[0].ToString ());
         data.AddField ("code", code);
         socketController.SocketEmit (socketController.gameCode.switchItem, data);
+    }
+    public void RequestUpgradeItem (string code) {
+        JSONObject data = new JSONObject (JSONObject.Type.OBJECT);
+        data.AddField ("code", code);
+        socketController.SocketEmit (socketController.gameCode.upgradeItem, data);
     }
     #endregion
     #region SOCKET LISTENER 
@@ -63,7 +78,7 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
         playerManager.InitPlayers (model.maxPlayer);
         PlayerController[] players = spawnController.SpawnPlayers (model.players, playerManager.players);
         playerManager.SetPlayers (players);
-
+        spawnController.SpawnStructures (model.structures, structuresController);
         socketController.SocketEmit (socketController.gameCode.receivedData, new JSONObject (true));
     }
 
@@ -108,13 +123,17 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
     }
 
     public void OnPlayerHit (string data) {
+        Debug.Log ($"Player hit: {data}");
         var temp = JSON.Parse (data);
         PlayerHitModel model = JsonUtility.FromJson<PlayerHitModel> (temp[1].ToString ());
         playerManager.PlayerHit (model);
     }
 
     public void OnPlayerStatus (string data) {
-        Debug.Log ($"Player status:  {data}");
+        var temp = JSON.Parse (data);
+        PlayerStatusModel model = JsonUtility.FromJson<PlayerStatusModel> (temp[1].ToString ());
+        // SYNC
+        uIController.UpdatePlayerInfo (model);
     }
 
     public void OnSwitchItem (string data) {
@@ -125,8 +144,23 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
     public void OnCreateStructure (string data) {
         var temp = JSON.Parse (data);
         CreateStructureModel model = JsonUtility.FromJson<CreateStructureModel> (temp[1].ToString ());
-        listStructure.Add (spawnController.SpawnStructures (model));
-        Debug.Log ($"{data}");
+        structuresController.AddStructure (spawnController.SpawnStructure (model));
+    }
+    public void OnDestroyStructure (string data) {
+        var temp = JSON.Parse (data);
+        RemoveStructureModel model = JsonUtility.FromJson<RemoveStructureModel> (temp[1].ToString ());
+        structuresController.RemoveStructures (model.id);
+    }
+    public void OnUpgradeItems (string data) {
+        var temp = JSON.Parse (data);
+        UpgradeItemModel model = JsonUtility.FromJson<UpgradeItemModel> (temp[1].ToString ());
+        uIController.ShowUpgradeItem (model);
+    }
+    public void OnSyncItem (string data) {
+        Debug.Log ($"items sync: {data}");
+        var temp = JSON.Parse (data);
+        SyncItemModel model = JsonUtility.FromJson<SyncItemModel> (temp[1].ToString ());
+        uIController.SyncItemTray (model);
     }
     #endregion
 
@@ -162,11 +196,22 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
         }
     }
 
-    public void OnTriggerAttack () {
+    public void OnTriggerAttack (bool byButton) {
         if (!playerManager.localPlayer) {
             return;
         }
-        socketController.SocketEmit (socketController.gameCode.triggerAttack);
+        JSONObject data = new JSONObject (JSONObject.Type.OBJECT);
+        data.AddField ("isbtn", byButton);
+        socketController.SocketEmit (socketController.gameCode.triggerAttack, data);
+    }
+
+    public void OnTriggerAutoAttack (bool action) {
+        if (!playerManager.localPlayer) {
+            return;
+        }
+        JSONObject data = new JSONObject (JSONObject.Type.OBJECT);
+        data.AddField ("action", action);
+        socketController.SocketEmit (socketController.gameCode.triggerAutoAttack, data);
     }
 
     #endregion

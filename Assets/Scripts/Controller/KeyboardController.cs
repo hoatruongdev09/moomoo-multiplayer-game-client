@@ -29,7 +29,7 @@ public class KeyboardController : Controller {
     }
     private void Update () {
         if (Input.GetKeyDown (KeyCode.Space)) {
-            controllerDelegate.OnTriggerAttack ();
+            controllerDelegate.OnTriggerAttack (true);
         }
         Movement ();
         Rotation ();

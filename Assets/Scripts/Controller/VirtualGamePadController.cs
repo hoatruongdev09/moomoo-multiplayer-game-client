@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class VirtualGamePadController : Controller, IJoyStickControllerDatasource, IJoyStickControllerDelegate {
     public override IControllerDatasource Datasource {
@@ -18,7 +19,11 @@ public class VirtualGamePadController : Controller, IJoyStickControllerDatasourc
 
     public JoystickController leftJoy;
     public JoystickController rightJoy;
+    public Button buttonUseItem;
 
+    private IEnumerator coroutineCheckAttack;
+    [SerializeField] private bool checkAttackIsRunning;
+    [SerializeField] private bool holdingAttack = false;
     public void Start () {
         leftJoy.Delegate = this;
         rightJoy.Delegate = this;
@@ -28,6 +33,9 @@ public class VirtualGamePadController : Controller, IJoyStickControllerDatasourc
 
         leftJoy.JoystickId = 0;
         rightJoy.JoystickId = 1;
+
+        coroutineCheckAttack = WaitForNextAttack (.3f);
+        buttonUseItem.onClick.AddListener (() => { controllerDelegate.OnTriggerAttack (true); });
     }
 
     public void JoystickDrag (int id, Vector2 inputVT) {
@@ -55,5 +63,32 @@ public class VirtualGamePadController : Controller, IJoyStickControllerDatasourc
 
     public void JoystickBeginDrag (int id, PointerEventData eventData) {
 
+    }
+
+    public void JoystickOverTheshold (int id, bool action) {
+        if (id == 1 && action) {
+            if (!checkAttackIsRunning && !holdingAttack) {
+                controllerDelegate.OnTriggerAttack (false);
+                holdingAttack = true;
+                StartCoroutine (WaitForNextAttack (.3f));
+            }
+        }
+        if (id == 1 && !action) {
+            checkAttackIsRunning = false;
+            if (holdingAttack) {
+                holdingAttack = false;
+                controllerDelegate.OnTriggerAutoAttack (false);
+            }
+        }
+    }
+
+    private IEnumerator WaitForNextAttack (float time) {
+        Debug.Log ("Start Wait for autoAttack");
+        checkAttackIsRunning = true;
+        yield return new WaitForSeconds (time);
+        if (holdingAttack) {
+            controllerDelegate.OnTriggerAutoAttack (true);
+        }
+        checkAttackIsRunning = false;
     }
 }

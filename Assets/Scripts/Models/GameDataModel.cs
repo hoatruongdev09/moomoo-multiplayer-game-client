@@ -6,6 +6,7 @@ public class GameDataModel {
     public int maxPlayer;
     public ResourceInfoModel[] resource;
     public InitPlayerModel[] players;
+    public CreateStructureModel[] structures;
 }
 
 [Serializable]

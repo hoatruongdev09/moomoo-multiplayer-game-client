@@ -22,5 +22,6 @@ public interface IControllerDelegate {
     /// <param name="ange">in radian</param>
     void OnChangeLookDirect (float ange);
 
-    void OnTriggerAttack ();
+    void OnTriggerAttack (bool byButton);
+    void OnTriggerAutoAttack (bool action);
 }

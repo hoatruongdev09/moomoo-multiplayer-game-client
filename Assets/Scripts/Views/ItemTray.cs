@@ -31,4 +31,16 @@ public class ItemTray : MonoBehaviour {
             item.click = clickAction;
         }
     }
+    public List<ButtonSwapItem> AllItems () {
+        List<ButtonSwapItem> temp = new List<ButtonSwapItem> ();
+        temp.AddRange (mainWeaponTray);
+        temp.AddRange (subWeaponTray);
+        temp.AddRange (foodTray);
+        temp.AddRange (wallTray);
+        temp.AddRange (pikeTray);
+        temp.AddRange (windmillTray);
+        temp.AddRange (spawnResourceTray);
+        temp.AddRange (miscTray);
+        return temp;
+    }
 }

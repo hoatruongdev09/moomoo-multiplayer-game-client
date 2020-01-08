@@ -23,10 +23,20 @@ public class UIController : MonoBehaviour, IJoinPanelViewControllerDelegate, IJo
     public void OnGameOver () {
         mainPanelViewController.gameObject.SetActive (true);
         gameViewController.Hide ();
+        StartCoroutine (AnimateStartup (.5f));
     }
 
     public void OnConnect () {
-        StartCoroutine (AnimateStartup (2f));
+        StartCoroutine (AnimateStartup (.5f));
+    }
+    public void UpdatePlayerInfo (PlayerStatusModel model) {
+        gameViewController.UpdatePlayerStatus (model);
+    }
+    public void ShowUpgradeItem (UpgradeItemModel model) {
+        gameViewController.OpenUpgradeItem (model.items);
+    }
+    public void SyncItemTray (SyncItemModel model) {
+        gameViewController.SyncItemTray (model);
     }
     private IEnumerator AnimateStartup (float time) {
         yield return new WaitForSeconds (time);
@@ -46,6 +56,10 @@ public class UIController : MonoBehaviour, IJoinPanelViewControllerDelegate, IJo
     #region GAME VIEW
     public void OnChangeItem (string item) {
         gameController.RequestSwitchItem (item);
+    }
+
+    public void OnUpgradeItem (string code) {
+        gameController.RequestUpgradeItem (code);
     }
     #endregion
 }

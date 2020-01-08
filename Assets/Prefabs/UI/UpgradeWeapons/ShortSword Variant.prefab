@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7164069983197465836
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8194726929160110334, guid: ce499721be78c4399ba966a1722fddc0,
+        type: 3}
+      propertyPath: m_Name
+      value: ShortSword Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194726929160110329, guid: ce499721be78c4399ba966a1722fddc0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194726929160110329, guid: ce499721be78c4399ba966a1722fddc0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194726929160110329, guid: ce499721be78c4399ba966a1722fddc0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194726929160110329, guid: ce499721be78c4399ba966a1722fddc0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194726929160110329, guid: ce499721be78c4399ba966a1722fddc0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194726929160110329, guid: ce499721be78c4399ba966a1722fddc0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194726929160110329, guid: ce499721be78c4399ba966a1722fddc0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194726929160110329, guid: ce499721be78c4399ba966a1722fddc0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194726929160110329, guid: ce499721be78c4399ba966a1722fddc0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194726929160110329, guid: ce499721be78c4399ba966a1722fddc0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194726929160110329, guid: ce499721be78c4399ba966a1722fddc0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194726929160110329, guid: ce499721be78c4399ba966a1722fddc0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194726929160110329, guid: ce499721be78c4399ba966a1722fddc0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194726929160110329, guid: ce499721be78c4399ba966a1722fddc0,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194726929160110329, guid: ce499721be78c4399ba966a1722fddc0,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194726929160110329, guid: ce499721be78c4399ba966a1722fddc0,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194726929160110329, guid: ce499721be78c4399ba966a1722fddc0,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194726929160110329, guid: ce499721be78c4399ba966a1722fddc0,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194726929160110329, guid: ce499721be78c4399ba966a1722fddc0,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194726929160110329, guid: ce499721be78c4399ba966a1722fddc0,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194726929160110329, guid: ce499721be78c4399ba966a1722fddc0,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194726929160110330, guid: ce499721be78c4399ba966a1722fddc0,
+        type: 3}
+      propertyPath: serverCode
+      value: w3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194726928882006329, guid: ce499721be78c4399ba966a1722fddc0,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 950533cdd4dfe48b8a3e396df60eb067,
+        type: 3}
+    - target: {fileID: 8194726927161886804, guid: ce499721be78c4399ba966a1722fddc0,
+        type: 3}
+      propertyPath: m_Text
+      value: Short Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194726927150766621, guid: ce499721be78c4399ba966a1722fddc0,
+        type: 3}
+      propertyPath: m_Text
+      value: Increased attack power but slower move speed
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ce499721be78c4399ba966a1722fddc0, type: 3}

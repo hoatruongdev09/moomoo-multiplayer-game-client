@@ -38,7 +38,7 @@ public class JoystickController : MonoBehaviour, IJoyStickController, IDragHandl
             pos.x = (pos.x / imgBackGround.rectTransform.sizeDelta.x);
             pos.y = (pos.y / imgBackGround.rectTransform.sizeDelta.y);
             temp = new Vector3 (pos.x * 2 - 1, pos.y * 2 - 1);
-            temp = (temp.magnitude > 1.01) ? temp.normalized : temp;
+            temp = (temp.sqrMagnitude > 1.01 * 1.01) ? temp.normalized : temp;
             imgJoystick.rectTransform.anchoredPosition = new Vector2 (temp.x * (imgBackGround.rectTransform.sizeDelta.x / 3), temp.y * (imgBackGround.rectTransform.sizeDelta.y / 3));
             inputVT = temp.sqrMagnitude > 0.1f * 0.1f?temp : inputVT;
             if (controllerDelegate != null) {
@@ -88,4 +88,5 @@ public interface IJoyStickControllerDelegate {
     void JoystickDrag (int id, Vector2 inputVT);
     void JoystickEndDrag (int id, PointerEventData eventData);
     void JoystickBeginDrag (int id, PointerEventData eventData);
+    void JoystickOverTheshold (int id, bool action);
 }

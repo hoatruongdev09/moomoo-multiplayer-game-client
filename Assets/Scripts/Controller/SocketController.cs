@@ -65,8 +65,25 @@ public class SocketController : MonoBehaviour {
 
         socket.On (gameCode.playerStatus, OnPlayerStatus);
         socket.On (gameCode.switchItem, OnSwitchItem);
-        socket.On (gameCode.spawnnStructures, OnCreateStructure);
 
+        socket.On (gameCode.spawnnStructures, OnCreateStructure);
+        socket.On (gameCode.removeStructures, OnDestroyStructure);
+
+        socket.On (gameCode.upgradeItem, OnUpgradeItems);
+        socket.On (gameCode.syncItem, OnSyncItems);
+
+    }
+
+    private void OnSyncItems (Socket socket, Packet packet, object[] args) {
+        controllerDelegate.OnSyncItem (packet.ToString ());
+    }
+
+    private void OnUpgradeItems (Socket socket, Packet packet, object[] args) {
+        controllerDelegate.OnUpgradeItems (packet.ToString ());
+    }
+
+    private void OnDestroyStructure (Socket socket, Packet packet, object[] args) {
+        controllerDelegate.OnDestroyStructure (packet.ToString ());
     }
 
     private void OnCreateStructure (Socket socket, Packet packet, object[] args) {
@@ -121,16 +138,19 @@ public class SocketController : MonoBehaviour {
 
 public interface ISocketControllerDelegate {
     void OnConnect (string data);
-    void OnCreateStructure (string v);
-    void OnPlayerDie (string v);
-    void OnPlayerHit (string v);
+    void OnCreateStructure (string data);
+    void OnDestroyStructure (string data);
+    void OnPlayerDie (string data);
+    void OnPlayerHit (string data);
     void OnPlayerQuit (string data);
-    void OnPlayerStatus (string v);
+    void OnPlayerStatus (string data);
     void OnReceiveData (string data);
     void OnSpawnPlayer (string data);
-    void OnSwitchItem (string v);
+    void OnSwitchItem (string data);
+    void OnSyncItem (string data);
     void OnSyncTransform (string data);
     void OnTriggerAttack (string data);
+    void OnUpgradeItems (string data);
 }
 
 public class SocketCode {
@@ -149,10 +169,14 @@ public class GameCode {
     public string syncMoveDirect = "syncMove";
     public string syncTransform = "syncTrsform";
     public string triggerAttack = "attk";
-
+    public string triggerAutoAttack = "autoAttk";
     public string playerHit = "phit";
     public string playerDie = "pdie";
     public string playerStatus = "pstt";
     public string switchItem = "swtItm";
     public string spawnnStructures = "spwnStrc";
+    public string removeStructures = "rmvStrc";
+    public string upgradeItem = "ugdItem";
+
+    public string syncItem = "syncItem";
 }

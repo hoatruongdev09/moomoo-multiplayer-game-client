@@ -24,9 +24,9 @@ public class Character : MonoBehaviour {
         if (LeanTween.isTweening (hands.gameObject)) {
             LeanTween.cancel (hands.gameObject);
         }
-        LeanTween.value (hands.gameObject, 90, 170, .2f).setOnUpdate ((float value) => {
+        LeanTween.value (hands.gameObject, 90, 180, .1f).setOnUpdate ((float value) => {
             hands.localRotation = Quaternion.Euler (0, 0, value);
-        }).setEaseInBack ().setLoopPingPong (1);
+        }).setEaseInSine ().setLoopPingPong (1);
     }
     public void ChangeColor (Color color) {
         this.color = color;

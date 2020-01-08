@@ -61,7 +61,12 @@ public class PlayerManager : MonoBehaviour {
     }
     public void PlayerSwitchItem (SwitchItemModel model) {
         if (players[model.id] != null) {
-            players[model.id].SwapItem (spawnController.CreateItem (model.item));
+            GameObject temp = spawnController.CreateItem (model.item);
+            if (temp != null) {
+                players[model.id].SwapItem (spawnController.CreateItem (model.item));
+            } else {
+                Debug.Log ("Switch item failed");
+            }
         }
     }
 }

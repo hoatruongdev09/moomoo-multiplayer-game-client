@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1630631453998064462
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7286298486302418278, guid: 7763f68de88d14d79947de2cc2f98221,
+        type: 3}
+      propertyPath: m_Name
+      value: GreateAxe Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286298486302418273, guid: 7763f68de88d14d79947de2cc2f98221,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286298486302418273, guid: 7763f68de88d14d79947de2cc2f98221,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286298486302418273, guid: 7763f68de88d14d79947de2cc2f98221,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286298486302418273, guid: 7763f68de88d14d79947de2cc2f98221,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286298486302418273, guid: 7763f68de88d14d79947de2cc2f98221,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286298486302418273, guid: 7763f68de88d14d79947de2cc2f98221,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286298486302418273, guid: 7763f68de88d14d79947de2cc2f98221,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286298486302418273, guid: 7763f68de88d14d79947de2cc2f98221,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286298486302418273, guid: 7763f68de88d14d79947de2cc2f98221,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286298486302418273, guid: 7763f68de88d14d79947de2cc2f98221,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286298486302418273, guid: 7763f68de88d14d79947de2cc2f98221,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286298486302418273, guid: 7763f68de88d14d79947de2cc2f98221,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286298486302418273, guid: 7763f68de88d14d79947de2cc2f98221,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286298486302418273, guid: 7763f68de88d14d79947de2cc2f98221,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286298486302418273, guid: 7763f68de88d14d79947de2cc2f98221,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286298486302418273, guid: 7763f68de88d14d79947de2cc2f98221,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286298486302418273, guid: 7763f68de88d14d79947de2cc2f98221,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286298486302418273, guid: 7763f68de88d14d79947de2cc2f98221,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286298486302418273, guid: 7763f68de88d14d79947de2cc2f98221,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286298486302418273, guid: 7763f68de88d14d79947de2cc2f98221,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286298486302418273, guid: 7763f68de88d14d79947de2cc2f98221,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286298486302418274, guid: 7763f68de88d14d79947de2cc2f98221,
+        type: 3}
+      propertyPath: serverCode
+      value: w7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286298486565887137, guid: 7763f68de88d14d79947de2cc2f98221,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 465d3e91b98aa4889bcb6f9f7bb233a9,
+        type: 3}
+    - target: {fileID: 7286298484846570956, guid: 7763f68de88d14d79947de2cc2f98221,
+        type: 3}
+      propertyPath: m_Text
+      value: Great Axe
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286298484838858629, guid: 7763f68de88d14d79947de2cc2f98221,
+        type: 3}
+      propertyPath: m_Text
+      value: Deal more damage and gather more resources
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7763f68de88d14d79947de2cc2f98221, type: 3}

@@ -67,7 +67,7 @@ public class SpawnController : MonoBehaviour {
                 return rsWood;
             case ResourceType.Gold:
                 return rsGold;
-            case ResourceType.Rock:
+            case ResourceType.Stone:
                 return rsRock;
             default:
                 return null;
@@ -91,7 +91,7 @@ public class SpawnController : MonoBehaviour {
         }
         return prefab.gameObject;
     }
-    public Structure SpawnStructures (CreateStructureModel model) {
+    public Structure SpawnStructure (CreateStructureModel model) {
         Structure prefab = null;
         foreach (Structure str in structurePrefabs) {
             if (str.itemId == model.itemId) {
@@ -107,10 +107,19 @@ public class SpawnController : MonoBehaviour {
         temp.id = model.id;
         return temp;
     }
+    public void SpawnStructures (CreateStructureModel[] models, StructuresController controller) {
+        Structure temp;
+        foreach (CreateStructureModel model in models) {
+            temp = SpawnStructure (model);
+            if (controller) {
+                controller.AddStructure (temp);
+            }
+        }
+    }
 }
 public enum ResourceType {
     Wood = 0,
-    Rock = 1,
+    Stone = 1,
     Gold = 2,
     Food = 3
 }

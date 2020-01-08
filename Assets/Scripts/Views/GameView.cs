@@ -1,18 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+public class GameView : MonoBehaviour {
+    public PlayerInfoText woodInfo;
+    public PlayerInfoText foodInfo;
+    public PlayerInfoText stoneInfo;
+    public PlayerInfoText goldInfo;
+    public PlayerInfoText killInfo;
+    public GameObject virtualGamePad;
+    public XpBar xpBar;
 
-public class GameView : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void UpdateInfo (PlayerStatusModel model) {
+        woodInfo.SetText (model.wood.ToString ());
+        foodInfo.SetText (model.food.ToString ());
+        stoneInfo.SetText (model.stone.ToString ());
+        goldInfo.SetText (model.gold.ToString ());
+        killInfo.SetText (model.kills.ToString ());
+        xpBar.SetXp (model.xp);
+        xpBar.SetLevel (model.level);
     }
 }
