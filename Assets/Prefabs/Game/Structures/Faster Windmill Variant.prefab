@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Faster Windmill Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2120404273068410507, guid: 4bcebd3c9a4c34c7b8636796543ee5c4,
+        type: 3}
+      propertyPath: itemId
+      value: i3
+      objectReference: {fileID: 0}
     - target: {fileID: 5977391873332733048, guid: 4bcebd3c9a4c34c7b8636796543ee5c4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -66,11 +71,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2120404273068410507, guid: 4bcebd3c9a4c34c7b8636796543ee5c4,
-        type: 3}
-      propertyPath: itemId
-      value: i3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4bcebd3c9a4c34c7b8636796543ee5c4, type: 3}

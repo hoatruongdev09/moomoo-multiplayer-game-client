@@ -12,6 +12,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodWall Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2120404273068410507, guid: 4bcebd3c9a4c34c7b8636796543ee5c4,
+        type: 3}
+      propertyPath: itemId
+      value: i19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7941247437756810120, guid: 4bcebd3c9a4c34c7b8636796543ee5c4,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 87b09ee7647cc406cb13cc10d5ad6b7b,
+        type: 3}
     - target: {fileID: 5977391873332733048, guid: 4bcebd3c9a4c34c7b8636796543ee5c4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -67,16 +78,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7941247437756810120, guid: 4bcebd3c9a4c34c7b8636796543ee5c4,
+    - target: {fileID: 6556821221888810072, guid: 4bcebd3c9a4c34c7b8636796543ee5c4,
         type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 87b09ee7647cc406cb13cc10d5ad6b7b,
-        type: 3}
-    - target: {fileID: 2120404273068410507, guid: 4bcebd3c9a4c34c7b8636796543ee5c4,
-        type: 3}
-      propertyPath: itemId
-      value: i19
+      propertyPath: m_Radius
+      value: 1.76
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114255106582994326, guid: 4bcebd3c9a4c34c7b8636796543ee5c4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4bcebd3c9a4c34c7b8636796543ee5c4, type: 3}

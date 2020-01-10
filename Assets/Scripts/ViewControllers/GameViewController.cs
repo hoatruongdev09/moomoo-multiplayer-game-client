@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameViewController : MonoBehaviour, IGameViewController, IPanelUpgradeItemDelegate {
     public ItemTrayController itemTrayController;
     public GameView gameView;
-
+    public MapViewController mapView;
     public PanelUpgradeItem panelUpgradeItem;
     public IGameViewControllerDatasource Datasource {
         get { return controllerDatasource; }
@@ -44,6 +44,30 @@ public class GameViewController : MonoBehaviour, IGameViewController, IPanelUpgr
 
     public void OnChooseCode (string code) {
         controllerDelegate.OnUpgradeItem (code);
+    }
+    public void AddPlayerToMap (int id) {
+        mapView.AddPlayerStatue (id);
+    }
+    public void AddWoodToMap (Vector3 position) {
+        mapView.AddWoodResource (position);
+    }
+    public void AddFoodToMap (Vector3 position) {
+        mapView.AddFoodResource (position);
+    }
+    public void AddStoneToMap (Vector3 position) {
+        mapView.AddStoneResource (position);
+    }
+    public void AddGoldToMap (Vector3 position) {
+        mapView.AddGoldResource (position);
+    }
+    public void UpdatePositionPlayer (int id, Vector3 position) {
+        mapView.UpdatePlayerPosition (id, position);
+    }
+    public void SetServerMapSize (Vector2 mapSize) {
+        mapView.serverMapSize = mapSize;
+    }
+    public void InitPlayerMapCount (int count) {
+        mapView.InitPlayerCount (count);
     }
 }
 public interface IGameViewController {

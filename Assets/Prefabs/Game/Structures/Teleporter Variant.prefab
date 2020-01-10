@@ -12,6 +12,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Teleporter Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 9208592607660373168, guid: 88f1a90053a874f8083c07f8a5dcaf79,
+        type: 3}
+      propertyPath: itemId
+      value: i16
+      objectReference: {fileID: 0}
+    - target: {fileID: 905984542042304947, guid: 88f1a90053a874f8083c07f8a5dcaf79,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bf5dc65ac9fce46d497a00a5dc0b3474,
+        type: 3}
     - target: {fileID: 3482892615569446467, guid: 88f1a90053a874f8083c07f8a5dcaf79,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -67,16 +78,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 905984542042304947, guid: 88f1a90053a874f8083c07f8a5dcaf79,
+    - target: {fileID: 4060219867544432227, guid: 88f1a90053a874f8083c07f8a5dcaf79,
         type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: bf5dc65ac9fce46d497a00a5dc0b3474,
-        type: 3}
-    - target: {fileID: 9208592607660373168, guid: 88f1a90053a874f8083c07f8a5dcaf79,
-        type: 3}
-      propertyPath: itemId
-      value: i16
+      propertyPath: m_Radius
+      value: 1.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88f1a90053a874f8083c07f8a5dcaf79, type: 3}

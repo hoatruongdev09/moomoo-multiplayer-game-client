@@ -14,7 +14,7 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
     public KeyboardController keyboardController;
     public VirtualGamePadController virtualGamePadController;
     private GameObject[] listResources;
-    private ConnectServerModel connectInfo;
+    [SerializeField] private ConnectServerModel connectInfo;
     [SerializeField] private Controller[] inputController;
     public GameDataModel gameInfo;
 
@@ -71,10 +71,22 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
 
     public void OnReceiveData (string data) {
         var temp = JSON.Parse (data);
-        // Debug.Log ($"{temp[1].ToString()}");
         GameDataModel model = JsonUtility.FromJson<GameDataModel> (temp[1].ToString ());
         gameInfo = model;
         listResources = spawnController.SpawnResources (model.resource);
+        uIController.gameViewController.InitPlayerMapCount (model.maxPlayer);
+        uIController.SetServerMapSize (model.mapSize.ToVector2 ());
+        // foreach (ResourceInfoModel mod in model.resource) {
+        //     if ((ResourceType) mod.type == ResourceType.Wood) {
+        //         uIController.AddWoodToMap (mod.pos.ToVector3 ());
+        //     } else if ((ResourceType) mod.type == ResourceType.Food) {
+        //         uIController.AddFoodToMap (mod.pos.ToVector3 ());
+        //     } else if ((ResourceType) mod.type == ResourceType.Stone) {
+        //         uIController.AddStoneToMap (mod.pos.ToVector3 ());
+        //     } else if ((ResourceType) mod.type == ResourceType.Gold) {
+        //         uIController.AddGoldToMap (mod.pos.ToVector3 ());
+        //     }
+        // }
         playerManager.InitPlayers (model.maxPlayer);
         PlayerController[] players = spawnController.SpawnPlayers (model.players, playerManager.players);
         playerManager.SetPlayers (players);
@@ -84,15 +96,15 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
 
     public void OnSpawnPlayer (string data) {
         var temp = JSON.Parse (data);
-        // Debug.Log ($"spawn plaer {temp[1].ToString()}");
+        Debug.Log ($"on Spawn player {data}");
         PlayerJoinGameModel model = JsonUtility.FromJson<PlayerJoinGameModel> (temp[1].ToString ());
-
         PlayerController pc = spawnController.SpawnPlayer (model.id, model.name, model.skinId, model.pos.ToVector3 ());
         playerManager.SetPlayer (pc, model.id);
 
         if (model.clientId == connectInfo.id) {
             cameraController.SetForcus (pc.transform);
             playerManager.localPlayer = pc;
+            uIController.AddPlayerToMap (model.id);
         }
         uIController.OnJoinGame ();
     }
@@ -117,13 +129,14 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
         var temp = JSON.Parse (data);
         PlayerDieModel model = JsonUtility.FromJson<PlayerDieModel> (temp[1].ToString ());
         playerManager.PlayerDie (model);
+        Debug.Log ($"player die id: { model.id}");
         if (model.id == connectInfo.id) {
             uIController.OnGameOver ();
         }
     }
 
     public void OnPlayerHit (string data) {
-        Debug.Log ($"Player hit: {data}");
+        Debug.Log ($"hit: {data}");
         var temp = JSON.Parse (data);
         PlayerHitModel model = JsonUtility.FromJson<PlayerHitModel> (temp[1].ToString ());
         playerManager.PlayerHit (model);
@@ -142,6 +155,7 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
         playerManager.PlayerSwitchItem (model);
     }
     public void OnCreateStructure (string data) {
+        Debug.Log ($"spawn structure: {data}");
         var temp = JSON.Parse (data);
         CreateStructureModel model = JsonUtility.FromJson<CreateStructureModel> (temp[1].ToString ());
         structuresController.AddStructure (spawnController.SpawnStructure (model));

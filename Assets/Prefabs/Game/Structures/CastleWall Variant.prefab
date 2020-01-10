@@ -12,6 +12,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: CastleWall Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2527756867471443505, guid: 5dfb9b588cd114841836873e3a27b7f0,
+        type: 3}
+      propertyPath: itemId
+      value: i2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5786473998669824818, guid: 5dfb9b588cd114841836873e3a27b7f0,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c01eb4a5aad08452e8f3de1cca611c98,
+        type: 3}
     - target: {fileID: 7821243150861329602, guid: 5dfb9b588cd114841836873e3a27b7f0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -77,11 +88,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.2
       objectReference: {fileID: 0}
-    - target: {fileID: 5786473998669824818, guid: 5dfb9b588cd114841836873e3a27b7f0,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c01eb4a5aad08452e8f3de1cca611c98,
-        type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5dfb9b588cd114841836873e3a27b7f0, type: 3}

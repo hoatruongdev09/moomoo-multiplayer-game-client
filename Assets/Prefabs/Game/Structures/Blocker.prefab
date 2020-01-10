@@ -89,6 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 638757467812252970}
   - component: {fileID: 5135111581875089369}
+  - component: {fileID: 58589246775293194}
   m_Layer: 0
   m_Name: Blocker
   m_TagString: Untagged
@@ -126,3 +127,19 @@ MonoBehaviour:
   id: 0
   itemId: i0
   graphic: {fileID: 3754417474920508122}
+--- !u!58 &58589246775293194
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4102445067709754738}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.4

@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour {
         switch (wpType) {
             case WeaponType.Melee:
                 character.AnimateMeleeAttack ();
+                MeleeAttackEffect ();
                 break;
             case WeaponType.Range:
 
@@ -37,6 +38,20 @@ public class PlayerController : MonoBehaviour {
     }
     public void SwapItem (GameObject item) {
         character.ChangeItem (item);
+    }
+    private void MeleeAttackEffect () {
+        Collider2D[] colls = Physics2D.OverlapBoxAll (transform.position - transform.right, new Vector2 (1, 3), transform.rotation.eulerAngles.z);
+        foreach (Collider2D col in colls) {
+            if (col.GetComponent<Structure> ()) {
+                col.GetComponent<Structure> ().Shake ();
+            } else if (col.GetComponent<ResourceObject> ()) {
+                col.GetComponent<ResourceObject> ().Shake ();
+            }
+        }
+    }
+    private void OnDrawGizmos () {
+        Gizmos.DrawRay (transform.position, -transform.right);
+        Gizmos.DrawWireCube (transform.position - transform.right, new Vector2 (1, 3));
     }
 }
 

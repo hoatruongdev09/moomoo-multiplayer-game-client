@@ -10,6 +10,7 @@ public class PlayerManager : MonoBehaviour {
     public PlayerController localPlayer;
 
     public Stack inactivedPlayers;
+    public UIController uIController;
 
     private void Start () {
         inactivedPlayers = new Stack ();
@@ -35,6 +36,7 @@ public class PlayerManager : MonoBehaviour {
     public void SyncTransform (SyncTransformModel model) {
         foreach (SyncPostionModel posMod in model.pos) {
             players[posMod.id].SyncPosition (posMod.pos.ToVector3 ());
+            uIController.UpdatePositionPlayer (posMod.id, posMod.pos.ToVector3 ());
         }
         foreach (SyncRotationModel rotMod in model.rot) {
             players[rotMod.id].SyncRotation (rotMod.angle);
@@ -54,10 +56,13 @@ public class PlayerManager : MonoBehaviour {
     }
 
     public void PlayerHit (PlayerHitModel model) {
-        if (players[model.id] != null) {
-            spawnController.SpawnDamagePopUp (model.hp - players[model.id].GetLastHealthPoint (), players[model.id].transform.position);
-            players[model.id].SyncHealthPoint (model.hp);
+        foreach (HitInfoModel info in model.data) {
+            if (players[info.id] != null) {
+                spawnController.SpawnDamagePopUp (info.hp - players[info.id].GetLastHealthPoint (), players[info.id].transform.position);
+                players[info.id].SyncHealthPoint (info.hp);
+            }
         }
+
     }
     public void PlayerSwitchItem (SwitchItemModel model) {
         if (players[model.id] != null) {

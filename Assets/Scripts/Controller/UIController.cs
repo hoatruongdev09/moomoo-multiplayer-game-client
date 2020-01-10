@@ -43,6 +43,28 @@ public class UIController : MonoBehaviour, IJoinPanelViewControllerDelegate, IJo
         mainPanelViewController.Show ();
     }
 
+    public void AddPlayerToMap (int id) {
+        gameViewController.AddPlayerToMap (id);
+    }
+    public void AddWoodToMap (Vector3 position) {
+        gameViewController.AddWoodToMap (position);
+    }
+    public void AddFoodToMap (Vector3 position) {
+        gameViewController.AddFoodToMap (position);
+    }
+    public void AddStoneToMap (Vector3 position) {
+        gameViewController.AddStoneToMap (position);
+    }
+    public void AddGoldToMap (Vector3 position) {
+        gameViewController.AddGoldToMap (position);
+    }
+    public void UpdatePositionPlayer (int id, Vector3 position) {
+        gameViewController.UpdatePositionPlayer (id, position);
+    }
+    public void SetServerMapSize (Vector2 size) {
+        Debug.Log ($"set server mapSize: {size}");
+        gameViewController.SetServerMapSize (size);
+    }
     #region PANEL VIEW
     public void OnJoinClick (string name, int gameId, int skinId) {
         gameController.RequestJoinGame (name, gameId, skinId);

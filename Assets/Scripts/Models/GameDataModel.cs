@@ -4,6 +4,7 @@ using UnityEngine;
 [Serializable]
 public class GameDataModel {
     public int maxPlayer;
+    public PositionModel mapSize;
     public ResourceInfoModel[] resource;
     public InitPlayerModel[] players;
     public CreateStructureModel[] structures;

@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &114255106582994326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7115815748235854880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63c7352463f9c4c0aa20636f645d2fbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 180
 --- !u!1001 &8642016212208279431
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12,6 +25,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Windmill Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7675166784460282124, guid: caa9463d8f3b64f0db1de20394d0d6f7,
+        type: 3}
+      propertyPath: itemId
+      value: i18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1862908656223165455, guid: caa9463d8f3b64f0db1de20394d0d6f7,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 99170bfd2c64644e2b095e3df8ec1e60,
+        type: 3}
     - target: {fileID: 2674414459935177727, guid: caa9463d8f3b64f0db1de20394d0d6f7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -67,16 +91,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1862908656223165455, guid: caa9463d8f3b64f0db1de20394d0d6f7,
+    - target: {fileID: 3247123765321761759, guid: caa9463d8f3b64f0db1de20394d0d6f7,
         type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 99170bfd2c64644e2b095e3df8ec1e60,
-        type: 3}
-    - target: {fileID: 7675166784460282124, guid: caa9463d8f3b64f0db1de20394d0d6f7,
-        type: 3}
-      propertyPath: itemId
-      value: i18
+      propertyPath: m_Radius
+      value: 1.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caa9463d8f3b64f0db1de20394d0d6f7, type: 3}
+--- !u!1 &7115815748235854880 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1526420441733651367, guid: caa9463d8f3b64f0db1de20394d0d6f7,
+    type: 3}
+  m_PrefabInstance: {fileID: 8642016212208279431}
+  m_PrefabAsset: {fileID: 0}

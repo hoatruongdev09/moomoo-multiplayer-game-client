@@ -12,6 +12,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Poiison Spikes Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 164775030215075902, guid: b9b0dba26e38c49beb606ebba39874fb,
+        type: 3}
+      propertyPath: itemId
+      value: i9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147200909481192765, guid: b9b0dba26e38c49beb606ebba39874fb,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9527f55831745476baaabc9db1efd50f,
+        type: 3}
     - target: {fileID: 5609128104341113549, guid: b9b0dba26e38c49beb606ebba39874fb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -77,16 +88,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 8147200909481192765, guid: b9b0dba26e38c49beb606ebba39874fb,
+    - target: {fileID: 5033569036043596525, guid: b9b0dba26e38c49beb606ebba39874fb,
         type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 9527f55831745476baaabc9db1efd50f,
-        type: 3}
-    - target: {fileID: 164775030215075902, guid: b9b0dba26e38c49beb606ebba39874fb,
-        type: 3}
-      propertyPath: itemId
-      value: i9
+      propertyPath: m_Radius
+      value: 1.4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2419225788783830719, guid: b9b0dba26e38c49beb606ebba39874fb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b9b0dba26e38c49beb606ebba39874fb, type: 3}

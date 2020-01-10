@@ -103,7 +103,7 @@ public class SpawnController : MonoBehaviour {
             Debug.Log ("SPAWN NULL");
             return null;
         }
-        Structure temp = Instantiate (prefab, model.position.ToVector3 (), Quaternion.identity, structureHolder.transform);
+        Structure temp = Instantiate (prefab, model.pos.ToVector3 (), Quaternion.Euler (0, 0, model.rot * Mathf.Rad2Deg - 90), structureHolder.transform);
         temp.id = model.id;
         return temp;
     }
