@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour {
@@ -9,12 +10,12 @@ public class PlayerManager : MonoBehaviour {
 
     public PlayerController localPlayer;
 
-    public Stack inactivedPlayers;
+    // public Stack inactivedPlayers;
     public UIController uIController;
 
-    private void Start () {
-        inactivedPlayers = new Stack ();
-    }
+    // private void Start () {
+    //     inactivedPlayers = new Stack ();
+    // }
     public void InitPlayers (int playerCount) {
         players = new PlayerController[playerCount];
     }
@@ -29,8 +30,9 @@ public class PlayerManager : MonoBehaviour {
     public void RemovePlayer (int id) {
         GameObject go = players[id].gameObject;
         players[id] = null;
-        go.gameObject.SetActive (false);
-        inactivedPlayers.Push (go);
+        Destroy (go);
+        // go.gameObject.SetActive (false);
+        // inactivedPlayers.Push (go);
     }
 
     public void SyncTransform (SyncTransformModel model) {
@@ -72,6 +74,12 @@ public class PlayerManager : MonoBehaviour {
             } else {
                 Debug.Log ("Switch item failed");
             }
+        }
+    }
+
+    public void ShowPlayerChat (ChatModel model) {
+        if (players[model.id] != null) {
+            players[model.id].ShowChat (model.text);
         }
     }
 }

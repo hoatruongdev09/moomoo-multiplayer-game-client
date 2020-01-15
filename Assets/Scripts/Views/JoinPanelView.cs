@@ -8,4 +8,5 @@ public class JoinPanelView : MonoBehaviour {
     public Button btnJoin;
     public Dropdown dSelectGame;
     public Modified.ToggleGroup tgSkinSelect;
+    public CanvasGroup canvasGroup;
 }

@@ -4,10 +4,14 @@ using UnityEngine;
 [Serializable]
 public class GameDataModel {
     public int maxPlayer;
+    public int maxNpcCount;
     public PositionModel mapSize;
     public ResourceInfoModel[] resource;
+    public float snowSize;
+    public float riverSize;
     public InitPlayerModel[] players;
     public CreateStructureModel[] structures;
+    public SpawnNpcModel[] npc;
 }
 
 [Serializable]

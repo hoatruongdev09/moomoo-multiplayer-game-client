@@ -14,6 +14,7 @@ public class UIController : MonoBehaviour, IJoinPanelViewControllerDelegate, IJo
 
         gameViewController.Delegate = this;
         gameViewController.Datasource = this;
+        mainPanelViewController.ShowConnectingIndicate ();
     }
 
     public void OnJoinGame () {
@@ -27,6 +28,7 @@ public class UIController : MonoBehaviour, IJoinPanelViewControllerDelegate, IJo
     }
 
     public void OnConnect () {
+        mainPanelViewController.HideConnectingIndicate ();
         StartCoroutine (AnimateStartup (.5f));
     }
     public void UpdatePlayerInfo (PlayerStatusModel model) {
@@ -82,6 +84,10 @@ public class UIController : MonoBehaviour, IJoinPanelViewControllerDelegate, IJo
 
     public void OnUpgradeItem (string code) {
         gameController.RequestUpgradeItem (code);
+    }
+
+    public void OnSendChat (string text) {
+        gameController.SendChat (text);
     }
     #endregion
 }

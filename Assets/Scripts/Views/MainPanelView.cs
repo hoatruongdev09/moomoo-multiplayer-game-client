@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class MainPanelView : MonoBehaviour {
     public JoinPanelViewController joinPanelViewController;
+    public ConnectingIndicateController connectingIndicateController;
     public CanvasGroup canvasGroup;
 }

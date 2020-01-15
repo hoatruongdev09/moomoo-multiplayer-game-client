@@ -13,6 +13,8 @@ public class Character : MonoBehaviour {
     public GameObject currentItem;
     public Color color;
 
+    private Coroutine delayShowName;
+    private bool isDelayShowName;
     private void Update () {
         healthBarHolder.position = transform.position + new Vector3 (0, -2);
         textName.transform.position = transform.position + new Vector3 (0, 3);
@@ -35,11 +37,35 @@ public class Character : MonoBehaviour {
         }
     }
     public void SyncHealthPoint (int hp) {
-        this.healthBar.transform.LeanScaleX ((float) hp / 100f, .1f);
+        this.healthBar.transform.LeanScaleX ((float) hp / 100f, .15f);
     }
     public void SetName (string name) {
-        gameObject.name = $"Player: {name}";
+        gameObject.name = $"{name}";
         textName.text = name;
+    }
+    public void Chat (string text) {
+        LeanTween.alphaText (textName.rectTransform, 0, .3f).setOnComplete (() => {
+            textName.text = text;
+            LeanTween.alphaText (textName.rectTransform, 1, .3f).setDelay (.1f);
+        });
+        if (isDelayShowName) {
+            if (delayShowName != null) {
+                StopCoroutine (delayShowName);
+            }
+            delayShowName = StartCoroutine (DelayToShowName ());
+        } else {
+            delayShowName = StartCoroutine (DelayToShowName ());
+        }
+    }
+    private IEnumerator DelayToShowName () {
+        isDelayShowName = true;
+        yield return new WaitForSeconds (3);
+        LeanTween.alphaText (textName.rectTransform, 0, .3f).setOnComplete (() => {
+            textName.text = gameObject.name;
+            LeanTween.alphaText (textName.rectTransform, 1, .3f).setDelay (.1f);
+            isDelayShowName = false;
+        });
+
     }
     public void ChangeItem (GameObject item) {
         Destroy (currentItem);

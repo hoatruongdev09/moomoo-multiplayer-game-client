@@ -21,12 +21,20 @@ public class SpawnController : MonoBehaviour {
     [Header ("STRUCTURES")]
     public Structure[] structurePrefabs;
     private GameObject structureHolder;
+    [Header ("PROJECTILE")]
+    public Projectile projectilePrefab;
+    private GameObject projectileHolder;
+    [Header ("NPC")]
+    public NpcController[] skinNpc;
+    private GameObject npcHolder;
 
     private void Start () {
         rsHolder = new GameObject ("RESOURCES HOLDER");
         playerHolder = new GameObject ("PLAYERS HOLDER");
         fxHolder = new GameObject ("EFFECTS HOLDER");
         structureHolder = new GameObject ("STRUCTURE HOLDER");
+        projectileHolder = new GameObject ("PROJECTILE HOLDER");
+        npcHolder = new GameObject ("NPC HOLDER");
     }
     public PlayerController[] SpawnPlayers (InitPlayerModel[] playerModels, PlayerController[] listPlayer) {
         for (int i = 0; i < playerModels.Length; i++) {
@@ -39,7 +47,7 @@ public class SpawnController : MonoBehaviour {
         GameObject playGO = Instantiate (playerPrefab, position, Quaternion.identity, playerHolder.transform);
         PlayerController pc = playGO.GetComponent<PlayerController> ();
         pc.Character.ChangeColor (colorId[skinId]);
-        pc.Character.SetName ($"{name} ({id})");
+        pc.Character.SetName ($"{name}");
         pc.SyncPosition (position);
         return pc;
     }
@@ -114,6 +122,22 @@ public class SpawnController : MonoBehaviour {
             if (controller) {
                 controller.AddStructure (temp);
             }
+        }
+    }
+    public Projectile SpawnProjectile (CreateProjectileModel model) {
+        Projectile temp = Instantiate (projectilePrefab, model.pos.ToVector3 (), Quaternion.Euler (0, 0, model.angle * Mathf.Rad2Deg), projectileHolder.transform);
+        temp.transform.position = model.pos.ToVector3 ();
+        temp.SyncPosition (model.pos.ToVector3 ());
+        temp.id = model.id;
+        return temp;
+    }
+
+    public void SpawnNpc (SpawnNpcModel[] models, NpcManager manager) {
+        NpcController temp;
+        foreach (SpawnNpcModel model in models) {
+            temp = Instantiate (skinNpc[model.skinId], model.pos.ToVector3 (), Quaternion.Euler (0, 0, model.rot * Mathf.Rad2Deg), npcHolder.transform);
+            temp.SyncPosition (model.pos.ToVector3 ());
+            manager.AddNpc (model.id, temp);
         }
     }
 }

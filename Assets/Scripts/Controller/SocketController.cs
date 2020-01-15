@@ -72,6 +72,42 @@ public class SocketController : MonoBehaviour {
         socket.On (gameCode.upgradeItem, OnUpgradeItems);
         socket.On (gameCode.syncItem, OnSyncItems);
 
+        socket.On (gameCode.createProjectile, OnCreateProjectile);
+        socket.On (gameCode.removeProjectile, OnRemoveProjectTile);
+        socket.On (gameCode.syncPositionProjectile, OnSyncPositionProjectile);
+        socket.On (gameCode.playerChat, OnPlayerChat);
+
+        socket.On (gameCode.syncNpcTransform, OnSyncNpcTransform);
+        socket.On (gameCode.syncNpcDie, OnNpcDie);
+        socket.On (gameCode.syncNpcHP, OnSyncNpcHp);
+    }
+
+    private void OnSyncNpcHp (Socket socket, Packet packet, object[] args) {
+        controllerDelegate.OnSyncNpcHp (packet.ToString ());
+    }
+
+    private void OnNpcDie (Socket socket, Packet packet, object[] args) {
+        controllerDelegate.OnNpcDie (packet.ToString ());
+    }
+
+    private void OnSyncNpcTransform (Socket socket, Packet packet, object[] args) {
+        controllerDelegate.OnSyncNpcTransform (packet.ToString ());
+    }
+
+    private void OnPlayerChat (Socket socket, Packet packet, object[] args) {
+        controllerDelegate.OnPlayerChat (packet.ToString ());
+    }
+
+    private void OnSyncPositionProjectile (Socket socket, Packet packet, object[] args) {
+        controllerDelegate.OnSyncPositionProjectile (packet.ToString ());
+    }
+
+    private void OnRemoveProjectTile (Socket socket, Packet packet, object[] args) {
+        controllerDelegate.OnRemoveProjectTile (packet.ToString ());
+    }
+
+    private void OnCreateProjectile (Socket socket, Packet packet, object[] args) {
+        controllerDelegate.OnCreateProjectile (packet.ToString ());
     }
 
     private void OnSyncItems (Socket socket, Packet packet, object[] args) {
@@ -138,45 +174,24 @@ public class SocketController : MonoBehaviour {
 
 public interface ISocketControllerDelegate {
     void OnConnect (string data);
+    void OnCreateProjectile (string v);
     void OnCreateStructure (string data);
     void OnDestroyStructure (string data);
+    void OnNpcDie (string v);
+    void OnPlayerChat (string v);
     void OnPlayerDie (string data);
     void OnPlayerHit (string data);
     void OnPlayerQuit (string data);
     void OnPlayerStatus (string data);
     void OnReceiveData (string data);
+    void OnRemoveProjectTile (string v);
     void OnSpawnPlayer (string data);
     void OnSwitchItem (string data);
     void OnSyncItem (string data);
+    void OnSyncNpcHp (string v);
+    void OnSyncNpcTransform (string v);
+    void OnSyncPositionProjectile (string v);
     void OnSyncTransform (string data);
     void OnTriggerAttack (string data);
     void OnUpgradeItems (string data);
-}
-
-public class SocketCode {
-    public string OnConnect = "oncon";
-    public string OnRequestJoin = "onJoin";
-    public string OnFailedToConnect = "onConFailed";
-}
-public class GameCode {
-    public string gameData = "gameData";
-    public string receivedData = "rvGameData";
-    public string spawnPlayer = "spwnPlayer";
-
-    public string playerQuit = "plQuit";
-
-    public string syncLookDirect = "syncLook";
-    public string syncMoveDirect = "syncMove";
-    public string syncTransform = "syncTrsform";
-    public string triggerAttack = "attk";
-    public string triggerAutoAttack = "autoAttk";
-    public string playerHit = "phit";
-    public string playerDie = "pdie";
-    public string playerStatus = "pstt";
-    public string switchItem = "swtItm";
-    public string spawnnStructures = "spwnStrc";
-    public string removeStructures = "rmvStrc";
-    public string upgradeItem = "ugdItem";
-
-    public string syncItem = "syncItem";
 }

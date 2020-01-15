@@ -39,6 +39,9 @@ public class PlayerController : MonoBehaviour {
     public void SwapItem (GameObject item) {
         character.ChangeItem (item);
     }
+    public void ShowChat (string text) {
+        character.Chat (text);
+    }
     private void MeleeAttackEffect () {
         Collider2D[] colls = Physics2D.OverlapBoxAll (transform.position - transform.right, new Vector2 (1, 3), transform.rotation.eulerAngles.z);
         foreach (Collider2D col in colls) {
@@ -53,6 +56,7 @@ public class PlayerController : MonoBehaviour {
         Gizmos.DrawRay (transform.position, -transform.right);
         Gizmos.DrawWireCube (transform.position - transform.right, new Vector2 (1, 3));
     }
+
 }
 
 public enum WeaponType {

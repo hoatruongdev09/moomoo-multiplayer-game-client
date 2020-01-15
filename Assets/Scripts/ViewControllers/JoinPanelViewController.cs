@@ -22,15 +22,27 @@ public class JoinPanelViewController : MonoBehaviour, IJoinPanelViewController {
     [SerializeField] private int gameSelected = 0;
     [SerializeField] private string playerName = "";
     [SerializeField] private GameStatusModel[] listGame;
+
+    public Vector2 originalPosition;
     private void OnEnable () {
+        originalPosition = (transform as RectTransform).anchoredPosition;
         InitializeView ();
         Show ();
     }
     public void Show () {
-
+        view.canvasGroup.LeanAlpha (1, .4f);
+        LeanTween.value (gameObject, originalPosition - new Vector2 (0, 50), originalPosition, .5f).setOnUpdate ((Vector2 value) => {
+            (transform as RectTransform).anchoredPosition = value;
+        }).setEaseOutBack ();
     }
     public void Hide () {
-        gameObject.SetActive (false);
+        view.canvasGroup.LeanAlpha (0, .4f);
+        LeanTween.value (gameObject, originalPosition, originalPosition - new Vector2 (0, 50), .5f).setOnUpdate ((Vector2 value) => {
+            (transform as RectTransform).anchoredPosition = value;
+        }).setEaseOutBack ().setOnComplete (() => {
+            gameObject.SetActive (false);
+        });
+
     }
     private void Start () {
         view.btnJoin.onClick.AddListener (ButtonJoin);

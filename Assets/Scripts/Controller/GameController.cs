@@ -4,19 +4,24 @@ using SimpleJSON;
 using UnityEngine;
 
 public class GameController : MonoBehaviour, ISocketControllerDelegate, IControllerDelegate, IControllerDatasource {
+    [Header ("CONTROLLER")]
     public SocketController socketController;
     public UIController uIController;
     public SpawnController spawnController;
     public PlayerManager playerManager;
     public StructuresController structuresController;
+    public ProjectileController projectileController;
     public CameraController cameraController;
-    [Header ("CONTROLLER")]
+    public MapManager mapManager;
+    public NpcManager npcManager;
+    [Header ("INPUT CONTROLLER")]
     public KeyboardController keyboardController;
     public VirtualGamePadController virtualGamePadController;
     private GameObject[] listResources;
     [SerializeField] private ConnectServerModel connectInfo;
     [SerializeField] private Controller[] inputController;
     public GameDataModel gameInfo;
+    // public UpdatePositionProjectileModel projectPositionInfo;
 
     private void Start () {
         socketController.Delegate = this;
@@ -58,6 +63,12 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
         data.AddField ("code", code);
         socketController.SocketEmit (socketController.gameCode.upgradeItem, data);
     }
+    public void SendChat (string text) {
+        JSONObject data = new JSONObject (JSONObject.Type.OBJECT);
+        data.AddField ("id", connectInfo.id);
+        data.AddField ("text", text);
+        socketController.SocketEmit (socketController.gameCode.playerChat, data);
+    }
     #endregion
     #region SOCKET LISTENER 
     public void OnConnect (string data) {
@@ -76,27 +87,21 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
         listResources = spawnController.SpawnResources (model.resource);
         uIController.gameViewController.InitPlayerMapCount (model.maxPlayer);
         uIController.SetServerMapSize (model.mapSize.ToVector2 ());
-        // foreach (ResourceInfoModel mod in model.resource) {
-        //     if ((ResourceType) mod.type == ResourceType.Wood) {
-        //         uIController.AddWoodToMap (mod.pos.ToVector3 ());
-        //     } else if ((ResourceType) mod.type == ResourceType.Food) {
-        //         uIController.AddFoodToMap (mod.pos.ToVector3 ());
-        //     } else if ((ResourceType) mod.type == ResourceType.Stone) {
-        //         uIController.AddStoneToMap (mod.pos.ToVector3 ());
-        //     } else if ((ResourceType) mod.type == ResourceType.Gold) {
-        //         uIController.AddGoldToMap (mod.pos.ToVector3 ());
-        //     }
-        // }
         playerManager.InitPlayers (model.maxPlayer);
         PlayerController[] players = spawnController.SpawnPlayers (model.players, playerManager.players);
         playerManager.SetPlayers (players);
         spawnController.SpawnStructures (model.structures, structuresController);
+        mapManager.SetMapSize (model.mapSize.ToVector2 ());
+        mapManager.SetSnowSize (model.snowSize);
+        mapManager.SetRiverSize (model.riverSize);
+        npcManager.InitListNpc (model.maxNpcCount);
+        spawnController.SpawnNpc (model.npc, npcManager);
         socketController.SocketEmit (socketController.gameCode.receivedData, new JSONObject (true));
     }
 
     public void OnSpawnPlayer (string data) {
         var temp = JSON.Parse (data);
-        Debug.Log ($"on Spawn player {data}");
+        // Debug.Log ($"on Spawn player {data}");
         PlayerJoinGameModel model = JsonUtility.FromJson<PlayerJoinGameModel> (temp[1].ToString ());
         PlayerController pc = spawnController.SpawnPlayer (model.id, model.name, model.skinId, model.pos.ToVector3 ());
         playerManager.SetPlayer (pc, model.id);
@@ -110,7 +115,7 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
     }
 
     public void OnPlayerQuit (string data) {
-        Debug.Log ($"On Player quit: {data}");
+        // Debug.Log ($"On Player quit: {data}");
         var temp = JSON.Parse (data);
         PlayerQuitModel model = JsonUtility.FromJson<PlayerQuitModel> (temp[1].ToString ());
         playerManager.RemovePlayer (model.id);
@@ -129,14 +134,13 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
         var temp = JSON.Parse (data);
         PlayerDieModel model = JsonUtility.FromJson<PlayerDieModel> (temp[1].ToString ());
         playerManager.PlayerDie (model);
-        Debug.Log ($"player die id: { model.id}");
+        // Debug.Log ($"player die id: { model.id}");
         if (model.id == connectInfo.id) {
             uIController.OnGameOver ();
         }
     }
 
     public void OnPlayerHit (string data) {
-        Debug.Log ($"hit: {data}");
         var temp = JSON.Parse (data);
         PlayerHitModel model = JsonUtility.FromJson<PlayerHitModel> (temp[1].ToString ());
         playerManager.PlayerHit (model);
@@ -175,6 +179,50 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
         var temp = JSON.Parse (data);
         SyncItemModel model = JsonUtility.FromJson<SyncItemModel> (temp[1].ToString ());
         uIController.SyncItemTray (model);
+    }
+    public void OnCreateProjectile (string data) {
+        Debug.Log ($"{data}");
+        var temp = JSON.Parse (data);
+        CreateProjectileModel model = JsonUtility.FromJson<CreateProjectileModel> (temp[1].ToString ());
+        projectileController.AddProjectile (spawnController.SpawnProjectile (model));
+    }
+
+    public void OnRemoveProjectTile (string data) {
+        // Debug.Log ($"{data}");
+        var temp = JSON.Parse (data);
+        RemoveProjectileModel model = JsonUtility.FromJson<RemoveProjectileModel> (temp[1].ToString ());
+        projectileController.RemoveProjectiles (model.id);
+    }
+
+    public void OnSyncPositionProjectile (string data) {
+        // Debug.Log ($"{data}");
+        var temp = JSON.Parse (data);
+        UpdatePositionProjectileModel model = JsonUtility.FromJson<UpdatePositionProjectileModel> (temp[1].ToString ());
+        projectileController.SyncProjectilePosition (model);
+    }
+    public void OnPlayerChat (string data) {
+        var temp = JSON.Parse (data);
+        ChatModel model = JsonUtility.FromJson<ChatModel> (temp[1].ToString ());
+        playerManager.ShowPlayerChat (model);
+    }
+    public void OnSyncNpcTransform (string data) {
+        // Debug.Log ($"npc transform: {data}");
+        var temp = JSON.Parse (data);
+        SyncTransformNPCModels model = JsonUtility.FromJson<SyncTransformNPCModels> (temp[1].ToString ());
+        npcManager.SyncTransform (model);
+    }
+    public void OnNpcDie (string data) {
+        Debug.Log ($"{data}");
+        var temp = JSON.Parse (data);
+        NpcDieModel model = JsonUtility.FromJson<NpcDieModel> (temp[1].ToString ());
+        npcManager.RemoveNpc (model);
+    }
+
+    public void OnSyncNpcHp (string data) {
+        // Debug.Log ($"{data}");
+        var temp = JSON.Parse (data);
+        SyncNpcHpModel model = JsonUtility.FromJson<SyncNpcHpModel> (temp[1].ToString ());
+        npcManager.SyncHp (model);
     }
     #endregion
 

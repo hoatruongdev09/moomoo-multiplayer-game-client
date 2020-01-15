@@ -78,6 +78,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4547914184185907978, guid: ddf940eae6d444e8c96d7acf58e70f95,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4547914184185907978, guid: ddf940eae6d444e8c96d7acf58e70f95,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3967701845949657898, guid: ddf940eae6d444e8c96d7acf58e70f95,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5429464396657870412, guid: ddf940eae6d444e8c96d7acf58e70f95,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -86,11 +101,6 @@ PrefabInstance:
     - target: {fileID: 5429464396657870412, guid: ddf940eae6d444e8c96d7acf58e70f95,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3967701845949657898, guid: ddf940eae6d444e8c96d7acf58e70f95,
-        type: 3}
-      propertyPath: m_Radius
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:

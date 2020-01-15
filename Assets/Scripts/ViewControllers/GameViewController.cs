@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameViewController : MonoBehaviour, IGameViewController, IPanelUpgradeItemDelegate {
+public class GameViewController : MonoBehaviour, IGameViewController, IPanelUpgradeItemDelegate, IChatViewControllerDelegate {
     public ItemTrayController itemTrayController;
+    public ChatViewController chatViewController;
     public GameView gameView;
     public MapViewController mapView;
     public PanelUpgradeItem panelUpgradeItem;
@@ -23,13 +24,18 @@ public class GameViewController : MonoBehaviour, IGameViewController, IPanelUpgr
     }
     private void Start () {
         panelUpgradeItem.Delegate = this;
+        chatViewController.Delegate = this;
         itemTrayController.RegisterDelegateForButton (controllerDelegate.OnChangeItem);
+
+        gameView.buttonChat.onClick.AddListener (OpenChatPanel);
     }
     public void Show () {
-
+        gameView.canvasGroup.LeanAlpha (1, .5f);
     }
     public void Hide () {
-        gameObject.SetActive (false);
+        gameView.canvasGroup.LeanAlpha (0, .5f).setOnComplete (() => {
+            gameObject.SetActive (false);
+        });
     }
     public void UpdatePlayerStatus (PlayerStatusModel model) {
         gameView.UpdateInfo (model);
@@ -69,6 +75,19 @@ public class GameViewController : MonoBehaviour, IGameViewController, IPanelUpgr
     public void InitPlayerMapCount (int count) {
         mapView.InitPlayerCount (count);
     }
+
+    public void OnButtonSendClick (string text) {
+        if (controllerDelegate != null) {
+            controllerDelegate.OnSendChat (text);
+        }
+    }
+    public void OpenChatPanel () {
+        if (chatViewController.gameObject.activeSelf) {
+            chatViewController.Hide ();
+        } else {
+            chatViewController.gameObject.SetActive (true);
+        }
+    }
 }
 public interface IGameViewController {
     IGameViewControllerDatasource Datasource { get; set; }
@@ -77,6 +96,7 @@ public interface IGameViewController {
 public interface IGameViewControllerDelegate {
     void OnChangeItem (string item);
     void OnUpgradeItem (string code);
+    void OnSendChat (string text);
 }
 public interface IGameViewControllerDatasource {
 

@@ -8,6 +8,13 @@ public class GameView : MonoBehaviour {
     public PlayerInfoText stoneInfo;
     public PlayerInfoText goldInfo;
     public PlayerInfoText killInfo;
+
+    public Button buttonChat;
+    public Button buttonShop;
+    public Button buttonClan;
+    public Button scoreBoard;
+
+    public CanvasGroup canvasGroup;
     public GameObject virtualGamePad;
     public XpBar xpBar;
 
