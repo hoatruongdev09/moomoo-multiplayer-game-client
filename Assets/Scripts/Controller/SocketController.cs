@@ -40,8 +40,11 @@ public class SocketController : MonoBehaviour {
         options.ReconnectionAttempts = 3;
         options.AutoConnect = true;
         options.ReconnectionDelay = miliSecForReconnect;
+
+#if UNITY_WEBGL	
         //use this option with WebGL build
-        // options.ConnectWith = BestHTTP.SocketIO.Transports.TransportTypes.WebSocket;
+        options.ConnectWith = BestHTTP.SocketIO.Transports.TransportTypes.WebSocket;
+#endif
 
         //Server URI
         var socketManagerRef = new SocketManager (new Uri ("http://" + socketUrl + "/socket.io/"), options);
