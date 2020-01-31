@@ -67,6 +67,9 @@ public class UIController : MonoBehaviour, IJoinPanelViewControllerDelegate, IJo
         Debug.Log ($"set server mapSize: {size}");
         gameViewController.SetServerMapSize (size);
     }
+    public void ReceiveScoreInfo (ScoreInfo[] infos) {
+        gameViewController.ReceiveScoreboard (infos);
+    }
     #region PANEL VIEW
     public void OnJoinClick (string name, int gameId, int skinId) {
         gameController.RequestJoinGame (name, gameId, skinId);
@@ -88,6 +91,10 @@ public class UIController : MonoBehaviour, IJoinPanelViewControllerDelegate, IJo
 
     public void OnSendChat (string text) {
         gameController.SendChat (text);
+    }
+
+    public void OnOpenScoreboard () {
+        gameController.RequestScore ();
     }
     #endregion
 }

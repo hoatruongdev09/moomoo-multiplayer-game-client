@@ -37,15 +37,20 @@ public class PlayerManager : MonoBehaviour {
 
     public void SyncTransform (SyncTransformModel model) {
         foreach (SyncPostionModel posMod in model.pos) {
-            players[posMod.id].SyncPosition (posMod.pos.ToVector3 ());
-            uIController.UpdatePositionPlayer (posMod.id, posMod.pos.ToVector3 ());
+            if (players[posMod.id]) {
+                players[posMod.id].SyncPosition (posMod.pos.ToVector3 ());
+                uIController.UpdatePositionPlayer (posMod.id, posMod.pos.ToVector3 ());
+            }
         }
         foreach (SyncRotationModel rotMod in model.rot) {
-            players[rotMod.id].SyncRotation (rotMod.angle);
+            if (players[rotMod.id]) {
+                players[rotMod.id].SyncRotation (rotMod.angle);
+            }
         }
     }
 
     public void TriggerPlayerAttack (TriggerAttackModel model) {
+        Debug.Log ("Trigger attack");
         if (players[model.idGame] != null) {
             players[model.idGame].TriggerAttack ((WeaponType) model.type);
         }

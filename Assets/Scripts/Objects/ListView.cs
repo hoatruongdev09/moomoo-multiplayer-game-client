@@ -43,6 +43,7 @@ public class ListView : MonoBehaviour, IListView {
             ListViewItem temp = listDatasource.CellOfRow (i);
             temp.transform.SetParent (layoutGroup.transform);
             temp.transform.localScale = Vector3.one;
+            temp.ID = i;
             int tempId = i;
             temp.OnSelected = delegate { listDelegate.OnSelectRow (tempId); };
             items.Add (temp);
@@ -53,7 +54,7 @@ public class ListView : MonoBehaviour, IListView {
         for (int i = 0; i < itemCount; i++) {
             size += listDatasource.SizeOfRow (i) + layoutGroup.spacing;
         }
-        rectLayout.sizeDelta = new Vector2 (rectLayout.rect.size.x, size);
+        rectLayout.sizeDelta = new Vector2 (rectLayout.sizeDelta.x, size);
     }
 
 }

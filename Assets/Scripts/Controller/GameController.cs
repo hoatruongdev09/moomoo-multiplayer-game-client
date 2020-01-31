@@ -69,6 +69,9 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
         data.AddField ("text", text);
         socketController.SocketEmit (socketController.gameCode.playerChat, data);
     }
+    public void RequestScore () {
+        socketController.SocketEmit (socketController.gameCode.scoreBoard);
+    }
     #endregion
     #region SOCKET LISTENER 
     public void OnConnect (string data) {
@@ -81,6 +84,7 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
     }
 
     public void OnReceiveData (string data) {
+        Debug.Log ($"INTRO DATA:\n {data}");
         var temp = JSON.Parse (data);
         GameDataModel model = JsonUtility.FromJson<GameDataModel> (temp[1].ToString ());
         gameInfo = model;
@@ -103,14 +107,18 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
         var temp = JSON.Parse (data);
         // Debug.Log ($"on Spawn player {data}");
         PlayerJoinGameModel model = JsonUtility.FromJson<PlayerJoinGameModel> (temp[1].ToString ());
-        PlayerController pc = spawnController.SpawnPlayer (model.id, model.name, model.skinId, model.pos.ToVector3 ());
-        playerManager.SetPlayer (pc, model.id);
-
+        PlayerController pc; // = spawnController.SpawnPlayer (model.id, model.name, model.skinId, model.pos.ToVector3 ());
         if (model.clientId == connectInfo.id) {
+            pc = spawnController.SpawnLocalPlayer (model.id, model.name, model.skinId, model.pos.ToVector3 ());
             cameraController.SetForcus (pc.transform);
             playerManager.localPlayer = pc;
             uIController.AddPlayerToMap (model.id);
+        } else {
+            pc = spawnController.SpawnPlayer (model.id, model.name, model.skinId, model.pos.ToVector3 ());
         }
+
+        playerManager.SetPlayer (pc, model.id);
+
         uIController.OnJoinGame ();
     }
 
@@ -165,6 +173,7 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
         structuresController.AddStructure (spawnController.SpawnStructure (model));
     }
     public void OnDestroyStructure (string data) {
+        Debug.Log ($"{data}");
         var temp = JSON.Parse (data);
         RemoveStructureModel model = JsonUtility.FromJson<RemoveStructureModel> (temp[1].ToString ());
         structuresController.RemoveStructures (model.id);
@@ -223,6 +232,16 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
         var temp = JSON.Parse (data);
         SyncNpcHpModel model = JsonUtility.FromJson<SyncNpcHpModel> (temp[1].ToString ());
         npcManager.SyncHp (model);
+    }
+    public void OnSpawnNpc (string data) {
+        var temp = JSON.Parse (data);
+        SpawnNpcModel model = JsonUtility.FromJson<SpawnNpcModel> (temp[1].ToString ());
+        spawnController.SpawnNpc (new SpawnNpcModel[] { model }, npcManager);
+    }
+    public void OnReceiveScoreBoard (string data) {
+        var temp = JSON.Parse (data);
+        PlayerScoreModel model = JsonUtility.FromJson<PlayerScoreModel> (temp[1].ToString ());
+        uIController.ReceiveScoreInfo (model.data);
     }
     #endregion
 

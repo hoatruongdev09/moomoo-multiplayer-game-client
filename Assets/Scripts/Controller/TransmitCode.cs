@@ -32,4 +32,6 @@ public class GameCode {
     public string syncNpcTransform = "npcTrans";
     public string syncNpcHP = "npcHP";
     public string syncNpcDie = "npcDie";
+    public string spawnNpc = "spwnNpc";
+    public string scoreBoard = "scrBoard";
 }

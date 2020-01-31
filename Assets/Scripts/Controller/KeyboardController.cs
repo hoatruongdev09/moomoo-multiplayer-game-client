@@ -31,6 +31,15 @@ public class KeyboardController : Controller {
         if (Input.GetKeyDown (KeyCode.Space)) {
             controllerDelegate.OnTriggerAttack (true);
         }
+        if (Input.GetMouseButton (0)) {
+            controllerDelegate.OnTriggerAttack (true);
+        }
+        if (Input.GetMouseButtonUp (0)) {
+            controllerDelegate.OnTriggerAttack (false);
+        }
+        // if (Input.GetMouseButtonDown (0)) {
+        //     controllerDelegate.OnTriggerAttack (true);
+        // }
         Movement ();
         Rotation ();
     }

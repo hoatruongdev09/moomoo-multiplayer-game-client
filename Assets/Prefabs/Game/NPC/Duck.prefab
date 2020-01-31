@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 4139937955878285397}
   - component: {fileID: 4484724460229717262}
   m_Layer: 0
-  m_Name: Bird
+  m_Name: Duck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7daff9bdb350499c995b0b2e21919eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHP: 250
   graphic: {fileID: 185170037949713807}
   healthBar: {fileID: 8338247249601468600}
   healthBarHolder: {fileID: 2781995597259636821}

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour {
     public int id;
+    public float destroyTime = 3;
     public SpriteRenderer graphic;
     private Vector3 lastPosition;
     private bool isDisable = false;
@@ -15,7 +16,7 @@ public class Projectile : MonoBehaviour {
         lastPosition = position;
     }
     public void Destroy () {
-        StartCoroutine (DelayToDestroy (3));
+        StartCoroutine (DelayToDestroy (destroyTime));
         isDisable = true;
     }
     private void OnTriggerStay2D (Collider2D other) {

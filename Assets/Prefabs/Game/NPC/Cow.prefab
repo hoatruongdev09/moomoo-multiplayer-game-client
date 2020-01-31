@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8501129835010394867}
   - component: {fileID: 8264921201608120232}
   m_Layer: 0
-  m_Name: Npc
+  m_Name: Cow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7daff9bdb350499c995b0b2e21919eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHP: 500
   graphic: {fileID: 5629442371117971241}
   healthBar: {fileID: 4555796311782367774}
   healthBarHolder: {fileID: 7644215401824500467}

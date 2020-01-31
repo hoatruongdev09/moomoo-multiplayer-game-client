@@ -3,6 +3,7 @@ using System;
 [Serializable]
 public class CreateProjectileModel {
     public int id;
+    public int skinId;
     public PositionModel pos;
     public float angle;
 }

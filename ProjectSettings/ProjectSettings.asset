@@ -12,12 +12,12 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: moomoo
+  companyName: stdio.hue
+  productName: MOUMOU.IO
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
-  m_ShowUnitySplashScreen: 1
+  m_ShowUnitySplashScreen: 0
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1
   m_SplashScreenAnimation: 1
@@ -119,7 +119,131 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleVersion: 0.1
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 8494629763322490066, guid: 957835c5dd2a1473abb56aa072ba94ec, type: 3}
+  - {fileID: 1157592689074041500, guid: 9f83b4aeb913149cb9ce85a7f284f133, type: 3}
+  - {fileID: 4331275701557798126, guid: 6819a743cab074ca7b5afd96a4038536, type: 3}
+  - {fileID: 1075996330983653808, guid: 535a4de225afe4fd8b999e6248765b16, type: 3}
+  - {fileID: 1582317359046662846, guid: 18e439f5816164e4480fb642292ffc01, type: 3}
+  - {fileID: 9000293997521136, guid: a08c2843fe0874bc1b51fbc29f4d5f93, type: 3}
+  - {fileID: 348266294337073802, guid: 724801082be2d48899dc793049b6ae5e, type: 3}
+  - {fileID: 8887817980938436186, guid: 2a69d21232f8c4c5cb2c2a5e0d50a8f3, type: 3}
+  - {fileID: 993500693689548358, guid: afa518dc8acaa494c810e8895bf15f53, type: 3}
+  - {fileID: 1109861280626717558, guid: 1d52de9f76c5c49ddb3c192f6885e22e, type: 3}
+  - {fileID: 4893464313860852176, guid: 30f4b6d6072c144bcaeec4cdfd8d9093, type: 3}
+  - {fileID: 8867446205663069579, guid: c5c69fe77a50a4ee98d1626b06a59935, type: 3}
+  - {fileID: 540627103534978165, guid: 70bb374e40bc9481297773a94a588c4d, type: 3}
+  - {fileID: 3251852333340196486, guid: 1aad82d1ba45b4a35b025f6dcc57aa3f, type: 3}
+  - {fileID: 3715748121757639583, guid: ccae316d5c3d34437bd30fa53b424f85, type: 3}
+  - {fileID: 35883925438062837, guid: b3995b2ebb68146c4a70a82168b19c08, type: 3}
+  - {fileID: 6190348685696230078, guid: 0f2d59f757f2c489ea62fd868a6d5834, type: 3}
+  - {fileID: 1332219094712334273, guid: 35e13beccfffb4ea1b3624ff605cd219, type: 3}
+  - {fileID: 8505977257587679357, guid: 33b1bfc2c7dc646099b6f39ade6cbf24, type: 3}
+  - {fileID: 3212638645869285232, guid: 450021c019846466397e75d038e88b56, type: 3}
+  - {fileID: 4160277348931121650, guid: 385a836cb36784d2d9b25ae1b3b68ef3, type: 3}
+  - {fileID: 4419143467178816710, guid: 162b217ecc9644e1d9febeee7f91ec63, type: 3}
+  - {fileID: 9161456535595835383, guid: e0ea782fd7ca44af0a557bf70ed55c84, type: 3}
+  - {fileID: 3421825685056960875, guid: ea1a629215bc84662857b11d04cf6802, type: 3}
+  - {fileID: 5632764170151724192, guid: d35a065266fbd4595972f5b6aa489d56, type: 3}
+  - {fileID: 5773852246713123980, guid: f3786f5b581fe4914aefae84bcdbf8ba, type: 3}
+  - {fileID: 2750456070508766582, guid: 915503b01123c4b74ac6ade9f997643f, type: 3}
+  - {fileID: 2481258226650243574, guid: a0963bb87a5d04f8eab6624e60fa18ec, type: 3}
+  - {fileID: 3170503955124905108, guid: 86eda1ca6524f424cb23d97f19ac3c54, type: 3}
+  - {fileID: 3716514494913964600, guid: b1d0abcedb9ce47fbaeee5a81cc1665d, type: 3}
+  - {fileID: 7631961368154488779, guid: 9e1c55922894a43f294016e02b230775, type: 3}
+  - {fileID: 3504556718526538306, guid: d1bf0f7f4eeac40ea93c7b781473593d, type: 3}
+  - {fileID: 3981457320829685055, guid: ce6ed5cd457fb40e2907091c2d5adbb1, type: 3}
+  - {fileID: 382901566531704232, guid: ad4a067f046ad49ccb880af6500d4e4d, type: 3}
+  - {fileID: 1230942663925473806, guid: 97ac903ee19c144738eea2276f0dc312, type: 3}
+  - {fileID: 9217650482992070343, guid: e4db4c74e072a4583b7b91030fd9f5bd, type: 3}
+  - {fileID: 9034632885380410597, guid: ea885ddffde764bee95a6fffdf317b7e, type: 3}
+  - {fileID: 5644250354101614635, guid: 7835d87cd5b334f518a11a384d3f1da2, type: 3}
+  - {fileID: 6313364055083634435, guid: 1856c94c6d7de4daeabfd2d8fb3e80b7, type: 3}
+  - {fileID: 453034042081782711, guid: 54b9f324d25c14421ab5418d0a4b5028, type: 3}
+  - {fileID: 1596763634179546587, guid: 009a493437c194d8dace7d290a2e97b8, type: 3}
+  - {fileID: 3815546804609666109, guid: 6829942f4aa4c46b592bff2c3af1b2a2, type: 3}
+  - {fileID: 6556028305308734278, guid: 447ac81a753494b8396cc1ebc6c0354f, type: 3}
+  - {fileID: 3312582849548946599, guid: f01cada6920644446a25ca122f76a522, type: 3}
+  - {fileID: 7414458429310853973, guid: 98ac64216ceb14e09b2e829a69cbacc3, type: 3}
+  - {fileID: 5704700157326792451, guid: d097f5eb72483484bad9b690e2e9244a, type: 3}
+  - {fileID: 3219174812619919599, guid: ea75b8b04c50f460b83857d1ecc6414f, type: 3}
+  - {fileID: 4489708326462561789, guid: 4f04a340bb93e4e8faa4f6000af5565a, type: 3}
+  - {fileID: 6379717286295670157, guid: 2f09358b7abc2493fa496c30ecf75c59, type: 3}
+  - {fileID: 6064251938469530387, guid: b8d29c0b191eb4bb0b310ac1bb7bfa5e, type: 3}
+  - {fileID: 8855848016688835950, guid: 634ad0305936d418fb74b13ab14fcd66, type: 3}
+  - {fileID: 4102445067709754738, guid: 4fe749906b261452cac823c39baac709, type: 3}
+  - {fileID: 6681408566424536218, guid: 5dfb9b588cd114841836873e3a27b7f0, type: 3}
+  - {fileID: 6144031746139571954, guid: c8e1145faf43a4a38b57754651b08ebd, type: 3}
+  - {fileID: 2621749697257742294, guid: 9eb9b98cce23442889c0a58252c6ce77, type: 3}
+  - {fileID: 2763291842174856576, guid: bf42db73da57243b9aceff43e171c01a, type: 3}
+  - {fileID: 5440429641579130315, guid: bb76bce50703747df8178f255a6d73bb, type: 3}
+  - {fileID: 5458712380216473740, guid: 7de0e4c362cf149e4af9b09dfdcda4dd, type: 3}
+  - {fileID: 3155936069971174022, guid: 8a6abbd63550b4b428aece2d523d4143, type: 3}
+  - {fileID: 9071413822608042645, guid: b9b0dba26e38c49beb606ebba39874fb, type: 3}
+  - {fileID: 2616901414244640958, guid: 520af470239e34a59856204147c62210, type: 3}
+  - {fileID: 4533376602290230941, guid: 30b3932a33d6a42409b4a283f913d78b, type: 3}
+  - {fileID: 6338471382898581890, guid: acb31f5d2c7494f4eb5d155f486be81b, type: 3}
+  - {fileID: 1094072752793185106, guid: ddf940eae6d444e8c96d7acf58e70f95, type: 3}
+  - {fileID: 6662646511317042193, guid: 6865a51343fe44258bf8587d4cccb867, type: 3}
+  - {fileID: 4010674135339362618, guid: aaa6a5a75deb944e2a2eb6cd297af617, type: 3}
+  - {fileID: 28775200701969947, guid: 88f1a90053a874f8083c07f8a5dcaf79, type: 3}
+  - {fileID: 5672305587036269625, guid: b2e565841db754507bc6a1b4576811d3, type: 3}
+  - {fileID: 1526420441733651367, guid: caa9463d8f3b64f0db1de20394d0d6f7, type: 3}
+  - {fileID: 7115815748235854880, guid: 4bcebd3c9a4c34c7b8636796543ee5c4, type: 3}
+  - {fileID: 1159193383465185986, guid: e73ba3c20bceb4f939fbf46d9651caaf, type: 3}
+  - {fileID: 6938643871816914868, guid: 1c1a4b2511d3e4c9c8cf9c2c078e2b24, type: 3}
+  - {fileID: 144853194003128864, guid: 6b8095a86e5ac4d5297254476323f2e2, type: 3}
+  - {fileID: 3634699008836696477, guid: e70128717f1c04f3ca0b08bf3b30200b, type: 3}
+  - {fileID: 7586852662301426577, guid: 320562b43fc964c8a9f56a2483d041e9, type: 3}
+  - {fileID: 8843381470273028493, guid: 46a9852e5e9b14198b7bee39ad1d31e6, type: 3}
+  - {fileID: 1425759575286552554, guid: f8e2f1579167a444193de9fdee2e9b17, type: 3}
+  - {fileID: 8254618325769084247, guid: 8a9c25a18152b450db974a4ce052962a, type: 3}
+  - {fileID: 790146191636390583, guid: 05c55eb58fc8f406ebec407b223a6552, type: 3}
+  - {fileID: 9172074085130496290, guid: a9872ec90424c42069d40c24ddb38c86, type: 3}
+  - {fileID: 1023339471348411061, guid: e197296ef40b44c6abb68d7a08d11407, type: 3}
+  - {fileID: 5919946804100591257, guid: 819ebe14365614af59199477630ac25b, type: 3}
+  - {fileID: 7925675548544886363, guid: c1a89ad1a15ff4cacaf7cc67554866e4, type: 3}
+  - {fileID: 3363381076259142604, guid: b2bb845e8c59140a48edf1aef10e8ba5, type: 3}
+  - {fileID: 1289715144047002606, guid: 28c0f705ddc074559acb4c7cf854dc3a, type: 3}
+  - {fileID: 251076768822490936, guid: 326cbc884b4b142a8b1a722982ac81ac, type: 3}
+  - {fileID: 294295448061992101, guid: fc938789ae99a4ecd8225138a1009e06, type: 3}
+  - {fileID: 7388966399582312191, guid: 235473fd2f19145dba6daf16590bb663, type: 3}
+  - {fileID: 2213796266468499536, guid: d2d00184863114c3e85b7e406c1c8e19, type: 3}
+  - {fileID: 3093999158946297664, guid: 0a80393131a1a431abee1c7a527f933c, type: 3}
+  - {fileID: 304796323062907726, guid: 6bebded22524d49a7b2b717ca5bc72ba, type: 3}
+  - {fileID: 6307331590089991851, guid: d49b450d8ab524a81ad5edde98bc1177, type: 3}
+  - {fileID: 900925163207556738, guid: 0e9ddf9cd316444a6825f7a3b234ef1b, type: 3}
+  - {fileID: 6984718958129453716, guid: cf63a5e05011342ec884e7a058d92870, type: 3}
+  - {fileID: 3291308471421430564, guid: 8d64bae2f75024d3fb0b5483996042ed, type: 3}
+  - {fileID: 8810307397219553256, guid: bc06b15c48fd74049bfdc68e0832484e, type: 3}
+  - {fileID: 3010861407015812458, guid: 86b151ca67afc49cdb96d4b047715797, type: 3}
+  - {fileID: 6022227872787907616, guid: 38e657edb12124f3d9aac89538676a46, type: 3}
+  - {fileID: 3532568478032888440, guid: 8702507836fa84c4eb4abebc671cb5b7, type: 3}
+  - {fileID: 3769613998038650621, guid: 78bf541cfc92c46358c8fe07f0f019fb, type: 3}
+  - {fileID: 5380385737088782908, guid: d619a2a85aaf14cae9cdcbf202941475, type: 3}
+  - {fileID: 7248059999343204080, guid: 38d9c49f4287f4e549f22ad48fab16f5, type: 3}
+  - {fileID: 4684754589942105737, guid: 6f1184bab3aae4c28b861526a4dcdddf, type: 3}
+  - {fileID: 634378415485001360, guid: 30ec7cf4b3e4c48e1a72e5ab9f52e438, type: 3}
+  - {fileID: 8851673841750863517, guid: 50f78bd73417b4217a2de1d208d04aa1, type: 3}
+  - {fileID: 2339682290198077701, guid: 1a66d3aa12cce43cbaedcd7d73353a0c, type: 3}
+  - {fileID: 4827820843618444691, guid: 39e18c3fe31a645bd8c1f62e570f0acb, type: 3}
+  - {fileID: 2918740935921266981, guid: e7c44d853374a449a8a87944c53ef8e3, type: 3}
+  - {fileID: 5031077457746841571, guid: f10545b41acda4d86802b5facb832e09, type: 3}
+  - {fileID: 332587353818603728, guid: 801ab91633c494b5588b325526f231e7, type: 3}
+  - {fileID: 5036741693941394822, guid: bba84805508c84b13b22fff5481df140, type: 3}
+  - {fileID: 7433679071246410119, guid: df2be5d87ffce4f22b19fbe83ae936b3, type: 3}
+  - {fileID: 7286298486302418278, guid: 7763f68de88d14d79947de2cc2f98221, type: 3}
+  - {fileID: 8340397630251566632, guid: 8fa65f9249c5f468d84bca6fd1ead32b, type: 3}
+  - {fileID: 4708598190035471216, guid: f169585e4996249d495234aa87f17d30, type: 3}
+  - {fileID: 9038960471080266317, guid: 73241c0f2146a4137850373efe6b583f, type: 3}
+  - {fileID: 2988186385611248811, guid: f24d934a9e9a34465a2c902ac9a3c36d, type: 3}
+  - {fileID: 687102447256198792, guid: 6a8851a2ead8e4c3ebba781dd755f030, type: 3}
+  - {fileID: 3866438525181616140, guid: ecdad7f7fd0244cb3b4174dbf40e260c, type: 3}
+  - {fileID: 4911335438204843037, guid: 72e43bdb17ad84006bd2cd5834bd54e0, type: 3}
+  - {fileID: 8194726929160110334, guid: ce499721be78c4399ba966a1722fddc0, type: 3}
+  - {fileID: 1356259722477210642, guid: c5a4a3921c91446f4bb5f8df32e323db, type: 3}
+  - {fileID: 5901438214130169369, guid: 9e87b235c742449a795ae8f04bad9be0, type: 3}
+  - {fileID: 1525189288920427530, guid: be60fcaf727644d72b5730a765e6e20a, type: 3}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -156,7 +280,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.stdiohue.moomoo
+    Android: com.stdiohue.moumou
     Standalone: com.Company.ProductName
   buildNumber: {}
   AndroidBundleVersionCode: 1
@@ -167,7 +291,7 @@ PlayerSettings:
   stripEngineCode: 1
   iPhoneStrippingLevel: 0
   iPhoneScriptCallOptimization: 0
-  ForceInternetPermission: 0
+  ForceInternetPermission: 1
   ForceSDCardPermission: 0
   CreateWallpaper: 0
   APKExpansionFiles: 0
@@ -245,11 +369,11 @@ PlayerSettings:
   clonedFromGUID: 5f34be1353de5cf4398729fda238591b
   templatePackageId: com.unity.template.2d@1.3.0
   templateDefaultScene: Assets/Scenes/SampleScene.unity
-  AndroidTargetArchitectures: 5
+  AndroidTargetArchitectures: 1
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: user.keystore
+  AndroidKeyaliasName: user
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
@@ -266,7 +390,45 @@ PlayerSettings:
   m_BuildTargetPlatformIcons:
   - m_BuildTarget: Android
     m_Icons:
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 2800000, guid: 2ac0c3dcdc2d945f3a90cb788ec40c2c, type: 3}
+      m_Width: 192
+      m_Height: 192
+      m_Kind: 1
+      m_SubKind: 
+    - m_Textures:
+      - {fileID: 0}
+      m_Width: 144
+      m_Height: 144
+      m_Kind: 1
+      m_SubKind: 
+    - m_Textures:
+      - {fileID: 0}
+      m_Width: 96
+      m_Height: 96
+      m_Kind: 1
+      m_SubKind: 
+    - m_Textures:
+      - {fileID: 0}
+      m_Width: 72
+      m_Height: 72
+      m_Kind: 1
+      m_SubKind: 
+    - m_Textures:
+      - {fileID: 0}
+      m_Width: 48
+      m_Height: 48
+      m_Kind: 1
+      m_SubKind: 
+    - m_Textures:
+      - {fileID: 0}
+      m_Width: 36
+      m_Height: 36
+      m_Kind: 1
+      m_SubKind: 
+    - m_Textures:
+      - {fileID: 2800000, guid: 2ac0c3dcdc2d945f3a90cb788ec40c2c, type: 3}
+      - {fileID: 0}
       m_Width: 432
       m_Height: 432
       m_Kind: 2
@@ -296,65 +458,41 @@ PlayerSettings:
       m_Height: 81
       m_Kind: 2
       m_SubKind: 
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 2800000, guid: 2ac0c3dcdc2d945f3a90cb788ec40c2c, type: 3}
       m_Width: 192
       m_Height: 192
       m_Kind: 0
       m_SubKind: 
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 0}
       m_Width: 144
       m_Height: 144
       m_Kind: 0
       m_SubKind: 
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 0}
       m_Width: 96
       m_Height: 96
       m_Kind: 0
       m_SubKind: 
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 0}
       m_Width: 72
       m_Height: 72
       m_Kind: 0
       m_SubKind: 
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 0}
       m_Width: 48
       m_Height: 48
       m_Kind: 0
       m_SubKind: 
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 0}
       m_Width: 36
       m_Height: 36
       m_Kind: 0
-      m_SubKind: 
-    - m_Textures: []
-      m_Width: 192
-      m_Height: 192
-      m_Kind: 1
-      m_SubKind: 
-    - m_Textures: []
-      m_Width: 144
-      m_Height: 144
-      m_Kind: 1
-      m_SubKind: 
-    - m_Textures: []
-      m_Width: 96
-      m_Height: 96
-      m_Kind: 1
-      m_SubKind: 
-    - m_Textures: []
-      m_Width: 72
-      m_Height: 72
-      m_Kind: 1
-      m_SubKind: 
-    - m_Textures: []
-      m_Width: 48
-      m_Height: 48
-      m_Kind: 1
-      m_SubKind: 
-    - m_Textures: []
-      m_Width: 36
-      m_Height: 36
-      m_Kind: 1
       m_SubKind: 
   m_BuildTargetBatching: []
   m_BuildTargetGraphicsAPIs: []
@@ -594,14 +732,16 @@ PlayerSettings:
   webGLThreadsSupport: 0
   scriptingDefineSymbols: {}
   platformArchitecture: {}
-  scriptingBackend: {}
+  scriptingBackend:
+    Android: 0
   il2cppCompilerConfiguration: {}
   managedStrippingLevel: {}
   incrementalIl2cppBuild: {}
   allowUnsafeCode: 0
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 1
-  apiCompatibilityLevelPerPlatform: {}
+  apiCompatibilityLevelPerPlatform:
+    Android: 6
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
   metroPackageName: Template_2D

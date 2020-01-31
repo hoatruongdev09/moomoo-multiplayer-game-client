@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Structure : MonoBehaviour {
     public int id;
+    public int fromId;
     public string itemId;
     public SpriteRenderer graphic;
     private Vector3 initPosition;

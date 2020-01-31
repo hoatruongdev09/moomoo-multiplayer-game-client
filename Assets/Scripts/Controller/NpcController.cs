@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class NpcController : MonoBehaviour {
+    public float maxHP;
     public SpriteRenderer graphic;
     public SpriteRenderer healthBar;
     public Transform healthBarHolder;
@@ -16,8 +17,11 @@ public class NpcController : MonoBehaviour {
         healthBarHolder.position = transform.position + new Vector3 (0, -2);
         healthBarHolder.rotation = Quaternion.identity;
     }
-    public void SyncHealthPoint (int hp) {
-        this.healthBar.transform.LeanScaleX ((float) hp / 100f, .15f);
+    public float GetlastHp () {
+        return healthBar.transform.localScale.x;
+    }
+    public void SyncHealthPoint (float hp) {
+        this.healthBar.transform.LeanScaleX (hp, .15f);
     }
     public void SyncRotation (float angle) {
         this.lastRotation = angle;

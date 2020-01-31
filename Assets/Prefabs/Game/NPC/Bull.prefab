@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7daff9bdb350499c995b0b2e21919eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHP: 700
   graphic: {fileID: 5020812849908299477}
   healthBar: {fileID: 3786188315738661858}
   healthBarHolder: {fileID: 7036869766599244559}

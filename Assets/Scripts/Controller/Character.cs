@@ -39,6 +39,9 @@ public class Character : MonoBehaviour {
     public void SyncHealthPoint (int hp) {
         this.healthBar.transform.LeanScaleX ((float) hp / 100f, .15f);
     }
+    public void SetHealbarColor (Color color) {
+        healthBar.color = color;
+    }
     public void SetName (string name) {
         gameObject.name = $"{name}";
         textName.text = name;

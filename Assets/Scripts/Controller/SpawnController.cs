@@ -22,11 +22,13 @@ public class SpawnController : MonoBehaviour {
     public Structure[] structurePrefabs;
     private GameObject structureHolder;
     [Header ("PROJECTILE")]
-    public Projectile projectilePrefab;
+    public Projectile[] projectilePrefab;
     private GameObject projectileHolder;
     [Header ("NPC")]
     public NpcController[] skinNpc;
     private GameObject npcHolder;
+    [Header ("Accessory")]
+    public Accessory[] accessories;
 
     private void Start () {
         rsHolder = new GameObject ("RESOURCES HOLDER");
@@ -38,14 +40,35 @@ public class SpawnController : MonoBehaviour {
     }
     public PlayerController[] SpawnPlayers (InitPlayerModel[] playerModels, PlayerController[] listPlayer) {
         for (int i = 0; i < playerModels.Length; i++) {
-            listPlayer[playerModels[i].id] = SpawnPlayer (playerModels[i].id, playerModels[i].name, playerModels[i].skinId, playerModels[i].pos.ToVector3 ());
-
+            // listPlayer[playerModels[i].id] = SpawnPlayer (playerModels[i].id, playerModels[i].name, playerModels[i].skinId, playerModels[i].pos.ToVector3 ());
+            listPlayer[playerModels[i].id] = SpawnPlayer (playerModels[i]);
         }
         return listPlayer;
+    }
+    public PlayerController SpawnPlayer (InitPlayerModel model) {
+        GameObject playGO = Instantiate (playerPrefab, model.pos.ToVector3 (), Quaternion.identity, playerHolder.transform);
+        PlayerController pc = playGO.GetComponent<PlayerController> ();
+        pc.character.ChangeColor (colorId[model.skinId]);
+        pc.character.SetName ($"{model.name}");
+        pc.SyncPosition (model.pos.ToVector3 ());
+        pc.SyncHealthPoint (model.hp);
+        pc.SwapItem (CreateItem (model.itemId));
+        return pc;
     }
     public PlayerController SpawnPlayer (int id, string name, int skinId, Vector3 position) {
         GameObject playGO = Instantiate (playerPrefab, position, Quaternion.identity, playerHolder.transform);
         PlayerController pc = playGO.GetComponent<PlayerController> ();
+        pc.Character.ChangeColor (colorId[skinId]);
+        pc.Character.SetName ($"{name}");
+        pc.SyncPosition (position);
+        return pc;
+    }
+    public PlayerController SpawnLocalPlayer (int id, string name, int skinId, Vector3 position) {
+        GameObject playGO = Instantiate (playerPrefab, position, Quaternion.identity, playerHolder.transform);
+        PlayerController pc = playGO.GetComponent<PlayerController> ();
+        Color color;
+        ColorUtility.TryParseHtmlString ("#18dcff", out color);
+        pc.character.SetHealbarColor (color);
         pc.Character.ChangeColor (colorId[skinId]);
         pc.Character.SetName ($"{name}");
         pc.SyncPosition (position);
@@ -85,6 +108,7 @@ public class SpawnController : MonoBehaviour {
 
     public void SpawnDamagePopUp (int damage, Vector3 position) {
         Color color;
+        Debug.Log ($"damage: {damage}");
         ColorUtility.TryParseHtmlString (damage < 0 ? "#ff5252" : "#33d9b2", out color);
         TextPopup temp = Instantiate (textPopup, position, Quaternion.identity, fxHolder.transform);
         temp.SetText (damage < 0 ? $"{damage}" : $"+{damage}", position, color);
@@ -94,6 +118,16 @@ public class SpawnController : MonoBehaviour {
         foreach (Item wp in itemPrefabs) {
             if (wp.id == id) {
                 prefab = wp;
+                break;
+            }
+        }
+        return prefab.gameObject;
+    }
+    public GameObject CreateAccessory (string id) {
+        Accessory prefab = null;
+        foreach (Accessory acc in accessories) {
+            if (acc.id == id) {
+                prefab = acc;
                 break;
             }
         }
@@ -113,6 +147,7 @@ public class SpawnController : MonoBehaviour {
         }
         Structure temp = Instantiate (prefab, model.pos.ToVector3 (), Quaternion.Euler (0, 0, model.rot * Mathf.Rad2Deg - 90), structureHolder.transform);
         temp.id = model.id;
+        temp.fromId = model.fromId;
         return temp;
     }
     public void SpawnStructures (CreateStructureModel[] models, StructuresController controller) {
@@ -125,7 +160,7 @@ public class SpawnController : MonoBehaviour {
         }
     }
     public Projectile SpawnProjectile (CreateProjectileModel model) {
-        Projectile temp = Instantiate (projectilePrefab, model.pos.ToVector3 (), Quaternion.Euler (0, 0, model.angle * Mathf.Rad2Deg), projectileHolder.transform);
+        Projectile temp = Instantiate (projectilePrefab[model.skinId], model.pos.ToVector3 (), Quaternion.Euler (0, 0, model.angle * Mathf.Rad2Deg), projectileHolder.transform);
         temp.transform.position = model.pos.ToVector3 ();
         temp.SyncPosition (model.pos.ToVector3 ());
         temp.id = model.id;
@@ -137,6 +172,7 @@ public class SpawnController : MonoBehaviour {
         foreach (SpawnNpcModel model in models) {
             temp = Instantiate (skinNpc[model.skinId], model.pos.ToVector3 (), Quaternion.Euler (0, 0, model.rot * Mathf.Rad2Deg), npcHolder.transform);
             temp.SyncPosition (model.pos.ToVector3 ());
+            temp.SyncHealthPoint (model.hp);
             manager.AddNpc (model.id, temp);
         }
     }

@@ -80,6 +80,16 @@ public class SocketController : MonoBehaviour {
         socket.On (gameCode.syncNpcTransform, OnSyncNpcTransform);
         socket.On (gameCode.syncNpcDie, OnNpcDie);
         socket.On (gameCode.syncNpcHP, OnSyncNpcHp);
+        socket.On (gameCode.spawnNpc, OnSpawnNpc);
+        socket.On (gameCode.scoreBoard, OnReceiveScoreBoard);
+    }
+
+    private void OnReceiveScoreBoard (Socket socket, Packet packet, object[] args) {
+        controllerDelegate.OnReceiveScoreBoard (packet.ToString ());
+    }
+
+    private void OnSpawnNpc (Socket socket, Packet packet, object[] args) {
+        controllerDelegate.OnSpawnNpc (packet.ToString ());
     }
 
     private void OnSyncNpcHp (Socket socket, Packet packet, object[] args) {
@@ -184,7 +194,9 @@ public interface ISocketControllerDelegate {
     void OnPlayerQuit (string data);
     void OnPlayerStatus (string data);
     void OnReceiveData (string data);
+    void OnReceiveScoreBoard (string v);
     void OnRemoveProjectTile (string v);
+    void OnSpawnNpc (string v);
     void OnSpawnPlayer (string data);
     void OnSwitchItem (string data);
     void OnSyncItem (string data);

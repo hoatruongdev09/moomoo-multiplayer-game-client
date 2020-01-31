@@ -8,6 +8,8 @@ public class GameViewController : MonoBehaviour, IGameViewController, IPanelUpgr
     public GameView gameView;
     public MapViewController mapView;
     public PanelUpgradeItem panelUpgradeItem;
+    public PanelScoreBoard panelScoreBoard;
+
     public IGameViewControllerDatasource Datasource {
         get { return controllerDatasource; }
         set { controllerDatasource = value; }
@@ -23,11 +25,25 @@ public class GameViewController : MonoBehaviour, IGameViewController, IPanelUpgr
         Show ();
     }
     private void Start () {
+
         panelUpgradeItem.Delegate = this;
         chatViewController.Delegate = this;
         itemTrayController.RegisterDelegateForButton (controllerDelegate.OnChangeItem);
 
         gameView.buttonChat.onClick.AddListener (OpenChatPanel);
+        gameView.scoreBoard.onClick.AddListener (() => {
+            OpenScoreboard ();
+            controllerDelegate.OnOpenScoreboard ();
+        });
+
+#if UNITY_ANDROID || UNITY_IOS
+        Debug.Log ("Unity android");
+        gameView.virtualGamePad.SetActive (true);
+#endif
+#if UNITY_EDITOR || UNITY_WEBGL
+        Debug.Log ("Unity editor");
+        gameView.virtualGamePad.SetActive (false);
+#endif
     }
     public void Show () {
         gameView.canvasGroup.LeanAlpha (1, .5f);
@@ -88,6 +104,16 @@ public class GameViewController : MonoBehaviour, IGameViewController, IPanelUpgr
             chatViewController.gameObject.SetActive (true);
         }
     }
+    public void OpenScoreboard () {
+        if (panelScoreBoard.gameObject.activeSelf) {
+            panelScoreBoard.Hide ();
+        } else {
+            panelScoreBoard.gameObject.SetActive (true);
+        }
+    }
+    public void ReceiveScoreboard (ScoreInfo[] infos) {
+        panelScoreBoard.SetScoreInfo (infos);
+    }
 }
 public interface IGameViewController {
     IGameViewControllerDatasource Datasource { get; set; }
@@ -97,6 +123,7 @@ public interface IGameViewControllerDelegate {
     void OnChangeItem (string item);
     void OnUpgradeItem (string code);
     void OnSendChat (string text);
+    void OnOpenScoreboard ();
 }
 public interface IGameViewControllerDatasource {
 

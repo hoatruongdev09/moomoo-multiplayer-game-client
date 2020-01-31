@@ -15,6 +15,7 @@ public class NpcTransformModel {
 public class SpawnNpcModel {
     public int id;
     public int skinId;
+    public int hp;
     public PositionModel pos;
     public float rot;
 }
@@ -32,5 +33,5 @@ public class SyncNpcHpModel {
 [Serializable]
 public class NpcHpModel {
     public int id;
-    public int hp;
+    public float hp;
 }
