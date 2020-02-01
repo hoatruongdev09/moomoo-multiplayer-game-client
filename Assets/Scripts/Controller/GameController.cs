@@ -84,7 +84,7 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
     }
 
     public void OnReceiveData (string data) {
-        Debug.Log ($"INTRO DATA:\n {data}");
+        // Debug.Log ($"INTRO DATA:\n {data}");
         var temp = JSON.Parse (data);
         GameDataModel model = JsonUtility.FromJson<GameDataModel> (temp[1].ToString ());
         gameInfo = model;
@@ -184,7 +184,7 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
         uIController.ShowUpgradeItem (model);
     }
     public void OnSyncItem (string data) {
-        Debug.Log ($"items sync: {data}");
+        // Debug.Log ($"items sync: {data}");
         var temp = JSON.Parse (data);
         SyncItemModel model = JsonUtility.FromJson<SyncItemModel> (temp[1].ToString ());
         uIController.SyncItemTray (model);
@@ -243,6 +243,10 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
         PlayerScoreModel model = JsonUtility.FromJson<PlayerScoreModel> (temp[1].ToString ());
         uIController.ReceiveScoreInfo (model.data);
     }
+    public void OnReceivePing (float ping) {
+        uIController.gameViewController.UpdatePing (ping);
+    }
+
     #endregion
 
     #region CONTROLLER

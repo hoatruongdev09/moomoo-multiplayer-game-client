@@ -2,6 +2,7 @@ public class SocketCode {
     public string OnConnect = "oncon";
     public string OnRequestJoin = "onJoin";
     public string OnFailedToConnect = "onConFailed";
+    public string OnPing = "ping";
 }
 public class GameCode {
     public string gameData = "gameData";

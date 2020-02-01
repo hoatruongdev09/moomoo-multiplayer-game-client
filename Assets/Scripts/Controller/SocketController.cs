@@ -1,10 +1,15 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Threading.Tasks;
 using BestHTTP;
 using BestHTTP.SocketIO;
 using SimpleJSON;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -13,16 +18,20 @@ public class SocketController : MonoBehaviour {
         get { return controllerDelegate; }
         set { controllerDelegate = value; }
     }
-    public string socketUrl;
+    public string socketUrl = "moomoo-server.herokuapp.com";
     private Socket socket;
     public SocketCode socketCode;
     public GameCode gameCode;
     private ISocketControllerDelegate controllerDelegate;
 
+    private float ping = 0;
     private void Start () {
         gameCode = new GameCode ();
         socketCode = new SocketCode ();
         InitSocket ();
+    }
+    private void Update () {
+        ping += Time.deltaTime;
     }
     public void SocketEmit (string eventName, object[] param) {
         socket.Emit (eventName, param);
@@ -40,20 +49,24 @@ public class SocketController : MonoBehaviour {
         options.ReconnectionAttempts = 3;
         options.AutoConnect = true;
         options.ReconnectionDelay = miliSecForReconnect;
+        var socketManagerRef = new SocketManager (new Uri ("http://" + socketUrl + "/socket.io/"), options);
 
 #if UNITY_WEBGL	
         //use this option with WebGL build
         options.ConnectWith = BestHTTP.SocketIO.Transports.TransportTypes.WebSocket;
+        socketManagerRef = new SocketManager (new Uri ("wss://" + socketUrl + "/socket.io/"), options);
 #endif
-
+        // options.ConnectWith = BestHTTP.SocketIO.Transports.TransportTypes.WebSocket;
         //Server URI
-        var socketManagerRef = new SocketManager (new Uri ("http://" + socketUrl + "/socket.io/"), options);
+
         socket = socketManagerRef.Socket;
         ListenerRegister ();
     }
     private void ListenerRegister () {
         socket.On (socketCode.OnConnect, OnConnect);
         socket.On (socketCode.OnFailedToConnect, OnFailedConnect);
+
+        socket.On (socketCode.OnPing, OnPing);
 
         socket.On (gameCode.gameData, OnReceiveData);
         socket.On (gameCode.spawnPlayer, OnSpawnPlayer);
@@ -85,6 +98,14 @@ public class SocketController : MonoBehaviour {
         socket.On (gameCode.syncNpcHP, OnSyncNpcHp);
         socket.On (gameCode.spawnNpc, OnSpawnNpc);
         socket.On (gameCode.scoreBoard, OnReceiveScoreBoard);
+    }
+    private void Ping () {
+        SocketEmit (socketCode.OnPing);
+    }
+    private void OnPing (Socket socket, Packet packet, object[] args) {
+        controllerDelegate.OnReceivePing (ping);
+        ping = 0;
+        Ping ();
     }
 
     private void OnReceiveScoreBoard (Socket socket, Packet packet, object[] args) {
@@ -180,7 +201,9 @@ public class SocketController : MonoBehaviour {
     }
 
     private void OnConnect (Socket socket, Packet packet, object[] args) {
+        // Debug.Log ($"On connect: {packet.ToString()}");
         controllerDelegate.OnConnect (packet.ToString ());
+        Ping ();
     }
 
 }
@@ -197,6 +220,7 @@ public interface ISocketControllerDelegate {
     void OnPlayerQuit (string data);
     void OnPlayerStatus (string data);
     void OnReceiveData (string data);
+    void OnReceivePing (float ping);
     void OnReceiveScoreBoard (string v);
     void OnRemoveProjectTile (string v);
     void OnSpawnNpc (string v);

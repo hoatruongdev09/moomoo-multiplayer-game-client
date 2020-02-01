@@ -64,7 +64,7 @@ public class UIController : MonoBehaviour, IJoinPanelViewControllerDelegate, IJo
         gameViewController.UpdatePositionPlayer (id, position);
     }
     public void SetServerMapSize (Vector2 size) {
-        Debug.Log ($"set server mapSize: {size}");
+        // Debug.Log ($"set server mapSize: {size}");
         gameViewController.SetServerMapSize (size);
     }
     public void ReceiveScoreInfo (ScoreInfo[] infos) {

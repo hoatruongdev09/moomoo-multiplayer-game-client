@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class GameViewController : MonoBehaviour, IGameViewController, IPanelUpgradeItemDelegate, IChatViewControllerDelegate {
     public ItemTrayController itemTrayController;
     public ChatViewController chatViewController;
@@ -9,7 +9,7 @@ public class GameViewController : MonoBehaviour, IGameViewController, IPanelUpgr
     public MapViewController mapView;
     public PanelUpgradeItem panelUpgradeItem;
     public PanelScoreBoard panelScoreBoard;
-
+    public Text textPing;
     public IGameViewControllerDatasource Datasource {
         get { return controllerDatasource; }
         set { controllerDatasource = value; }
@@ -37,11 +37,11 @@ public class GameViewController : MonoBehaviour, IGameViewController, IPanelUpgr
         });
 
 #if UNITY_ANDROID || UNITY_IOS
-        Debug.Log ("Unity android");
+        // Debug.Log ("Unity android");
         gameView.virtualGamePad.SetActive (true);
 #endif
 #if UNITY_EDITOR || UNITY_WEBGL
-        Debug.Log ("Unity editor");
+        // Debug.Log ("Unity editor");
         gameView.virtualGamePad.SetActive (false);
 #endif
     }
@@ -113,6 +113,9 @@ public class GameViewController : MonoBehaviour, IGameViewController, IPanelUpgr
     }
     public void ReceiveScoreboard (ScoreInfo[] infos) {
         panelScoreBoard.SetScoreInfo (infos);
+    }
+    public void UpdatePing (float value) {
+        textPing.text = $"{Mathf.FloorToInt(value * 1000)} ms";
     }
 }
 public interface IGameViewController {
