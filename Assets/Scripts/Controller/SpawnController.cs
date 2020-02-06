@@ -66,9 +66,7 @@ public class SpawnController : MonoBehaviour {
     public PlayerController SpawnLocalPlayer (int id, string name, int skinId, Vector3 position) {
         GameObject playGO = Instantiate (playerPrefab, position, Quaternion.identity, playerHolder.transform);
         PlayerController pc = playGO.GetComponent<PlayerController> ();
-        Color color;
-        ColorUtility.TryParseHtmlString ("#18dcff", out color);
-        pc.character.SetHealbarColor (color);
+        pc.character.SetLocalHealthBarColor ();
         pc.Character.ChangeColor (colorId[skinId]);
         pc.Character.SetName ($"{name}");
         pc.SyncPosition (position);

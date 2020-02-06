@@ -22,12 +22,14 @@ public class SocketController : MonoBehaviour {
     private Socket socket;
     public SocketCode socketCode;
     public GameCode gameCode;
+    public ClanCode clanCode;
     private ISocketControllerDelegate controllerDelegate;
 
     private float ping = 0;
     private void Start () {
         gameCode = new GameCode ();
         socketCode = new SocketCode ();
+        clanCode = new ClanCode ();
         InitSocket ();
     }
     private void Update () {
@@ -98,7 +100,34 @@ public class SocketController : MonoBehaviour {
         socket.On (gameCode.syncNpcHP, OnSyncNpcHp);
         socket.On (gameCode.spawnNpc, OnSpawnNpc);
         socket.On (gameCode.scoreBoard, OnReceiveScoreBoard);
+
+        socket.On (clanCode.createClan, OnCreateClan);
+        socket.On (clanCode.joinClan, OnJoinClan);
+        socket.On (clanCode.removeClan, OnRemoveClan);
+        socket.On (clanCode.kickMember, OnKickMember);
+        socket.On (clanCode.requestJoin, OnRequestJoin);
     }
+
+    private void OnRequestJoin (Socket socket, Packet packet, object[] args) {
+        controllerDelegate.OnReceiveRequestJoin (packet.ToString ());
+    }
+
+    private void OnRemoveClan (Socket socket, Packet packet, object[] args) {
+        controllerDelegate.OnRemoveClan (packet.ToString ());
+    }
+
+    private void OnKickMember (Socket socket, Packet packet, object[] args) {
+        controllerDelegate.OnKickMember (packet.ToString ());
+    }
+
+    private void OnJoinClan (Socket socket, Packet packet, object[] args) {
+        controllerDelegate.OnJoinClan (packet.ToString ());
+    }
+
+    private void OnCreateClan (Socket socket, Packet packet, object[] args) {
+        controllerDelegate.OnCreateClan (packet.ToString ());
+    }
+
     private void Ping () {
         SocketEmit (socketCode.OnPing);
     }
@@ -210,9 +239,12 @@ public class SocketController : MonoBehaviour {
 
 public interface ISocketControllerDelegate {
     void OnConnect (string data);
+    void OnCreateClan (string v);
     void OnCreateProjectile (string v);
     void OnCreateStructure (string data);
     void OnDestroyStructure (string data);
+    void OnJoinClan (string v);
+    void OnKickMember (string v);
     void OnNpcDie (string v);
     void OnPlayerChat (string v);
     void OnPlayerDie (string data);
@@ -221,7 +253,9 @@ public interface ISocketControllerDelegate {
     void OnPlayerStatus (string data);
     void OnReceiveData (string data);
     void OnReceivePing (float ping);
+    void OnReceiveRequestJoin (string v);
     void OnReceiveScoreBoard (string v);
+    void OnRemoveClan (string v);
     void OnRemoveProjectTile (string v);
     void OnSpawnNpc (string v);
     void OnSpawnPlayer (string data);

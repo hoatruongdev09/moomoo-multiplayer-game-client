@@ -3,6 +3,7 @@ public class SocketCode {
     public string OnRequestJoin = "onJoin";
     public string OnFailedToConnect = "onConFailed";
     public string OnPing = "ping";
+    public string Error = "err";
 }
 public class GameCode {
     public string gameData = "gameData";
@@ -35,4 +36,13 @@ public class GameCode {
     public string syncNpcDie = "npcDie";
     public string spawnNpc = "spwnNpc";
     public string scoreBoard = "scrBoard";
+}
+public class ClanCode {
+    public string createClan = "clCreate";
+    public string removeClan = "clRemove";
+    public string requestJoin = "clRequestJoin";
+    public string joinClan = "clJoin";
+    public string kickMember = "clKick";
+    public string member = "clMember";
+    public string listClan = "clList";
 }

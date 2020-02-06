@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using SimpleJSON;
 using UnityEngine;
 
@@ -14,6 +16,7 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
     public CameraController cameraController;
     public MapManager mapManager;
     public NpcManager npcManager;
+    public ClanManager clanManager;
     [Header ("INPUT CONTROLLER")]
     public KeyboardController keyboardController;
     public VirtualGamePadController virtualGamePadController;
@@ -21,6 +24,7 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
     [SerializeField] private ConnectServerModel connectInfo;
     [SerializeField] private Controller[] inputController;
     public GameDataModel gameInfo;
+    [SerializeField] private int localPlayerId = -1;
     // public UpdatePositionProjectileModel projectPositionInfo;
 
     private void Start () {
@@ -41,7 +45,12 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
         virtualGamePadController.gameObject.SetActive (false);
 #endif
     }
-
+    public int GetConnectId () {
+        return connectInfo.id;
+    }
+    public int GetLocalConnectId () {
+        return localPlayerId;
+    }
     #region SOCKET COMMAND
     public ConnectServerModel RequestConnectInfo () {
         return connectInfo;
@@ -65,18 +74,75 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
     }
     public void SendChat (string text) {
         JSONObject data = new JSONObject (JSONObject.Type.OBJECT);
-        data.AddField ("id", connectInfo.id);
+        data.AddField ("id", GetLocalConnectId ());
         data.AddField ("text", text);
         socketController.SocketEmit (socketController.gameCode.playerChat, data);
     }
     public void RequestScore () {
         socketController.SocketEmit (socketController.gameCode.scoreBoard);
     }
+    public void RequestCreateClan (string name) {
+        JSONObject data = new JSONObject (JSONObject.Type.OBJECT);
+        data.AddField ("name", name);
+        socketController.SocketEmit (socketController.clanCode.createClan, data);
+    }
+    public void RequestLeaveClan () {
+        JSONObject data = new JSONObject (JSONObject.Type.OBJECT);
+        data.AddField ("id", GetLocalConnectId ());
+        socketController.SocketEmit (socketController.clanCode.kickMember, data);
+    }
+    public void RequestJoinClan (int id) {
+        JSONObject data = new JSONObject (JSONObject.Type.OBJECT);
+        data.AddField ("id", id);
+        socketController.SocketEmit (socketController.clanCode.joinClan, data);
+    }
+    public void RequestKickMember (int id) {
+        JSONObject data = new JSONObject (JSONObject.Type.OBJECT);
+        data.AddField ("id", id);
+        socketController.SocketEmit (socketController.clanCode.kickMember, data);
+    }
+
+    public void DenyJoinRequest () {
+        int id = clanManager.PopARequest ();
+        if (id == -1) {
+            uIController.HideRequestJoinClan ();
+            return;
+        }
+        JSONObject data = new JSONObject (JSONObject.Type.OBJECT);
+        data.AddField ("id", id);
+        data.AddField ("action", false);
+        socketController.SocketEmit (socketController.clanCode.requestJoin, data);
+        id = clanManager.GetCurrentJoinRequest ();
+        if (id == -1) {
+            uIController.HideRequestJoinClan ();
+        } else {
+            uIController.ShowRequestJoinClan (id);
+        }
+    }
+
+    public void AcceptJoinRequest () {
+        int id = clanManager.PopARequest ();
+        if (id == -1) {
+            uIController.HideRequestJoinClan ();
+            return;
+        }
+        JSONObject data = new JSONObject (JSONObject.Type.OBJECT);
+        data.AddField ("id", id);
+        data.AddField ("action", true);
+        socketController.SocketEmit (socketController.clanCode.requestJoin, data);
+        id = clanManager.GetCurrentJoinRequest ();
+        if (id == -1) {
+            uIController.HideRequestJoinClan ();
+        } else {
+            uIController.ShowRequestJoinClan (id);
+        }
+    }
+
     #endregion
     #region SOCKET LISTENER 
     public void OnConnect (string data) {
         var temp = JSON.Parse (data);
-        // Debug.Log ($"{temp[1]}");
+        Debug.Log ($"{temp[1]}");
         ConnectServerModel model = JsonUtility.FromJson<ConnectServerModel> (temp[1].ToString ());
         connectInfo = model;
         uIController.OnConnect ();
@@ -100,7 +166,10 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
         mapManager.SetRiverSize (model.riverSize);
         npcManager.InitListNpc (model.maxNpcCount);
         spawnController.SpawnNpc (model.npc, npcManager);
+        clanManager.SetListClan (model.clans);
+        clanManager.SetListMember (model.clansMember);
         socketController.SocketEmit (socketController.gameCode.receivedData, new JSONObject (true));
+
     }
 
     public void OnSpawnPlayer (string data) {
@@ -108,8 +177,9 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
         // Debug.Log ($"on Spawn player {data}");
         PlayerJoinGameModel model = JsonUtility.FromJson<PlayerJoinGameModel> (temp[1].ToString ());
         PlayerController pc; // = spawnController.SpawnPlayer (model.id, model.name, model.skinId, model.pos.ToVector3 ());
-        if (model.clientId == connectInfo.id) {
+        if (model.clientId == GetConnectId ()) {
             pc = spawnController.SpawnLocalPlayer (model.id, model.name, model.skinId, model.pos.ToVector3 ());
+            localPlayerId = model.id;
             cameraController.SetForcus (pc.transform);
             playerManager.localPlayer = pc;
             uIController.AddPlayerToMap (model.id);
@@ -118,7 +188,6 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
         }
 
         playerManager.SetPlayer (pc, model.id);
-
         uIController.OnJoinGame ();
     }
 
@@ -142,8 +211,8 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
         var temp = JSON.Parse (data);
         PlayerDieModel model = JsonUtility.FromJson<PlayerDieModel> (temp[1].ToString ());
         playerManager.PlayerDie (model);
-        // Debug.Log ($"player die id: { model.id}");
-        if (model.id == connectInfo.id) {
+        Debug.Log ($"player die id: { model.id}, local player: {GetLocalConnectId()}");
+        if (model.id == GetLocalConnectId ()) {
             uIController.OnGameOver ();
         }
     }
@@ -246,7 +315,78 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
     public void OnReceivePing (float ping) {
         uIController.gameViewController.UpdatePing (ping);
     }
+    public void OnCreateClan (string data) {
+        var temp = JSON.Parse (data);
+        ClanInfoModel clan = JsonUtility.FromJson<ClanInfoModel> (temp[1].ToString ());
+        clanManager.AddClan (clan);
+        if (uIController.IsClanPanelOpened ()) {
+            uIController.ResetClanPanel (clanManager.listClan);
+        }
+    }
+    public void OnJoinClan (string data) {
+        var temp = JSON.Parse (data);
+        ClanMemberModel model = JsonUtility.FromJson<ClanMemberModel> (temp[1].ToString ());
+        clanManager.JoinClan (model);
+        if (model.id == GetLocalConnectId ()) { // If someone join into your clan then do this
+            clanManager.localClanId = model.idClan;
+            if (uIController.IsClanPanelOpened ()) {
+                uIController.OpenClanPanel ();
+                uIController.OpenClanMemberPanel ();
+                Debug.Log ("clan panel Opened");
+                return;
+            }
+        }
+        if (clanManager.localClanId == model.idClan) {
+            clanManager.GroupLocalClanMember ();
+        }
+        if (uIController.IsClanMemberPanelOpened ()) {
+            Debug.Log ("Reset clan Panel");
+            uIController.ResetClanMemberPanel (clanManager.GetListMemberLocalClan ());
+        }
+    }
+    public void OnKickMember (string data) {
+        Debug.Log ($"Kick Member: {data}");
+        var temp = JSON.Parse (data);
+        ClanKickMemberModel model = JsonUtility.FromJson<ClanKickMemberModel> (temp[1].ToString ());
+        Debug.Log ($"model is null: {model == null}");
+        clanManager.KickMembers (model.id);
+        if (model.id.Contains (GetLocalConnectId ())) { // If you out your clan then do this
+            clanManager.localClanId = -1;
+            if (uIController.IsClanMemberPanelOpened ()) {
+                Debug.Log ("Hide clan member panel");
+                uIController.OpenClanMemberPanel ();
+                uIController.OpenClanPanel ();
+                return;
+            }
+        }
+        if (uIController.IsClanMemberPanelOpened ()) {
+            uIController.ResetClanMemberPanel (clanManager.GetListMemberLocalClan ());
+        }
+    }
 
+    public void OnRemoveClan (string data) {
+        var temp = JSON.Parse (data);
+        RemoveClanModel model = JsonUtility.FromJson<RemoveClanModel> (temp[1].ToString ());
+        clanManager.RemoveClan (model.id);
+        if (model.id == clanManager.localClanId) { // If your clan removed then do this 
+            clanManager.localClanId = -1;
+            if (uIController.IsClanMemberPanelOpened ()) {
+                Debug.Log ("Hide clan member panel");
+                uIController.OpenClanMemberPanel ();
+                uIController.OpenClanPanel ();
+            }
+        }
+        if (uIController.IsClanPanelOpened ()) {
+            uIController.ResetClanPanel (clanManager.listClan);
+        }
+
+    }
+    public void OnReceiveRequestJoin (string data) {
+        var temp = JSON.Parse (data);
+        RequestJoinClanModel model = JsonUtility.FromJson<RequestJoinClanModel> (temp[1].ToString ());
+        clanManager.AddRequestJoinClan (model.id);
+        uIController.ShowRequestJoinClan (model.id);
+    }
     #endregion
 
     #region CONTROLLER

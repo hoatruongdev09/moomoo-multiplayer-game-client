@@ -42,6 +42,9 @@ public class PlayerController : MonoBehaviour {
     public void ShowChat (string text) {
         character.Chat (text);
     }
+    public void ShowClanName (string clanName) {
+        character.SetClanName (clanName);
+    }
     private void MeleeAttackEffect () {
         Collider2D[] colls = Physics2D.OverlapBoxAll (transform.position - transform.right, new Vector2 (1, 3), transform.rotation.eulerAngles.z);
         foreach (Collider2D col in colls) {

@@ -1,9 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class UIController : MonoBehaviour, IJoinPanelViewControllerDelegate, IJoinPanelViewControllerDatasource, IGameViewControllerDatasource, IGameViewControllerDelegate {
     public GameController gameController;
+    public ClanManager clanManager;
     public MainPanelViewController mainPanelViewController;
     public GameViewController gameViewController;
     public JoinPanelViewController joinPanelViewController;
@@ -45,12 +47,62 @@ public class UIController : MonoBehaviour, IJoinPanelViewControllerDelegate, IJo
         mainPanelViewController.Show ();
     }
 
+    public void ResetClanPanel (List<ClanInfoModel> listClan) {
+        gameViewController.panelClanViewController.SetClansInfo (listClan.ToArray ());
+        gameViewController.panelClanViewController.ResetList ();
+    }
+    public void ResetClanMemberPanel (VisualClanMemberModel[] listMember) {
+        gameViewController.panelClanMemberController.SetClanMemberInfo (listMember);
+        gameViewController.panelClanMemberController.ResetList ();
+    }
+    public void OpenClanPanel () {
+        if (IsClanMemberPanelOpened ()) {
+            gameViewController.HideClanMemberPanel ();
+        }
+        if (IsClanPanelOpened ()) {
+            gameViewController.HideClanPanel ();
+        } else {
+            gameViewController.panelClanViewController.SetClansInfo (clanManager.listClan.ToArray ());
+            gameViewController.ShowClanPanel ();
+        }
+    }
+    public void OpenClanMemberPanel () {
+        if (IsClanPanelOpened ()) {
+            gameViewController.HideClanPanel ();
+        }
+        if (IsClanMemberPanelOpened ()) {
+            gameViewController.HideClanMemberPanel ();
+        } else {
+            gameViewController.panelClanMemberController.SetClanMemberInfo (clanManager.GetListMemberLocalClan ());
+            gameViewController.panelClanMemberController.SetClanName (clanManager.GetLocalClan ().name);
+            gameViewController.panelClanMemberController.SetPermission (clanManager.IsMasterLocalClan ());
+            gameViewController.ShowClanMemberPanel ();
+        }
+    }
+    public void ShowRequestJoinClan (int id) {
+        if (gameController.playerManager.players[id] != null) {
+            gameViewController.ShowPopupJoinClan (gameController.playerManager.players[id].character.name);
+        }
+    }
+    public void HideRequestJoinClan () {
+        gameViewController.HidePopupJoinClan ();
+    }
+    public bool IsClanMemberPanelOpened () {
+        return gameViewController.panelClanMemberController.gameObject.activeSelf;
+    }
+    public bool IsClanPanelOpened () {
+        return gameViewController.panelClanViewController.gameObject.activeSelf;
+    }
     public void AddPlayerToMap (int id) {
         gameViewController.AddPlayerToMap (id);
+    }
+    public void RemovePlayerFromMap (int id) {
+        gameViewController.RemovePlayerFromMap (id);
     }
     public void AddWoodToMap (Vector3 position) {
         gameViewController.AddWoodToMap (position);
     }
+
     public void AddFoodToMap (Vector3 position) {
         gameViewController.AddFoodToMap (position);
     }
@@ -96,5 +148,38 @@ public class UIController : MonoBehaviour, IJoinPanelViewControllerDelegate, IJo
     public void OnOpenScoreboard () {
         gameController.RequestScore ();
     }
+
+    public void OnOpenClan () {
+        if (clanManager.localClanId == -1) {
+            OpenClanPanel ();
+        } else {
+            OpenClanMemberPanel ();
+        }
+    }
+
+    public void CreateClan (string text) {
+        gameController.RequestCreateClan (text);
+    }
+
+    public void LeaveClan () {
+        gameController.RequestLeaveClan ();
+    }
+
+    public void RequestJoinClan (int id) {
+        gameController.RequestJoinClan (id);
+    }
+
+    public void RequestKick (int id) {
+        gameController.RequestKickMember (id);
+    }
+
+    public void AcceptRequest () {
+        gameController.AcceptJoinRequest ();
+    }
+
+    public void DenyRequest () {
+        gameController.DenyJoinRequest ();
+    }
+
     #endregion
 }

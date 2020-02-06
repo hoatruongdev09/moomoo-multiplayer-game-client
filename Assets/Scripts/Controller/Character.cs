@@ -12,7 +12,8 @@ public class Character : MonoBehaviour {
     public Transform itemHolder;
     public GameObject currentItem;
     public Color color;
-
+    private string charName;
+    private string clanName = "";
     private Coroutine delayShowName;
     private bool isDelayShowName;
     private void Update () {
@@ -42,9 +43,29 @@ public class Character : MonoBehaviour {
     public void SetHealbarColor (Color color) {
         healthBar.color = color;
     }
+    public void SetLocalHealthBarColor () {
+        Color color;
+        ColorUtility.TryParseHtmlString ("#18dcff", out color);
+        SetHealbarColor (color);
+    }
+    public void SetRemoteHealthBarColor () {
+        //EA8685
+        Color color;
+        ColorUtility.TryParseHtmlString ("#EA8685", out color);
+        SetHealbarColor (color);
+    }
     public void SetName (string name) {
+        this.charName = name;
         gameObject.name = $"{name}";
-        textName.text = name;
+        if (string.IsNullOrEmpty (clanName)) {
+            textName.text = $"{name}";
+        } else {
+            textName.text = $"[{clanName}] {name}";
+        }
+    }
+    public void SetClanName (string clanName) {
+        this.clanName = clanName;
+        SetName (charName);
     }
     public void Chat (string text) {
         LeanTween.alphaText (textName.rectTransform, 0, .3f).setOnComplete (() => {

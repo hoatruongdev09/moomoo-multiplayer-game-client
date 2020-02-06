@@ -22,6 +22,11 @@ public class MapViewController : MonoBehaviour {
             lastDie.rectTransform.anchoredPosition = playerStatues[id].anchoredPosition;
         }
     }
+    public void RemovePlayerFromMap (int id) {
+        if (playerStatues[id] != null) {
+            Destroy (playerStatues[id].gameObject);
+        }
+    }
     public void UpdatePlayerPosition (int id, Vector3 worldPosition) {
         if (playerStatues[id] != null)
             playerStatues[id].anchoredPosition = Vector2.Lerp (playerStatues[id].anchoredPosition, WorldPositionToUIMapPosition (worldPosition), .1f); // new Vector2 (worldPosition.x * uiMapSize.x / serverMapSize.x, worldPosition.y * uiMapSize.y / serverMapSize.y);

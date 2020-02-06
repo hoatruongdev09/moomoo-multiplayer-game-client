@@ -1,14 +1,18 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class GameViewController : MonoBehaviour, IGameViewController, IPanelUpgradeItemDelegate, IChatViewControllerDelegate {
+public class GameViewController : MonoBehaviour, IGameViewController, IPanelUpgradeItemDelegate, IChatViewControllerDelegate, IPanelClanDelegate, IPanelClanMemberDelegate, IJoinClanPopupDelegate {
     public ItemTrayController itemTrayController;
     public ChatViewController chatViewController;
     public GameView gameView;
     public MapViewController mapView;
     public PanelUpgradeItem panelUpgradeItem;
     public PanelScoreBoard panelScoreBoard;
+    public PanelClanViewController panelClanViewController;
+    public PanelClanMemberController panelClanMemberController;
+    public JoinClanPopupController joinClanPopup;
     public Text textPing;
     public IGameViewControllerDatasource Datasource {
         get { return controllerDatasource; }
@@ -28,6 +32,10 @@ public class GameViewController : MonoBehaviour, IGameViewController, IPanelUpgr
 
         panelUpgradeItem.Delegate = this;
         chatViewController.Delegate = this;
+        panelClanViewController.Delegate = this;
+        panelClanMemberController.Delegate = this;
+        joinClanPopup.Delegate = this;
+
         itemTrayController.RegisterDelegateForButton (controllerDelegate.OnChangeItem);
 
         gameView.buttonChat.onClick.AddListener (OpenChatPanel);
@@ -35,6 +43,7 @@ public class GameViewController : MonoBehaviour, IGameViewController, IPanelUpgr
             OpenScoreboard ();
             controllerDelegate.OnOpenScoreboard ();
         });
+        gameView.buttonClan.onClick.AddListener (OpenClanPanel);
 
 #if UNITY_ANDROID || UNITY_IOS
         // Debug.Log ("Unity android");
@@ -45,6 +54,7 @@ public class GameViewController : MonoBehaviour, IGameViewController, IPanelUpgr
         gameView.virtualGamePad.SetActive (false);
 #endif
     }
+
     public void Show () {
         gameView.canvasGroup.LeanAlpha (1, .5f);
     }
@@ -53,6 +63,7 @@ public class GameViewController : MonoBehaviour, IGameViewController, IPanelUpgr
             gameObject.SetActive (false);
         });
     }
+
     public void UpdatePlayerStatus (PlayerStatusModel model) {
         gameView.UpdateInfo (model);
     }
@@ -69,6 +80,9 @@ public class GameViewController : MonoBehaviour, IGameViewController, IPanelUpgr
     }
     public void AddPlayerToMap (int id) {
         mapView.AddPlayerStatue (id);
+    }
+    public void RemovePlayerFromMap (int id) {
+        mapView.RemovePlayerFromMap (id);
     }
     public void AddWoodToMap (Vector3 position) {
         mapView.AddWoodResource (position);
@@ -97,6 +111,30 @@ public class GameViewController : MonoBehaviour, IGameViewController, IPanelUpgr
             controllerDelegate.OnSendChat (text);
         }
     }
+    public void ShowClanPanel () {
+        panelClanViewController.gameObject.SetActive (true);
+    }
+    public void HideClanPanel () {
+        panelClanViewController.Hide ();
+    }
+    public void ShowClanMemberPanel () {
+        panelClanMemberController.gameObject.SetActive (true);
+    }
+    public void HideClanMemberPanel () {
+        panelClanMemberController.Hide ();
+    }
+    private void OpenClanPanel () {
+        if (controllerDelegate != null) {
+            controllerDelegate.OnOpenClan ();
+        }
+    }
+    public void ShowPopupJoinClan (string name) {
+        joinClanPopup.gameObject.SetActive (true);
+        joinClanPopup.SetRequestName (name);
+    }
+    public void HidePopupJoinClan () {
+        joinClanPopup.Hide ();
+    }
     public void OpenChatPanel () {
         if (chatViewController.gameObject.activeSelf) {
             chatViewController.Hide ();
@@ -117,6 +155,30 @@ public class GameViewController : MonoBehaviour, IGameViewController, IPanelUpgr
     public void UpdatePing (float value) {
         textPing.text = $"{Mathf.FloorToInt(value * 1000)} ms";
     }
+
+    public void CreateClan (string text) {
+        controllerDelegate.CreateClan (text);
+    }
+
+    public void OnLeaveClan () {
+        controllerDelegate.LeaveClan ();
+    }
+
+    public void OnKickMember (int id) {
+        controllerDelegate.RequestKick (id);
+    }
+
+    public void RequestJoinClan (int id) {
+        controllerDelegate.RequestJoinClan (id);
+    }
+
+    public void OnAccept () {
+        controllerDelegate.AcceptRequest ();
+    }
+
+    public void OnDeny () {
+        controllerDelegate.DenyRequest ();
+    }
 }
 public interface IGameViewController {
     IGameViewControllerDatasource Datasource { get; set; }
@@ -127,6 +189,13 @@ public interface IGameViewControllerDelegate {
     void OnUpgradeItem (string code);
     void OnSendChat (string text);
     void OnOpenScoreboard ();
+    void OnOpenClan ();
+    void CreateClan (string text);
+    void LeaveClan ();
+    void RequestJoinClan (int id);
+    void RequestKick (int id);
+    void AcceptRequest ();
+    void DenyRequest ();
 }
 public interface IGameViewControllerDatasource {
 

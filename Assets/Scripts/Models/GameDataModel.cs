@@ -12,6 +12,8 @@ public class GameDataModel {
     public InitPlayerModel[] players;
     public CreateStructureModel[] structures;
     public SpawnNpcModel[] npc;
+    public ClanInfoModel[] clans;
+    public ClanMemberModel[] clansMember;
 }
 
 [Serializable]

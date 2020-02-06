@@ -26,6 +26,9 @@ public class PlayerManager : MonoBehaviour {
     public void SetPlayer (PlayerController player, int id) {
         players[id] = player;
     }
+    public PlayerController GetPlayer (int id) {
+        return players[id];
+    }
 
     public void RemovePlayer (int id) {
         GameObject go = players[id].gameObject;
@@ -34,7 +37,20 @@ public class PlayerManager : MonoBehaviour {
         // go.gameObject.SetActive (false);
         // inactivedPlayers.Push (go);
     }
-
+    public void GroupAllMemberClan (int[] ids) {
+        foreach (int id in ids) {
+            if (players[id] != null) {
+                players[id].character.SetLocalHealthBarColor ();
+                uIController.AddPlayerToMap (id);
+            }
+        }
+    }
+    public void RemovePlayerFromClan (int id) {
+        if (players[id] != null) {
+            players[id].character.SetRemoteHealthBarColor ();
+            uIController.RemovePlayerFromMap (id);
+        }
+    }
     public void SyncTransform (SyncTransformModel model) {
         foreach (SyncPostionModel posMod in model.pos) {
             if (players[posMod.id]) {
