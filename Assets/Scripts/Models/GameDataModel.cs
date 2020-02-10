@@ -14,6 +14,7 @@ public class GameDataModel {
     public SpawnNpcModel[] npc;
     public ClanInfoModel[] clans;
     public ClanMemberModel[] clansMember;
+    public AllShopItemModel shop;
 }
 
 [Serializable]

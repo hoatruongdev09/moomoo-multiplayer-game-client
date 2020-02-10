@@ -36,6 +36,8 @@ public class GameCode {
     public string syncNpcDie = "npcDie";
     public string spawnNpc = "spwnNpc";
     public string scoreBoard = "scrBoard";
+    public string syncShop = "shopSync";
+    public string shopSelectItem = "shopSltItem";
 }
 public class ClanCode {
     public string createClan = "clCreate";

@@ -12,6 +12,7 @@ public class GameViewController : MonoBehaviour, IGameViewController, IPanelUpgr
     public PanelScoreBoard panelScoreBoard;
     public PanelClanViewController panelClanViewController;
     public PanelClanMemberController panelClanMemberController;
+    public PanelShopViewController panelShopViewController;
     public JoinClanPopupController joinClanPopup;
     public Text textPing;
     public IGameViewControllerDatasource Datasource {
@@ -44,6 +45,7 @@ public class GameViewController : MonoBehaviour, IGameViewController, IPanelUpgr
             controllerDelegate.OnOpenScoreboard ();
         });
         gameView.buttonClan.onClick.AddListener (OpenClanPanel);
+        gameView.buttonShop.onClick.AddListener (OpenShopPanel);
 
 #if UNITY_ANDROID || UNITY_IOS
         // Debug.Log ("Unity android");
@@ -78,6 +80,14 @@ public class GameViewController : MonoBehaviour, IGameViewController, IPanelUpgr
     public void OnChooseCode (string code) {
         controllerDelegate.OnUpgradeItem (code);
     }
+    private void OpenShopPanel () {
+        if (panelShopViewController.gameObject.activeSelf) {
+            panelShopViewController.Hide ();
+        } else {
+            panelShopViewController.gameObject.SetActive (true);
+        }
+    }
+    #region MAP JOBS
     public void AddPlayerToMap (int id) {
         mapView.AddPlayerStatue (id);
     }
@@ -105,12 +115,38 @@ public class GameViewController : MonoBehaviour, IGameViewController, IPanelUpgr
     public void InitPlayerMapCount (int count) {
         mapView.InitPlayerCount (count);
     }
-
+    #endregion
+    #region CHAT PANEL
     public void OnButtonSendClick (string text) {
         if (controllerDelegate != null) {
             controllerDelegate.OnSendChat (text);
         }
     }
+
+    public void OpenChatPanel () {
+        if (chatViewController.gameObject.activeSelf) {
+            chatViewController.Hide ();
+        } else {
+            chatViewController.gameObject.SetActive (true);
+        }
+    }
+    #endregion
+    #region SCORE PANEL
+    public void OpenScoreboard () {
+        if (panelScoreBoard.gameObject.activeSelf) {
+            panelScoreBoard.Hide ();
+        } else {
+            panelScoreBoard.gameObject.SetActive (true);
+        }
+    }
+    public void ReceiveScoreboard (ScoreInfo[] infos) {
+        panelScoreBoard.SetScoreInfo (infos);
+    }
+    #endregion
+    public void UpdatePing (float value) {
+        textPing.text = $"{Mathf.FloorToInt(value * 1000)} ms";
+    }
+    #region CLAN JOBS
     public void ShowClanPanel () {
         panelClanViewController.gameObject.SetActive (true);
     }
@@ -135,27 +171,6 @@ public class GameViewController : MonoBehaviour, IGameViewController, IPanelUpgr
     public void HidePopupJoinClan () {
         joinClanPopup.Hide ();
     }
-    public void OpenChatPanel () {
-        if (chatViewController.gameObject.activeSelf) {
-            chatViewController.Hide ();
-        } else {
-            chatViewController.gameObject.SetActive (true);
-        }
-    }
-    public void OpenScoreboard () {
-        if (panelScoreBoard.gameObject.activeSelf) {
-            panelScoreBoard.Hide ();
-        } else {
-            panelScoreBoard.gameObject.SetActive (true);
-        }
-    }
-    public void ReceiveScoreboard (ScoreInfo[] infos) {
-        panelScoreBoard.SetScoreInfo (infos);
-    }
-    public void UpdatePing (float value) {
-        textPing.text = $"{Mathf.FloorToInt(value * 1000)} ms";
-    }
-
     public void CreateClan (string text) {
         controllerDelegate.CreateClan (text);
     }
@@ -179,6 +194,7 @@ public class GameViewController : MonoBehaviour, IGameViewController, IPanelUpgr
     public void OnDeny () {
         controllerDelegate.DenyRequest ();
     }
+    #endregion
 }
 public interface IGameViewController {
     IGameViewControllerDatasource Datasource { get; set; }

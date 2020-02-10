@@ -100,12 +100,17 @@ public class SocketController : MonoBehaviour {
         socket.On (gameCode.syncNpcHP, OnSyncNpcHp);
         socket.On (gameCode.spawnNpc, OnSpawnNpc);
         socket.On (gameCode.scoreBoard, OnReceiveScoreBoard);
+        socket.On (gameCode.syncShop, OnSyncItemShop);
 
         socket.On (clanCode.createClan, OnCreateClan);
         socket.On (clanCode.joinClan, OnJoinClan);
         socket.On (clanCode.removeClan, OnRemoveClan);
         socket.On (clanCode.kickMember, OnKickMember);
         socket.On (clanCode.requestJoin, OnRequestJoin);
+    }
+
+    private void OnSyncItemShop (Socket socket, Packet packet, object[] args) {
+        controllerDelegate.OnSyncItemShop (packet.ToString ());
     }
 
     private void OnRequestJoin (Socket socket, Packet packet, object[] args) {
@@ -261,6 +266,7 @@ public interface ISocketControllerDelegate {
     void OnSpawnPlayer (string data);
     void OnSwitchItem (string data);
     void OnSyncItem (string data);
+    void OnSyncItemShop (string v);
     void OnSyncNpcHp (string v);
     void OnSyncNpcTransform (string v);
     void OnSyncPositionProjectile (string v);

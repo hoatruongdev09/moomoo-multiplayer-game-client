@@ -17,6 +17,7 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
     public MapManager mapManager;
     public NpcManager npcManager;
     public ClanManager clanManager;
+    public ShopManager shopManager;
     [Header ("INPUT CONTROLLER")]
     public KeyboardController keyboardController;
     public VirtualGamePadController virtualGamePadController;
@@ -101,6 +102,11 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
         data.AddField ("id", id);
         socketController.SocketEmit (socketController.clanCode.kickMember, data);
     }
+    public void RequestSelectItem (string id) {
+        JSONObject data = new JSONObject (JSONObject.Type.OBJECT);
+        data.AddField ("id", id);
+        socketController.SocketEmit (socketController.gameCode.shopSelectItem, data);
+    }
 
     public void DenyJoinRequest () {
         int id = clanManager.PopARequest ();
@@ -169,7 +175,8 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
         clanManager.SetListClan (model.clans);
         clanManager.SetListMember (model.clansMember);
         socketController.SocketEmit (socketController.gameCode.receivedData, new JSONObject (true));
-
+        shopManager.hats = model.shop.hats;
+        shopManager.accessories = model.shop.accessories;
     }
 
     public void OnSpawnPlayer (string data) {
@@ -311,6 +318,11 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
         var temp = JSON.Parse (data);
         PlayerScoreModel model = JsonUtility.FromJson<PlayerScoreModel> (temp[1].ToString ());
         uIController.ReceiveScoreInfo (model.data);
+    }
+    public void OnSyncItemShop (string data) {
+        var temp = JSON.Parse (data);
+        SyncItempShopModel model = JsonUtility.FromJson<SyncItempShopModel> (temp[1].ToString ());
+        shopManager.SyncItem (model);
     }
     public void OnReceivePing (float ping) {
         uIController.gameViewController.UpdatePing (ping);
