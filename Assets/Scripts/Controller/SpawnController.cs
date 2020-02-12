@@ -29,6 +29,8 @@ public class SpawnController : MonoBehaviour {
     private GameObject npcHolder;
     [Header ("Accessory")]
     public Accessory[] accessories;
+    [Header ("Hat")]
+    public Accessory[] hats;
 
     private void Start () {
         rsHolder = new GameObject ("RESOURCES HOLDER");
@@ -40,8 +42,13 @@ public class SpawnController : MonoBehaviour {
     }
     public PlayerController[] SpawnPlayers (InitPlayerModel[] playerModels, PlayerController[] listPlayer) {
         for (int i = 0; i < playerModels.Length; i++) {
-            // listPlayer[playerModels[i].id] = SpawnPlayer (playerModels[i].id, playerModels[i].name, playerModels[i].skinId, playerModels[i].pos.ToVector3 ());
             listPlayer[playerModels[i].id] = SpawnPlayer (playerModels[i]);
+            if (!string.IsNullOrEmpty (playerModels[i].hat)) {
+                listPlayer[playerModels[i].id].SyncEquipedHat (CreateHat (playerModels[i].hat));
+            }
+            if (!string.IsNullOrEmpty (playerModels[i].acc)) {
+                listPlayer[playerModels[i].id].SyncEquipedAccessory (CreateAccessory (playerModels[i].acc));
+            }
         }
         return listPlayer;
     }
@@ -124,6 +131,16 @@ public class SpawnController : MonoBehaviour {
     public GameObject CreateAccessory (string id) {
         Accessory prefab = null;
         foreach (Accessory acc in accessories) {
+            if (acc.id == id) {
+                prefab = acc;
+                break;
+            }
+        }
+        return prefab.gameObject;
+    }
+    public GameObject CreateHat (string id) {
+        Accessory prefab = null;
+        foreach (Accessory acc in hats) {
             if (acc.id == id) {
                 prefab = acc;
                 break;

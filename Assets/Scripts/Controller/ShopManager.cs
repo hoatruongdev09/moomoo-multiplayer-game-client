@@ -41,7 +41,7 @@ public class ShopManager : MonoBehaviour, IShopPanelDatasource, IShopPanelDelega
             return new VisualShopItemInfo (status, item.id, item.name, item.description, item.price);
         }).ToArray ();
     }
-    public void SyncItem (SyncItempShopModel model) {
+    public void SyncItem (SyncItemShopModel model) {
         ownedItem = model.owned;
         equipedHat = model.equipedHat;
         equipedAccesory = model.equipedAccessory;

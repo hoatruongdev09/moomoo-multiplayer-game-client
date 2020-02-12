@@ -1,50 +1,52 @@
 public class SocketCode {
-    public string OnConnect = "oncon";
-    public string OnRequestJoin = "onJoin";
-    public string OnFailedToConnect = "onConFailed";
-    public string OnPing = "ping";
-    public string Error = "err";
+    public string OnConnect = "s0";
+    public string OnRequestJoin = "s1";
+    public string OnFailedToConnect = "s2";
+    public string OnPing = "s3";
+    public string Error = "s4";
+    public string ClientStatus = "s5";
 }
 public class GameCode {
-    public string gameData = "gameData";
-    public string receivedData = "rvGameData";
-    public string spawnPlayer = "spwnPlayer";
+    public string gameData = "g0";
+    public string receivedData = "g1";
+    public string spawnPlayer = "g2";
 
-    public string playerQuit = "plQuit";
+    public string playerQuit = "g3";
 
-    public string syncLookDirect = "syncLook";
-    public string syncMoveDirect = "syncMove";
-    public string syncTransform = "syncTrsform";
-    public string triggerAttack = "attk";
-    public string triggerAutoAttack = "autoAttk";
-    public string playerHit = "phit";
-    public string playerDie = "pdie";
-    public string playerStatus = "pstt";
-    public string switchItem = "swtItm";
-    public string spawnnStructures = "spwnStrc";
-    public string removeStructures = "rmvStrc";
-    public string upgradeItem = "ugdItem";
+    public string syncLookDirect = "g4";
+    public string syncMoveDirect = "g5";
+    public string syncTransform = "g6";
+    public string triggerAttack = "g7";
+    public string triggerAutoAttack = "g8";
+    public string playerHit = "g9";
+    public string playerDie = "g10";
+    public string playerStatus = "g11";
+    public string switchItem = "g12";
+    public string spawnnStructures = "g13";
+    public string removeStructures = "g14";
+    public string upgradeItem = "g15";
 
-    public string syncItem = "syncItem";
+    public string syncItem = "g16";
 
-    public string createProjectile = "prjti0";
-    public string removeProjectile = "prjti1";
-    public string syncPositionProjectile = "prjtiUp";
-    public string playerChat = "chat";
-    public string syncNpcTransform = "npcTrans";
-    public string syncNpcHP = "npcHP";
-    public string syncNpcDie = "npcDie";
-    public string spawnNpc = "spwnNpc";
-    public string scoreBoard = "scrBoard";
-    public string syncShop = "shopSync";
-    public string shopSelectItem = "shopSltItem";
+    public string createProjectile = "g17";
+    public string removeProjectile = "g18";
+    public string syncPositionProjectile = "g19";
+    public string playerChat = "g20";
+    public string syncNpcTransform = "g21";
+    public string syncNpcHP = "g22";
+    public string syncNpcDie = "g23";
+    public string spawnNpc = "g24";
+    public string scoreBoard = "g25";
+    public string syncShop = "g26";
+    public string shopSelectItem = "g27";
+    public string syncEquipItem = "g28";
 }
 public class ClanCode {
-    public string createClan = "clCreate";
-    public string removeClan = "clRemove";
-    public string requestJoin = "clRequestJoin";
-    public string joinClan = "clJoin";
-    public string kickMember = "clKick";
-    public string member = "clMember";
-    public string listClan = "clList";
+    public string createClan = "c0";
+    public string removeClan = "c1";
+    public string requestJoin = "c2";
+    public string joinClan = "c3";
+    public string kickMember = "c4";
+    public string member = "c5";
+    public string listClan = "c6";
 }

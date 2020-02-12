@@ -36,6 +36,22 @@ public class PlayerController : MonoBehaviour {
     public void SyncHealthPoint (int hp) {
         character.SyncHealthPoint (hp);
     }
+    public void SyncEquipedHat (GameObject item) {
+        if (item == null) {
+            if (character.currentHat)
+                Destroy (character.currentHat);
+        } else {
+            character.ChangeHat (item);
+        }
+    }
+    public void SyncEquipedAccessory (GameObject item) {
+        if (item == null) {
+            if (character.currentAccessory)
+                Destroy (character.currentAccessory);
+        } else {
+            character.ChangeAccessory (item);
+        }
+    }
     public void SwapItem (GameObject item) {
         character.ChangeItem (item);
     }

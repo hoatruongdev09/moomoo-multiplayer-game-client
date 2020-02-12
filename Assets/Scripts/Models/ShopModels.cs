@@ -31,8 +31,15 @@ public class VisualShopItemInfo : ShopItemInfo {
 }
 
 [Serializable]
-public class SyncItempShopModel {
+public class SyncItemShopModel {
     public string[] owned;
     public string equipedHat;
     public string equipedAccessory;
+}
+
+[Serializable]
+public class SyncEquipItemShop {
+    public int id;
+    public string hat;
+    public string acc;
 }

@@ -97,6 +97,22 @@ public class PlayerManager : MonoBehaviour {
             }
         }
     }
+    public void PlayerSyncItemShop (SyncEquipItemShop model) {
+        if (players[model.id] != null) {
+            if (string.IsNullOrEmpty (model.hat)) {
+                players[model.id].SyncEquipedHat (null);
+            } else {
+                Debug.Log ("equip hat");
+                players[model.id].SyncEquipedHat (spawnController.CreateHat (model.hat));
+            }
+            if (string.IsNullOrEmpty (model.acc)) {
+                players[model.id].SyncEquipedAccessory (null);
+            } else {
+                Debug.Log ("equip accessory");
+                players[model.id].SyncEquipedAccessory (spawnController.CreateAccessory (model.acc));
+            }
+        }
+    }
 
     public void ShowPlayerChat (ChatModel model) {
         if (players[model.id] != null) {

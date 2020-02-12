@@ -23,6 +23,9 @@ public class UIController : MonoBehaviour, IJoinPanelViewControllerDelegate, IJo
         mainPanelViewController.Hide ();
         gameViewController.gameObject.SetActive (true);
     }
+    public void OnConnectFailed (string text) {
+        mainPanelViewController.ShowErrorPanel (text);
+    }
     public void OnGameOver () {
         mainPanelViewController.gameObject.SetActive (true);
         gameViewController.Hide ();

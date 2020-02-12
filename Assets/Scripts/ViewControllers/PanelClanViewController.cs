@@ -37,6 +37,7 @@ public class PanelClanViewController : MonoBehaviour, IListViewDatasource, IList
         });
     }
     public void Hide () {
+        Debug.Log ("Hide caln view controller");
         canvasGroup.LeanAlpha (0, .4f).setOnComplete (() => {
             gameObject.SetActive (false);
             listClanView.gameObject.SetActive (false);

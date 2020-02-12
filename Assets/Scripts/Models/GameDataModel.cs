@@ -29,6 +29,8 @@ public class InitPlayerModel {
     public int id;
     public string name;
     public int skinId;
+    public string hat;
+    public string acc;
     public string itemId;
     public int hp;
     public PositionModel pos;

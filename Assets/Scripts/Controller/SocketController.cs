@@ -35,6 +35,9 @@ public class SocketController : MonoBehaviour {
     private void Update () {
         ping += Time.deltaTime;
     }
+    public bool GetSocketStatus () {
+        return socket.IsOpen;
+    }
     public void SocketEmit (string eventName, object[] param) {
         socket.Emit (eventName, param);
     }
@@ -51,6 +54,7 @@ public class SocketController : MonoBehaviour {
         options.ReconnectionAttempts = 3;
         options.AutoConnect = true;
         options.ReconnectionDelay = miliSecForReconnect;
+        options.Timeout = TimeSpan.FromMilliseconds (30000);
         var socketManagerRef = new SocketManager (new Uri ("http://" + socketUrl + "/socket.io/"), options);
 
 #if UNITY_WEBGL	
@@ -101,12 +105,17 @@ public class SocketController : MonoBehaviour {
         socket.On (gameCode.spawnNpc, OnSpawnNpc);
         socket.On (gameCode.scoreBoard, OnReceiveScoreBoard);
         socket.On (gameCode.syncShop, OnSyncItemShop);
+        socket.On (gameCode.syncEquipItem, OnSyncEquipItem);
 
         socket.On (clanCode.createClan, OnCreateClan);
         socket.On (clanCode.joinClan, OnJoinClan);
         socket.On (clanCode.removeClan, OnRemoveClan);
         socket.On (clanCode.kickMember, OnKickMember);
         socket.On (clanCode.requestJoin, OnRequestJoin);
+    }
+
+    private void OnSyncEquipItem (Socket socket, Packet packet, object[] args) {
+        controllerDelegate.OnSyncEquipItem (packet.ToString ());
     }
 
     private void OnSyncItemShop (Socket socket, Packet packet, object[] args) {
@@ -231,7 +240,7 @@ public class SocketController : MonoBehaviour {
     }
 
     private void OnFailedConnect (Socket socket, Packet packet, object[] args) {
-        Debug.Log ($"On Failed to Connect, {packet.ToString()}");
+        controllerDelegate.OnFailedToConnect (packet.ToString ());
     }
 
     private void OnConnect (Socket socket, Packet packet, object[] args) {
@@ -244,32 +253,34 @@ public class SocketController : MonoBehaviour {
 
 public interface ISocketControllerDelegate {
     void OnConnect (string data);
-    void OnCreateClan (string v);
-    void OnCreateProjectile (string v);
+    void OnCreateClan (string data);
+    void OnCreateProjectile (string data);
     void OnCreateStructure (string data);
     void OnDestroyStructure (string data);
-    void OnJoinClan (string v);
-    void OnKickMember (string v);
-    void OnNpcDie (string v);
-    void OnPlayerChat (string v);
+    void OnFailedToConnect (string v);
+    void OnJoinClan (string data);
+    void OnKickMember (string data);
+    void OnNpcDie (string data);
+    void OnPlayerChat (string data);
     void OnPlayerDie (string data);
     void OnPlayerHit (string data);
     void OnPlayerQuit (string data);
     void OnPlayerStatus (string data);
     void OnReceiveData (string data);
     void OnReceivePing (float ping);
-    void OnReceiveRequestJoin (string v);
-    void OnReceiveScoreBoard (string v);
-    void OnRemoveClan (string v);
-    void OnRemoveProjectTile (string v);
-    void OnSpawnNpc (string v);
+    void OnReceiveRequestJoin (string data);
+    void OnReceiveScoreBoard (string data);
+    void OnRemoveClan (string data);
+    void OnRemoveProjectTile (string data);
+    void OnSpawnNpc (string data);
     void OnSpawnPlayer (string data);
     void OnSwitchItem (string data);
+    void OnSyncEquipItem (string data);
     void OnSyncItem (string data);
-    void OnSyncItemShop (string v);
-    void OnSyncNpcHp (string v);
-    void OnSyncNpcTransform (string v);
-    void OnSyncPositionProjectile (string v);
+    void OnSyncItemShop (string data);
+    void OnSyncNpcHp (string data);
+    void OnSyncNpcTransform (string data);
+    void OnSyncPositionProjectile (string data);
     void OnSyncTransform (string data);
     void OnTriggerAttack (string data);
     void OnUpgradeItems (string data);

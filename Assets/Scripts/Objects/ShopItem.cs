@@ -36,6 +36,7 @@ public class ShopItem : ListViewItem {
             textItemPrice.text = $"{info.price}";
             textItemStatus.text = "Purchase";
         }
+        textDescription.text = info.description;
         imageItem.sprite = Resources.Load<Sprite> ($"ShopItemSprite/{info.id}");
         buttonPurchase.onClick.AddListener (delegate { onSelected (id); });
     }

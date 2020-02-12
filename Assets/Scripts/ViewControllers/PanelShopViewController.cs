@@ -42,6 +42,11 @@ public class PanelShopViewController : MonoBehaviour, IListViewDatasource, IList
         RecreateList ();
     }
     public void RecreateList () {
+        if (isShowAccessories) {
+            listItem = Datasource.GetAccessoryItem ();
+        } else {
+            listItem = Datasource.GetHatItem ();
+        }
         listItemView.gameObject.SetActive (false);
         listItemView.gameObject.SetActive (true);
     }
@@ -53,7 +58,7 @@ public class PanelShopViewController : MonoBehaviour, IListViewDatasource, IList
     }
     public void Hide () {
         canvasGroup.LeanAlpha (0, .4f).setOnComplete (() => {
-            listItemView.gameObject.SetActive (false);
+            gameObject.SetActive (false);
             listItemView.gameObject.SetActive (false);
         });
     }

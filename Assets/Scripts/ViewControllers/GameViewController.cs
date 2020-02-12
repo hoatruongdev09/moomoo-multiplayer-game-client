@@ -65,7 +65,6 @@ public class GameViewController : MonoBehaviour, IGameViewController, IPanelUpgr
             gameObject.SetActive (false);
         });
     }
-
     public void UpdatePlayerStatus (PlayerStatusModel model) {
         gameView.UpdateInfo (model);
     }

@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SawBlade Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 1722622835477773872, guid: d3ccfec1c281c49e985625ec09e1cf8a,
+        type: 3}
+      propertyPath: id
+      value: a16
+      objectReference: {fileID: 0}
     - target: {fileID: 5399066039143416960, guid: d3ccfec1c281c49e985625ec09e1cf8a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -79,13 +84,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5978525107548199755, guid: d3ccfec1c281c49e985625ec09e1cf8a,
         type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      propertyPath: m_LocalPosition.y
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5978525107548199755, guid: d3ccfec1c281c49e985625ec09e1cf8a,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 847537544767025395, guid: d3ccfec1c281c49e985625ec09e1cf8a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 847537544767025395, guid: d3ccfec1c281c49e985625ec09e1cf8a,
         type: 3}
@@ -93,10 +103,5 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: ba82bac9b2b2d4c5fb3083d5504864f3,
         type: 3}
-    - target: {fileID: 1722622835477773872, guid: d3ccfec1c281c49e985625ec09e1cf8a,
-        type: 3}
-      propertyPath: id
-      value: a16
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3ccfec1c281c49e985625ec09e1cf8a, type: 3}

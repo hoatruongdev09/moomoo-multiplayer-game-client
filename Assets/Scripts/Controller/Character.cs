@@ -11,6 +11,10 @@ public class Character : MonoBehaviour {
     public Transform hands;
     public Transform itemHolder;
     public GameObject currentItem;
+    public Transform hatHolder;
+    public GameObject currentHat;
+    public Transform accessoryHolder;
+    public GameObject currentAccessory;
     public Color color;
     private string charName;
     private string clanName = "";
@@ -94,5 +98,17 @@ public class Character : MonoBehaviour {
     public void ChangeItem (GameObject item) {
         Destroy (currentItem);
         currentItem = Instantiate (item, itemHolder);
+    }
+    public void ChangeHat (GameObject item) {
+        Destroy (currentHat);
+        currentHat = Instantiate (item, hatHolder);
+        currentHat.transform.localPosition = Vector3.zero;
+        currentHat.transform.localRotation = Quaternion.Euler (0, 0, 0);
+    }
+    public void ChangeAccessory (GameObject item) {
+        Destroy (currentAccessory);
+        currentAccessory = Instantiate (item, accessoryHolder);
+        currentAccessory.transform.localPosition = Vector3.zero;
+        currentAccessory.transform.localRotation = Quaternion.Euler (0, 0, 0);
     }
 }

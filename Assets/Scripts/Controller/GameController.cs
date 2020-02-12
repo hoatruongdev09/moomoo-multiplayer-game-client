@@ -63,6 +63,11 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
         data.AddField ("skinId", skinId);
         socketController.SocketEmit (socketController.socketCode.OnRequestJoin, data);
     }
+    public void SendClientStatus (bool focusStatus) {
+        JSONObject data = new JSONObject (JSONObject.Type.OBJECT);
+        data.AddField ("focus", focusStatus);
+        socketController.SocketEmit (socketController.socketCode.ClientStatus, data);
+    }
     public void RequestSwitchItem (string code) {
         JSONObject data = new JSONObject (JSONObject.Type.OBJECT);
         data.AddField ("code", code);
@@ -321,7 +326,7 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
     }
     public void OnSyncItemShop (string data) {
         var temp = JSON.Parse (data);
-        SyncItempShopModel model = JsonUtility.FromJson<SyncItempShopModel> (temp[1].ToString ());
+        SyncItemShopModel model = JsonUtility.FromJson<SyncItemShopModel> (temp[1].ToString ());
         shopManager.SyncItem (model);
     }
     public void OnReceivePing (float ping) {
@@ -399,6 +404,17 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
         clanManager.AddRequestJoinClan (model.id);
         uIController.ShowRequestJoinClan (model.id);
     }
+    public void OnSyncEquipItem (string data) {
+        Debug.Log ($"sync equip item: {data}");
+        var temp = JSON.Parse (data);
+        SyncEquipItemShop model = JsonUtility.FromJson<SyncEquipItemShop> (temp[1].ToString ());
+        playerManager.PlayerSyncItemShop (model);
+    }
+    public void OnFailedToConnect (string data) {
+        var temp = JSON.Parse (data);
+        FailedToConnectModel model = JsonUtility.FromJson<FailedToConnectModel> (temp[1].ToString ());
+        uIController.OnConnectFailed (model.reason);
+    }
     #endregion
 
     #region CONTROLLER
@@ -452,4 +468,10 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
     }
 
     #endregion
+#if !UNITY_WEBGL
+    private void OnApplicationPause (bool pauseStatus) {
+        Debug.Log ($"game is pause {pauseStatus}");
+        SendClientStatus (pauseStatus);
+    }
+#endif
 }
