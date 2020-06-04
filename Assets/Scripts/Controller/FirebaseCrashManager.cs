@@ -19,6 +19,8 @@ public class FirebaseCrashManager : MonoBehaviour {
                 Firebase.FirebaseApp app = Firebase.FirebaseApp.DefaultInstance;
 
                 // Set a flag here for indicating that your project is ready to use Firebase.
+                updatesBeforeException = 0;
+                Firebase.FirebaseApp.LogLevel = Firebase.LogLevel.Debug;
             } else {
                 UnityEngine.Debug.LogError (System.String.Format (
                     "Could not resolve all Firebase dependencies: {0}", dependencyStatus));
@@ -27,5 +29,21 @@ public class FirebaseCrashManager : MonoBehaviour {
         });
 #endif
     }
+    private void Update () {
+        // Call the exception-throwing method here so that it's run
+        // every frame update
+        if (Debug.isDebugBuild)
+            throwExceptionEvery60Updates ();
+    }
+    void throwExceptionEvery60Updates () {
+        if (updatesBeforeException > 0) {
+            updatesBeforeException--;
+        } else {
+            // Set the counter to 60 updates
+            updatesBeforeException = 60;
 
+            // Throw an exception to test your Crashlytics implementation
+            throw new System.Exception ("test exception please ignore");
+        }
+    }
 }
