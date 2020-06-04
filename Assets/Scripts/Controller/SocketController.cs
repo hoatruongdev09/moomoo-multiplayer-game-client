@@ -66,6 +66,7 @@ public class SocketController : MonoBehaviour {
         //Server URI
 
         socket = socketManagerRef.Socket;
+
         ListenerRegister ();
     }
     private void ListenerRegister () {

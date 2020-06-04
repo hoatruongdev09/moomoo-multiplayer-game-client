@@ -40,11 +40,23 @@ public class InitPlayerModel {
 public class PositionModel {
     public float x;
     public float y;
-
+    public PositionModel (float x, float y) {
+        this.x = x;
+        this.y = y;
+    }
+    public PositionModel () {
+        x = y = 0;
+    }
     public Vector2 ToVector2 () {
         return new Vector2 (x, y);
     }
     public Vector3 ToVector3 () {
         return new Vector3 (x, y);
+    }
+    public static PositionModel FromVector3 (Vector3 vector) {
+        return new PositionModel (vector.x, vector.y);
+    }
+    public static PositionModel FromVector2 (Vector2 vector) {
+        return new PositionModel (vector.x, vector.y);
     }
 }

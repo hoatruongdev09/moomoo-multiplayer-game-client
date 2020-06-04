@@ -63,8 +63,21 @@ public class PlayerManager : MonoBehaviour {
                 players[rotMod.id].SyncRotation (rotMod.angle);
             }
         }
+        HideUnSeePlayers (model.rot);
     }
+    private void HideUnSeePlayers (SyncRotationModel[] viewAblePlayers) {
+        List<int> viewAbleIDs = viewAblePlayers.Select (p => { return p.id; }).ToList ();
+        for (int i = 0; i < players.Length; i++) {
+            if (players[i] != null) {
+                if (viewAbleIDs.Contains (i)) {
+                    players[i].gameObject.SetActive (true);
+                } else {
+                    players[i].gameObject.SetActive (false);
+                }
+            }
+        }
 
+    }
     public void TriggerPlayerAttack (TriggerAttackModel model) {
         Debug.Log ("Trigger attack");
         if (players[model.idGame] != null) {

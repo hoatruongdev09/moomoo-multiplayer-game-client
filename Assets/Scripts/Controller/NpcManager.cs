@@ -14,11 +14,25 @@ public class NpcManager : MonoBehaviour {
     public void SyncTransform (SyncTransformNPCModels model) {
         foreach (NpcTransformModel info in model.pos) {
             if (info.id < listNpc.Length && listNpc[info.id] != null) {
-                // Debug.Log ($"{info.id} position: {info.pos.ToVector3()}");
                 listNpc[info.id].SyncPosition (info.pos.ToVector3 ());
                 listNpc[info.id].SyncRotation (info.rot * Mathf.Rad2Deg);
+                listNpc[info.id].gameObject.SetActive (true);
             }
         }
+        HideUnSeeNpcs (model.pos);
+    }
+    private void HideUnSeeNpcs (NpcTransformModel[] viewAbleNpcs) {
+        List<int> viewAbleIDs = viewAbleNpcs.Select (p => { return p.id; }).ToList ();
+        for (int i = 0; i < listNpc.Length; i++) {
+            if (listNpc[i] != null) {
+                if (viewAbleIDs.Contains (i)) {
+                    listNpc[i].gameObject.SetActive (true);
+                } else {
+                    listNpc[i].gameObject.SetActive (false);
+                }
+            }
+        }
+
     }
     public void AddNpc (int id, NpcController npc) {
         listNpc[id] = npc;

@@ -6,11 +6,13 @@ public class MapManager : MonoBehaviour {
     public SpriteRenderer mapBackGround;
     public SpriteRenderer snowBackground;
     public SpriteRenderer riverBackground;
+    public SpriteRenderer gridBackground;
 
     private Vector2 mapSize;
     public void SetMapSize (Vector2 size) {
-        mapBackGround.transform.position = size / 2;
+        gridBackground.transform.position = mapBackGround.transform.position = size / 2;
         mapBackGround.size = size;
+        gridBackground.size = size;
         mapSize = size;
     }
     public void SetSnowSize (float size) {

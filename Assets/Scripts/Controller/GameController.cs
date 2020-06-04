@@ -58,15 +58,20 @@ public class GameController : MonoBehaviour, ISocketControllerDelegate, IControl
     }
     public void RequestJoinGame (string name, int gameId, int skinId) {
         JSONObject data = new JSONObject (JSONObject.Type.OBJECT);
+
         data.AddField ("name", name);
         data.AddField ("gameId", gameId);
         data.AddField ("skinId", skinId);
+
+        data.AddField ("screenSizeX", cameraController.CameraSize.x);
+        data.AddField ("screenSizeY", cameraController.CameraSize.y);
+
         socketController.SocketEmit (socketController.socketCode.OnRequestJoin, data);
     }
     public void SendClientStatus (bool focusStatus) {
         JSONObject data = new JSONObject (JSONObject.Type.OBJECT);
         data.AddField ("focus", focusStatus);
-        socketController.SocketEmit (socketController.socketCode.ClientStatus, data);
+        socketController?.SocketEmit (socketController?.socketCode?.ClientStatus, data);
     }
     public void RequestSwitchItem (string code) {
         JSONObject data = new JSONObject (JSONObject.Type.OBJECT);
